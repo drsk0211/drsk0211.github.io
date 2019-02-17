@@ -460,7 +460,7 @@ hr {
 
 .services-item .services-content h3 a {
   font-size: 16px;
-  color: #585b60;
+  color: #000;
 }
 
 .services-item .services-content h3 a:hover {
@@ -585,7 +585,7 @@ hr {
 }
 
 .navbar-expand-md .navbar-nav .nav-item {
-  padding-left: 25px;
+  padding-left: 40px;
 }
 
 .navbar-expand-md .navbar-nav .nav-link {
@@ -756,6 +756,7 @@ hr {
   position: relative;
   overflow: hidden;
   padding: 180px 0 80px;
+  text-align:  center;
 }
 
 #hero-area .contents .head-title {
@@ -1416,7 +1417,7 @@ textarea {
   background: #CE332A;
 }
 
-.img-fluid{
-  text-align: center;
+.engine{
+  color: #000;
+  
 }
-
