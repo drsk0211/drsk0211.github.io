@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Arvo:700|Open+Sans");
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
 html {
   overflow-x: hidden;
 }
@@ -19,11 +21,15 @@ body {
   overflow-x: hidden;
 }
 
+}
 h1, h2, h3, h4 {
-  font-size: 38px;
-  color: #333;
+  font-size: 25px;
+  color: #111;
   font-weight: 700;
-  font-family: 'Arvo', serif;
+  font-family: 'Roboto', serif;
+}
+
+
 }
 
 a {
@@ -459,7 +465,7 @@ hr {
 }
 
 .services-item .services-content h3 a {
-  font-size: 16px;
+  font-size: 25px;
   color: #000;
 }
 
@@ -468,7 +474,7 @@ hr {
 }
 
 .services-item:hover {
-  box-shadow: 0 10px 22px 10px rgba(27, 38, 49, 0.1);
+  box-shadow: 0 10px 22px 10px rgba(11, 16, 20, 0.1);
 }
 
 .services-item:hover .icon {
@@ -480,7 +486,7 @@ hr {
 }
 
 #service {
-  position: relative;
+  position: ABSOLUTE;
 }
 
 .about-area .about-wrapper {
@@ -1417,8 +1423,3 @@ textarea {
   background: #CE332A;
 }
 
-.engine{
-
-  height="26";
-  
-}
