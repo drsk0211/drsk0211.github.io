@@ -32,7 +32,6 @@ h1, h2, h3, h4 {
   font-family: 'Roboto', serif;
 }
 
-
 }
 
 a {
@@ -598,7 +597,7 @@ hr {
 }
 
 .navbar-expand-md .navbar-nav .nav-link {
-  color: whitesmoke;
+  color: white;
   font-weight: 400;
   padding: 7px 0;
   cursor: pointer;
@@ -757,16 +756,18 @@ hr {
 3. Hero Area
 ========================================================================== */
 #hero-area {
-  background-image: url();
+  background: url(//xn----7sbbaggflvddzks7f.xn--p1ai/wp-content/themes/blankslate/img/block1.jpg) no-repeat right bottom;
+  height: 100%;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #333;
-  min-height: 650px;
+  min-height: 1000px;
   position: relative;
   overflow: hidden;
   padding: 180px 0 80px;
-  text-align:  center;
+  text-align:  left;
+  padding-bottom: 5px;
 }
 
 #hero-area .contents .head-title {
@@ -778,7 +779,7 @@ hr {
 }
 
 #hero-area .contents .header-button {
-  margin-top: 20px;
+  margin-top: 35px;
   color: #222222;
 }
 
