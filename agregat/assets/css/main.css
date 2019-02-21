@@ -20,6 +20,9 @@ body {
   backface-visibility: hidden;
   overflow-x: hidden;
 }
+strong{
+color: #0021b4ef
+}
 
 }
 h1, h2, h3, h4 {
@@ -595,7 +598,7 @@ hr {
 }
 
 .navbar-expand-md .navbar-nav .nav-link {
-  color: #333;
+  color: whitesmoke;
   font-weight: 400;
   padding: 7px 0;
   cursor: pointer;
@@ -754,11 +757,11 @@ hr {
 3. Hero Area
 ========================================================================== */
 #hero-area {
-  background-image: url(https://www.google.com/imgres?imgurl=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F8%2F82%2FKamAZ-65802.jpg&imgrefurl=https%3A%2F%2Fru.wikipedia.org%2Fwiki%2F%25D0%25A4%25D0%25B0%25D0%25B9%25D0%25BB%3AKamAZ-65802.jpg&docid=V-dv5hcCqHGGcM&tbnid=3g6fo6on8aMbKM%3A&vet=10ahUKEwjg08Pi0MrgAhUp2aYKHaQeAGQQMwiaAigEMAQ..i&w=3217&h=2317&bih=969&biw=1920&q=rfvfp&ved=0ahUKEwjg08Pi0MrgAhUp2aYKHaQeAGQQMwiaAigEMAQ&iact=mrc&uact=8);
+  background-image: url();
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: #4444
+  background-color: #333;
   min-height: 650px;
   position: relative;
   overflow: hidden;
@@ -767,7 +770,7 @@ hr {
 }
 
 #hero-area .contents .head-title {
-  color: #222222;
+  color: #ffffff;
   font-size: 42px;
   font-weight: 700;
   line-height: 60px;
