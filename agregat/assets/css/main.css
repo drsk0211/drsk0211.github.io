@@ -7,14 +7,14 @@ html {
 
 body {
   background: #fff;
-  font-size: 14px;
+  font-size: 20px;
   font-weight: 400;
   font-family: 'Open Sans', sans-serif;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-font-smoothing: subpixel-antialiased;
-  color: #abacae;
+  color: #f3f3f3;
   line-height: 25px;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
@@ -766,12 +766,16 @@ hr {
   position: relative;
   overflow: hidden;
   padding: 180px 0 80px;
-  text-align:  left;
   padding-bottom: 5px;
+}
+
+#hero-area .contents_2{
+  text-align: right; 
 }
 
 #hero-area .contents .head-title {
   color: #ffffff;
+  text-align:  left;
   font-size: 42px;
   font-weight: 700;
   line-height: 60px;
