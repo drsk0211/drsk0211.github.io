@@ -14,14 +14,15 @@ body {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-font-smoothing: subpixel-antialiased;
-  color: #000;
+  color: #333333;
   line-height: 25px;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   overflow-x: hidden;
 }
 strong{
-color: #2243d6ef
+color:#2a8aea;
+font-family: 'Open Sans', sans-serif;
 }
 
 }
@@ -29,7 +30,7 @@ h1, h2, h3, h4 {
   font-size: 25px;
   color: #111;
   font-weight: 700;
-  font-family: 'Roboto', serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 }
@@ -768,8 +769,8 @@ hr {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;      
   background-color: #333;
-  min-height: 1000px;
   position: relative;
   overflow: hidden;
   padding: 180px 0 80px;
@@ -778,6 +779,8 @@ hr {
 
 #hero-area .contents{
   color: #e4e4e4;
+  text-align: left;
+  font-weight: normal;
 }
 
 #hero-area .contents_2{
@@ -1389,7 +1392,9 @@ textarea {
   border-top: 1px solid #d5d4e9;
   padding: 15px 0;
   margin: 45px 0 0px;
-}
+  width: 100%;
+  text-align: center;
+  margin-
 
 #copyright p {
   line-height: 42px;
@@ -1445,4 +1450,29 @@ textarea {
 
 #slider{
  text-align: center;
+}
+
+.block-1{
+font-size: 30px;
+}
+
+#engineModal {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+
+#license{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+
+#policy{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
 }
