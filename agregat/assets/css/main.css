@@ -82,7 +82,7 @@ a:not([href]):not([tabindex]) {
 }
 
 .section-title {
-  font-size: 30px;
+  font-size: 40px;
   color: #222222;
   display: inline-block;
   font-weight: 700;
@@ -514,6 +514,7 @@ hr {
 
 .about-area .content {
   margin-top: 15px;
+  text-align: center;
 }
 
 .about-area .content p {
@@ -1442,7 +1443,6 @@ textarea {
   background: #CE332A;
 }
 
-.slide{
-  height: 250px;
-  weight: 150px;
+#slider{
+ text-align: center;
 }
