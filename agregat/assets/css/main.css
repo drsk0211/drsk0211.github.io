@@ -54,7 +54,7 @@ p {
   font-weight: 400;
   font-family: 'Open Sans', sans-serif;
   margin: 0px;
-  font-size: 14px;
+  font-size: 15px;
   color: #111111;
 }
 
@@ -72,8 +72,21 @@ a:not([href]):not([tabindex]) {
   color: #fff;
 }
 
+
 .section-header {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+}
+
+
+
+.image h5 {
+	position	: absolute;
+	top		: 200px;
+	left		: 0;
+  width		: 100%;
+  color: #fff;
+  text-align: center;
+
 }
 
 .section-header p {
@@ -88,6 +101,11 @@ a:not([href]):not([tabindex]) {
   display: inline-block;
   font-weight: 700;
   position: relative;
+}
+
+.form-check-label {
+font-size: 14px;
+color: whitesmoke;
 }
 
 .shape {
@@ -326,6 +344,7 @@ a.back-to-top:hover, a.back-to-top:focus {
 
 .section-padding {
   padding: 60px 0;
+  margin: 20px;
 }
 
 hr {
@@ -426,6 +445,12 @@ hr {
 }
 
 /* Services Item */
+
+.image {
+	position	: relative;
+	width		: 100%; 
+}
+
 .services-item {
   padding: 20px;
   border-radius: 4px;
@@ -547,7 +572,8 @@ hr {
 }
 
 .top-nav-collapse .navbar-brand img {
-  width: 70%;
+  width: 60%;
+
 }
 
 .top-nav-collapse .navbar-nav .nav-link {
@@ -575,7 +601,7 @@ hr {
 }
 
 .navbar-brand img {
-  width: 70%;
+  width: 60%;
 }
 
 .top-nav-collapse .navbar-nav li.active a.nav-link {
@@ -659,7 +685,7 @@ hr {
 }
 
 .navbar {
-  padding: 20px 0;
+  padding: 10px 0;
 }
 
 .navbar li.active a.nav-link {
@@ -775,6 +801,12 @@ hr {
   overflow: hidden;
   padding: 180px 0 80px;
   padding-bottom: 5px;
+
+}
+
+
+#hero-area ul li, ol li {
+  margin: 25px;
 }
 
 #hero-area .contents{
