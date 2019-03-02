@@ -814,7 +814,7 @@ hr {
 }
 
 #hero-area .contents{
-  color: #e4e4e4;
+  color: #f7f7f7;
   text-align: left;
   font-weight: normal;
 }
@@ -1513,7 +1513,7 @@ font-size: 30px;
   transform: translate(-50%,-50%);
 }
 
-.priemy {
+#profit {
   text-align: center;
 }
 
