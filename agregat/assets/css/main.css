@@ -1521,3 +1521,12 @@ font-size: 30px;
   height: 600px;
   width: 100%;
 }
+
+.grayRectangle {
+  z-index: 1;
+  
+}
+
+#priemyshestva {
+margin-top: 150px;
+}
