@@ -526,6 +526,10 @@ hr {
   color: rgb(0, 0, 0);
 }
 
+.about-area {
+  margin-top:25px;
+}
+
 .about-area .about-wrapper {
   height: 100%;
   width: 100%;
