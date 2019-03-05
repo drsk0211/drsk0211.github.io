@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Arvo:700|Open+Sans");
+@import url("https://fonts.googleapis.com/css?family=Arvo:700|Open+Sans:100,300,400,600");
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
 html {
@@ -816,7 +816,7 @@ hr {
 #hero-area .contents{
   color: #f7f7f7;
   text-align: left;
-  font-weight: normal;
+  font-weight: 100;
 }
 
 #hero-area .contents_2{
