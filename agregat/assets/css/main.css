@@ -77,7 +77,9 @@ a:not([href]):not([tabindex]) {
   margin-bottom: 20px;
 }
 
-
+.title {
+  color: white;
+}
 
 .image h5 {
 	position	: absolute;
