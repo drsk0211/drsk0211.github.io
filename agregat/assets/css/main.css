@@ -450,10 +450,20 @@ hr {
 
 .image {
 	position	: relative;
-  width		: 100%; 
+  width		: 100%;
 }
 .image img {
   margin-top: 20px;
+}
+
+
+.img {
+  display: block;
+  width: 200px;
+  height: 200px;
+  background-image: linear-gradient(to bottom, black 0%, transparent 100%), url(https://xn----7sbbaggflvddzks7f.xn--p1ai/wp-content/uploads/2017/07/eng2.jpg);
+  background-size: cover;
+  background-position: center;
 }
 
 .services-item {
@@ -565,6 +575,10 @@ hr {
   padding: 0px;
 }
 
+.price {
+  background: #272727;
+}
+
 .top-nav-collapse {
   background: #fff;
   z-index: 999999;
@@ -598,7 +612,7 @@ hr {
 }
 
 .top-nav-collapse .navbar-nav .nav-link:hover {
-  color: #F63854 !important;
+  color: #2a8aea !important;
 }
 
 .navbar-expand-md .navbar-toggler {
@@ -614,8 +628,8 @@ hr {
 }
 
 .top-nav-collapse .navbar-nav li.active a.nav-link {
-  color: #F63854 !important;
-  border-color: #F63854;
+  color: #2a8aea !important;
+  border-color: #2a8aea;
 }
 
 .indigo {
@@ -623,7 +637,8 @@ hr {
 }
 
 iframe {
-  filter: grayscale(100%);
+  filter: grayscale(100%); 
+  
 }
 
 .menu-bg {
