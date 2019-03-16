@@ -1288,12 +1288,11 @@ iframe {
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   transition: all 0.3s;
-  padding: 10px;
   border: 1px solid #f1f1f1;
 }
 
 .form-control:focus {
-  border-color: #F63854;
+  border-color: #2a8aea;
   box-shadow: none;
   outline: none;
 }
