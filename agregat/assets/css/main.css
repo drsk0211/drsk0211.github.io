@@ -714,6 +714,7 @@ iframe {
 
 .navbar {
   padding: 10px 0;
+  font-weight: 400;
 }
 
 .navbar li.active a.nav-link {
@@ -820,7 +821,7 @@ iframe {
 #hero-area {
   background: url(//xn----7sbbaggflvddzks7f.xn--p1ai/wp-content/themes/blankslate/img/block1.jpg) no-repeat right bottom;
   height: 100%;
-
+  font-weight: 100;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -833,6 +834,9 @@ iframe {
 
 }
 
+#hero-area .h3{
+  font-weight: 100;
+}
 
 #hero-area ul li, ol li {
   margin: 25px;
