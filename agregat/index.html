@@ -123,7 +123,7 @@
                   <label class="title text-right" for="engineSelect1">
                     <h3>Выберите модель</h3>
                   </label>
-                  <select class="form-control-sm" id="engineSelect1">
+                  <select class="form-control-sm" id="model">
                     <option value="">Дигатель 1</option>
                     <option value="">Дигатель 2</option>
                     <option value="">Дигатель 3</option>
@@ -1553,6 +1553,27 @@
   <script src="assets/js/jquery.counterup.min.js"></script>
   <script src="assets/js/waypoints.min.js"></script>
   <script src="assets/js/main.js"></script>
+
+  <script type="text-javascript">
+
+    $('.model').autoComplete({
+      resolver: 'ajax',
+      resolverSettings: {},
+      minLength: 3,
+      valueKey: 'value',
+      formatResult: null,
+      autoSelect: true,
+      noResultsText: 'No results',
+      events: {
+        typed: null,
+        searchPre: null,
+        search: null,
+        searchPost: null,
+        select: null,
+        focus: null,
+      }
+    });
+    </script>
 
 </body>
 
