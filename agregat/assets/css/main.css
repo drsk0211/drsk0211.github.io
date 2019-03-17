@@ -82,6 +82,10 @@ a:not([href]):not([tabindex]) {
   font-weight: 200;
 }
 
+.head .h3 {
+  
+}
+
 .image h5 {
 	position	: absolute;
 	top		: 200px;
