@@ -86,14 +86,22 @@ a:not([href]):not([tabindex]) {
   
 }
 
-.image h5 {
+.image h1 {
 	position	: absolute;
-	top		: 200px;
+	top		: 230px;
 	left		: 0;
   width		: 100%;
   color: #fff;
   text-align: center;
 
+}
+
+.m-t {
+  margin-top: 5px;
+}
+
+#header-wrap {
+  height: 100%;
 }
 
 .section-header p {
@@ -718,7 +726,7 @@ iframe {
 }
 
 .navbar {
-  padding: 10px 0;
+  border-bottom: 1px solid #F4F4F4; 
   font-weight: 400;
 }
 
@@ -1330,6 +1338,10 @@ textarea {
 
 .contact-right-area .contact-title h1 {
   font-size: 22px;
+}
+
+.engine h1 {
+  font-size: 20px;
 }
 
 .contact-right {
