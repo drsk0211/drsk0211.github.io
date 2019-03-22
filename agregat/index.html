@@ -116,9 +116,9 @@
                   </select>
                 </div>
                 <input class="btn btn-outline-primary" type="button" value="Подтвердить">
-                <div id="default-suggestions">
-                  <input class="typeahead" type="text" placeholder="NFL Teams">
-                </div>
+                
+                  <input class="typeahead" type="text" placeholder="NFL Teams" id="select">
+               
               </form>
             </div>
           </div>
@@ -1521,7 +1521,7 @@
       }
     }
     
-    $('#default-suggestions .typeahead').typeahead({
+    $('#select').typeahead({
       minLength: 0,
       highlight: true
     },
