@@ -100,7 +100,12 @@ a:not([href]):not([tabindex]) {
   margin-top: 5px;
 }
 
+.h-100 {
+  height: 100%;
+}
+
 #header-wrap {
+  width: 100%;
   height: 100%;
 }
 

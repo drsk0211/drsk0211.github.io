@@ -36,7 +36,8 @@
 
   <!-- Header Area wrapper Starts -->
   <header id="header-wrap">
-    <div class="head">
+    <div class="head h-100">
+      <div class="head__inner h-100">
       <!-- Navbar Start -->
       <nav class="navbar navbar-expand-lg bg-inverse fixed-top scrolling-navbar">
         <div class="container">
@@ -117,12 +118,15 @@
                 </div>
                 <input class="btn btn-outline-primary" type="button" value="Подтвердить">
                 
+                <div id='default-suggestions'>
                   <input class="typeahead" type="text" placeholder="NFL Teams" id="select">
+                </div>
                
               </form>
             </div>
           </div>
         </div>
+      </div>
       </div>
     </div>
     <!-- Hero Area End -->
@@ -1503,34 +1507,36 @@
   <script src="assets/js/main.js"></script>
   <script src="assets/js/typeahead.bundle.min.js"></script>
   <script>
-    var nflTeams = new Bloodhound({
-      datumTokenizer: Bloodhound.tokenizers.obj.whitespace('team'),
+    $(document).ready(function() {
+    
+    var dvigatels = new Bloodhound({
+      datumTokenizer: Bloodhound.tokenizers.whitespace,
       queryTokenizer: Bloodhound.tokenizers.whitespace,
-      identify: function(obj) { return obj.team; },
       prefetch: 'models.json'
     });
     
-    function nflTeamsWithDefaults(q, sync) {
+    function dvigatelsWithDefaults(q, sync) {
       if (q === '') {
-        sync(nflTeams.get('Detroit Lions', 'Green Bay Packers', 'Chicago Bears'));
+        sync(dvigatels.get('урал', 'камаз2'));
       }
     
       else {
-        nflTeams.search(q, sync);
+        dvigatels.search(q, sync);
       }
     }
     
-    $('#select').typeahead({
+    $('#default-suggestions #select').typeahead({
       minLength: 0,
       highlight: true
     },
     {
-      name: 'nfl-teams',
-      display: 'team',
-      source: nflTeamsWithDefaults
+      name: 'dvigatels',
+      source: dvigatelsWithDefaults
     });
-  </script>
 
+
+  });
+</script>
 
     
 </body>
