@@ -116,6 +116,9 @@
                   </select>
                 </div>
                 <input class="btn btn-outline-primary" type="button" value="Подтвердить">
+                <div id="default-suggestions">
+                  <input class="typeahead" type="text" placeholder="NFL Teams">
+                </div>
               </form>
             </div>
           </div>
@@ -1363,7 +1366,7 @@
     </div>
   </section> -->
   <section>
-    <div class="about-area section-padding bg-gray">
+    <div id="team" class="about-area section-padding bg-gray">
       <div class="container text-center justify-content-center">
         <div class="section-header">
           <h2>Наши преимущества</h2>
@@ -1418,7 +1421,7 @@
   <!-- Footer Section Start -->
   <footer id="footer" class="footer-area section-padding">
     <div class="container">
-      <div class="container">
+      <div class="container" id="contact">
         <div class="row">
           <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 col-mb-12">
             <div class="widget">
@@ -1499,26 +1502,34 @@
   <script src="assets/js/waypoints.min.js"></script>
   <script src="assets/js/main.js"></script>
   <script src="assets/js/bootstrap-autocomplete.min.js"></script>
-  <script type="text-javascript">
-
-    $('#model').autoComplete({
-      resolver: 'ajax',
-      resolverSettings: {},
-      minLength: 3,
-      valueKey: 'value',
-      formatResult: null,
-      autoSelect: true,
-      noResultsText: 'No results',
-      events: {
-        typed: null,
-        searchPre: null,
-        search: null,
-        searchPost: null,
-        select: null,
-        focus: null,
-      }
+  <script type="text-javascript" src="assets/js/typeahead.js">
+    var nflTeams = new Bloodhound({
+      datumTokenizer: Bloodhound.tokenizers.obj.whitespace('team'),
+      queryTokenizer: Bloodhound.tokenizers.whitespace,
+      identify: function(obj) { return obj.team; },
+      prefetch: '../data/nfl.json'
     });
-    </script>
+    
+    function nflTeamsWithDefaults(q, sync) {
+      if (q === '') {
+        sync(nflTeams.get('Detroit Lions', 'Green Bay Packers', 'Chicago Bears'));
+      }
+    
+      else {
+        nflTeams.search(q, sync);
+      }
+    }
+    
+    $('#default-suggestions .typeahead').typeahead({
+      minLength: 0,
+      highlight: true
+    },
+    {
+      name: 'nfl-teams',
+      display: 'team',
+      source: nflTeamsWithDefaults
+    });
+  </script>
 
 
     
