@@ -674,6 +674,17 @@ hr {
   background: #272727;
 }
 
+#priemyshestva {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#priemyshestva img {
+  width: 64px;
+  
+}
+
 .top-nav-collapse {
   background: #fff;
   z-index: 999999;
@@ -930,6 +941,11 @@ iframe {
   overflow: hidden;
   padding: 120px 0 80px;
   padding-bottom: 5px;
+}
+
+#hero-area li {
+  display: flex;
+  align-items: center;
 }
 
 #hero-area h1 {
@@ -1721,4 +1737,42 @@ font-size: 30px;
 
 .hidden {
   display: none;
+}
+
+.geo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.geo__mark {
+
+}
+
+.geo__text {
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
+}
+
+.mail img {
+  margin-right: 5px;
+}
+
+.mail a {
+  font-size: 17px;
+}
+
+.phone {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.phone__img {
+
+}
+
+.phone__number {
+  font-size: 16px;
 }
