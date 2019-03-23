@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Arvo:700|Open+Sans:100,300,400,600");
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,200,300');
 
 html {
   overflow-x: hidden;
@@ -20,12 +20,12 @@ body {
   backface-visibility: hidden;
   overflow-x: hidden;
 }
-strong{
-color:#2a8aea;
-font-family: 'Open Sans', sans-serif;
+strong {
+  color:#2a8aea;
+  font-family: 'Open Sans', sans-serif;
 }
 
-}
+
 h1, h2, h3, h4 {
   font-size: 25px;
   color: #111;
@@ -33,7 +33,6 @@ h1, h2, h3, h4 {
   font-family: 'Open Sans', sans-serif;
 }
 
-}
 
 a {
   -webkit-transition: all 0.2s linear;
@@ -116,10 +115,11 @@ a:not([href]):not([tabindex]) {
 }
 
 .section-title {
+  font-family: roboto;
   font-size: 40px;
   color: #222222;
   display: inline-block;
-  font-weight: 700;
+  font-weight: 400;
   position: relative;
 }
 
@@ -813,7 +813,11 @@ iframe {
 }
 
 .navbar li.active a.nav-link {
-  color: #preset;
+  color: white;
+}
+
+.navbar li a.nav-link {
+  color: lightblue;
 }
 
 .dropdown-toggle::after {
@@ -916,7 +920,7 @@ iframe {
 #hero-area {
   background: url(//xn----7sbbaggflvddzks7f.xn--p1ai/wp-content/themes/blankslate/img/block1.jpg) no-repeat right bottom;
   height: 100%;
-  font-weight: 100;
+  /* font-weight: 100; */
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -924,23 +928,34 @@ iframe {
   background-color: #333;
   position: relative;
   overflow: hidden;
-  padding: 180px 0 80px;
+  padding: 120px 0 80px;
   padding-bottom: 5px;
-
 }
 
-#hero-area .h3{
-  font-weight: 100 !important;
+#hero-area h1 {
+  font-size: 2em;
+}
+
+#hero-area h2 {
+  font-size: 1.7em;
+}
+ #hero-area h1, #hero-area h2 {
+  font-family: roboto;
+  font-weight: 200 !important;
+}
+
+#hero-area h3{
+  font-family: roboto;
 }
 
 #hero-area ul li, ol li {
-  margin: 25px;
+  margin: 15px;
 }
 
 #hero-area .contents{
   color: #f7f7f7;
   text-align: left;
-  font-weight: 100;
+  font-weight: 200;
 }
 
 #hero-area .contents_2{
@@ -1557,7 +1572,7 @@ textarea {
   margin: 45px 0 0px;
   width: 100%;
   text-align: center;
-  margin-
+}
 
 #copyright p {
   line-height: 42px;
@@ -1654,6 +1669,56 @@ font-size: 30px;
   
 }
 
-#priemyshestva {
-margin-top: 150px;
+
+/****************************************************
+*** Раздел typeahead   ******************************
+****************************************************/
+.tt-query {
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+     -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+.tt-hint {
+  color: #999
+}
+
+.tt-menu {    /* used to be tt-dropdown-menu in older versions */
+  width: 300px;
+  margin-top: -14px;
+  padding: 0px 0;
+  z-index: 1200;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+  -webkit-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+     -moz-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+          box-shadow: 0 5px 10px rgba(0,0,0,.2);
+}
+
+.tt-suggestion {
+  padding: 3px 20px;
+  line-height: 24px;
+}
+
+.tt-suggestion.tt-cursor,.tt-suggestion:hover {
+  color: #fff;
+  background-color: #0097cf;
+
+}
+
+.tt-suggestion p {
+  margin: 0;
+}
+
+.form-group .twitter-typeahead {
+  width: 100%;
+  text-align: left;
+}
+
+.hidden {
+  display: none;
 }
