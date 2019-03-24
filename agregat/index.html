@@ -31,6 +31,7 @@
   <link rel="stylesheet" href="assets/css/responsive.css">
 
   <script src="assets/js/jquery-min.js"></script>
+  <script src="assets/js/handlebars-v4.1.1.js"></script>
 
 </head>
 
@@ -117,7 +118,7 @@
                   <div class="form-group " id='default-suggestions'>
                     <div class="title" style="color:lightgray; padding-bottom:1em;">запросить предложение</div>
 
-                    <input type="email" class="form-control" id="input_contact" aria-describedby="phoneHelp"
+                    <input type="tel" class="form-control" id="input_contact"
                       placeholder="ваш телефон или email"
                       onchange="$('#btnSend').addClass('btn-primary');$('#btnSend').removeClass('btn-outline-primary');">
                     <input class="typeahead form-control" type="text" placeholder="укажите модель" id="select">
@@ -221,109 +222,156 @@
   <!-- Header Area wrapper End -->
 
 
-  <!-- Services Section Start -->
+  <!-- Каталлог движков -->
   <section id="services" class="section-padding">
     <div class="container text-center">
       <div class="section-header text-center">
         <h1 class="section-title ">Двигатели КамАЗ</h1>
         <div class="shape wow fadeInDown"></div>
       </div>
-      <div class="row">
+      <div class="row" id="models_container">
         <!-- Services item -->
-        <div class="engine col-md-6 col-lg-4 col-xs-12">
-          <a href="" class="nal-link" data-toggle="modal" data-target="#engineModal1">
-            <div class="image">
-              <img src="https://xn----7sbbaggflvddzks7f.xn--p1ai/wp-content/uploads/2017/07/eng2.jpg" alt=""
-                class="img-thumbnail" />
-              <h1> Двигатель КамАЗ 74039.10-400</h1>
-            </div>
-          </a>
-        </div>
-        <!-- Services item -->
-        <div class="engine col-md-6 col-lg-4 col-xs-12">
-          <a href="" class="nal-link" data-toggle="modal" data-target="#engineModal2">
-            <div class="image">
-              <img src="https://xn----7sbbaggflvddzks7f.xn--p1ai/wp-content/uploads/2017/07/eng2.jpg" alt=""
-                class="img-thumbnail" />
-              <h1> Двигатель КамАЗ 74039.10-400 <br>390 000 руб.</h1>
-            </div>
-          </a>
-        </div>
-        <!-- Services item -->
-        <div class="engine col-md-6 col-lg-4 col-xs-12">
-          <a href="" class="nal-link" data-toggle="modal" data-target="#engineModal3">
-            <div class="image">
-              <img src="https://xn----7sbbaggflvddzks7f.xn--p1ai/wp-content/uploads/2017/07/eng2.jpg" alt=""
-                class="img-thumbnail" />
-              <h1> Двигатель КамАЗ 74039.10-400<br>430040</h1>
-            </div>
-          </a>
-        </div>
-        <!-- Services item -->
-        <div class="engine col-md-6 col-lg-4 col-xs-12">
-          <a href="" class="nal-link" data-toggle="modal" data-target="#engineModal4">
-            <div class="image">
-              <img src="https://xn----7sbbaggflvddzks7f.xn--p1ai/wp-content/uploads/2017/07/eng2.jpg" alt=""
-                class="img-thumbnail" />
-              <h1> Двигатель КамАЗ 74039.10-400 <br>390 000 руб.</h1>
-            </div>
-          </a>
-        </div>
-        <!-- Services item -->
-        <div class="engine col-md-6 col-lg-4 col-xs-12">
-          <a href="" class="nal-link" data-toggle="modal" data-target="#engineModal5">
-            <div class="image">
-              <img src="https://xn----7sbbaggflvddzks7f.xn--p1ai/wp-content/uploads/2017/07/eng2.jpg" alt=""
-                class="img-thumbnail" />
-              <h1> Двигатель КамАЗ 74039.10-400 <br>390 000 руб.</h1>
-            </div>
-          </a>
-        </div>
-        <!-- Services item -->
-        <div class="engine col-md-6 col-lg-4 col-xs-12">
-          <a href="" class="nal-link" data-toggle="modal" data-target="#engineModal6">
-            <div class="image">
-              <img src="https://xn----7sbbaggflvddzks7f.xn--p1ai/wp-content/uploads/2017/07/eng2.jpg" alt=""
-                class="img-thumbnail" />
-              <h1> Двигатель КамАЗ 74039.10-400 <br>390 000 руб.</h1>
-            </div>
-          </a>
-        </div>
-        <!--  Services item -->
-        <div class="engine col-md-6 col-lg-4 col-xs-12">
-          <a href="" class="nal-link" data-toggle="modal" data-target="#engineModal7">
-            <div class="image">
-              <img src="https://xn----7sbbaggflvddzks7f.xn--p1ai/wp-content/uploads/2017/07/eng2.jpg" alt=""
-                class="img-thumbnail" />
-              <h1> Двигатель КамАЗ 74039.10-400 <br>390 000 руб.</h1>
-            </div>
-          </a>
-        </div>
-        <!-- Services item -->
-        <div class="engine col-md-6 col-lg-4 col-xs-12">
-          <a href="" class="nal-link" data-toggle="modal" data-target="#engineModal8">
-            <div class="image">
-              <img src="https://xn----7sbbaggflvddzks7f.xn--p1ai/wp-content/uploads/2017/07/eng2.jpg" alt=""
-                class="img-thumbnail" />
-              <h1> Двигатель КамАЗ 74039.10-400 <br>390 000 руб.</h1>
-            </div>
-          </a>
-        </div>
-        <!-- Services item -->
-        <div class="engine col-md-6 col-lg-4 col-xs-12">
-          <a href="" class="nal-link" data-toggle="modal" data-target="#engineModal9">
-            <div class="image">
-              <img src="https://xn----7sbbaggflvddzks7f.xn--p1ai/wp-content/uploads/2017/07/eng2.jpg" alt=""
-                class="img-thumbnail" />
-              <h1> Двигатель КамАЗ 74039.10-400 <br>390 000 руб.</h1>
-            </div>
-          </a>
-        </div>
+       
+
+
       </div>
     </div>
   </section>
 
-  <!-- Modal windows -->
+
+<script>
+  var mods;
+  $.getJSON("models.json", function(json) {
+      mods = json;
+      if(mods == null || mods.length == 0) return;
+      var source = document.getElementById("dvigatel-item").innerHTML;
+      var template = Handlebars.compile(source);
+
+      for (let index = 0; index < mods.length; index++) {
+        var rez1 = mods[index];
+        var html1 = template(rez1);
+        $("#models_container").append(html1);
+      }
+      
+      
+  });
+
+
+    function show_dvigatel_popup(id) {
+        var source = document.getElementById("dvigatel-popup-template").innerHTML;
+        var template = Handlebars.compile(source);
+        if(mods == null || mods.length == 0) return;
+
+        var rez = mods.find(x => x.id == id);
+        if (rez != null) {
+          var html = template(rez);
+          $("#popup_container").html("");
+          $("#popup_container").append(html);
+          $('#engineModal_one').modal('show');
+        }
+
+    }
+</script>
+
+
+<div id="popup_container"></div>
+  <!-- Modal windows -------------------------->
+  <script id="dvigatel-item" type="text/x-handlebars-template">
+    <div class="engine col-md-6 col-lg-4 col-xs-12">
+        <a href="javascript:" onclick="show_dvigatel_popup({{id}});" class="nal-link" data-toggle="modal">
+          <div class="image">
+            <img src="assets/img/dvigatels/{{img}}" alt="{{name}}"
+              class="img-thumbnail" />
+            <h1>{{name}}</h1>
+          </div>
+        </a>
+      </div>
+  </script>
+
+  <!-- Modal windows -------------------------->
+  <script id="dvigatel-popup-template" type="text/x-handlebars-template">
+  
+    <div class="modal" id="engineModal_one" tabindex="-1" role="dialog" aria-labelledby="engineModal" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="vertical-alignment-helper">
+          <div class="modal-dialog vertical-align-center">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title">{{name}}</h4>
+                <button class="close" type="button" data-dismiss="modal" aria-label="close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="container">
+                  <div class="row">
+    
+                    <div id="photoDescription" class="col">
+                      <img src='{{img}}' alt=""
+                        class="img-thumbnail" />
+                    </div>
+    
+                    <div id="description" class="col">
+                      <h2>{{name}}</h2>
+                      <table>
+                        <tr>
+                          <td>
+                            <p>Мощность двигателя:</p>
+                          </td>
+                          <td>{{power}}</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <p>Экологический класс:</p>
+                          </td>
+                          <td>{{eco}}</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <p>Топливная аппаратура:</p>
+                          </td>
+                          <td>{{toplivo}}</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <p>Турбокомпрессор:</p>
+                          </td>
+                          <td>{{turbo}}</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <p>Применяемость с КПП:</p>
+                          </td>
+                          <td>{{kpp}}</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <p>Привод вентилятора:</p>
+                          </td>
+                          <td>{{ventilator}}</td>
+                        </tr>
+                        <tr>Цена:</tr>
+                        <tr>{{price}}</tr>-
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+  </script>
+
+
+
+
+
+
   <div class="modal" id="engineModal1" tabindex="-1" role="dialog" aria-labelledby="engineModal" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="vertical-alignment-helper">
@@ -395,786 +443,7 @@
       </div>
     </div>
   </div>
-  <div class="modal" id="engineModal2" tabindex="-1" role="dialog" aria-labelledby="engineModal" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="vertical-alignment-helper">
-        <div class="modal-dialog vertical-align-center">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h4 class="modal-title">Двигатель КАМАЗ 74039.10-400</h4>
-              <button class="close" type="button" data-dismiss="modal" aria-label="close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <div class="container">
-                <div class="row">
-                  <div id="photoDescription" class="col">
-                    <img src="https://xn----7sbbaggflvddzks7f.xn--p1ai/wp-content/uploads/2017/07/eng2.jpg" alt=""
-                      class="img-thumbnail" />
-                  </div>
 
-                  <div id="description" class="col">
-                    <h2>Двигатель КАМАЗ 74039.10-400</h2>
-                    <table>
-                      <tr>
-                        <td>
-                          <p>Мощьность двигателя:</p>
-                        </td>
-                        <td>200 л/c</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <p>Экологический класс:</p>
-                        </td>
-                        <td>ЕВРО-0</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <p>Топливная аппаратура:</p>
-                        </td>
-                        <td>ЯЗДА 334.1111005</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <p>Турбокомпрессор:</p>
-                        </td>
-                        <td>ТКР 7Н1</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <p>Применяемость с КПП:</p>
-                        </td>
-                        <td>14, 142, 15, 152</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <p>Привод вентилятора:</p>
-                        </td>
-                        <td>гидромуфта</td>
-                      </tr>
-                      <tr>Цена:</tr>
-                      <tr>317 000 руб.</tr>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="modal" id="engineModal3" tabindex="-1" role="dialog" aria-labelledby="engineModal" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="vertical-alignment-helper">
-        <div class="modal-dialog vertical-align-center">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h4 class="modal-title">Двигатель КАМАЗ 74039.10-400</h4>
-              <button class="close" type="button" data-dismiss="modal" aria-label="close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <div class="container">
-                <div class="row">
-
-                  <div id="photoDescription" class="col">
-                    <img src="https://xn----7sbbaggflvddzks7f.xn--p1ai/wp-content/uploads/2017/07/eng2.jpg" alt=""
-                      class="img-thumbnail" />
-                  </div>
-
-                  <div id="description" class="col">
-                    <h2>Двигатель КАМАЗ 74039.10-400</h2>
-                    <table>
-                      <tr>
-                        <td>
-                          <p>Мощьность двигателя:</p>
-                        </td>
-                        <td>200 л/c</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <p>Экологический класс:</p>
-                        </td>
-                        <td>ЕВРО-0</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <p>Топливная аппаратура:</p>
-                        </td>
-                        <td>ЯЗДА 334.1111005</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <p>Турбокомпрессор:</p>
-                        </td>
-                        <td>ТКР 7Н1</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <p>Применяемость с КПП:</p>
-                        </td>
-                        <td>14, 142, 15, 152</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <p>Привод вентилятора:</p>
-                        </td>
-                        <td>гидромуфта</td>
-                      </tr>
-                      <tr></tr>
-                      <tr></tr>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="modal" id="engineModal4" tabindex="-1" role="dialog" aria-labelledby="engineModal" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="vertical-alignment-helper">
-        <div class="modal-dialog vertical-align-center">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h4 class="modal-title">Двигатель КАМАЗ 74039.10-400</h4>
-              <button class="close" type="button" data-dismiss="modal" aria-label="close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <div class="container">
-                <div class="row">
-
-                  <div id="photoDescription" class="col">
-                    <img src="https://xn----7sbbaggflvddzks7f.xn--p1ai/wp-content/uploads/2017/07/eng2.jpg" alt=""
-                      class="img-thumbnail" />
-                  </div>
-
-                  <div id="description" class="col">
-                    <h2>Двигатель КАМАЗ 74039.10-400</h2>
-                    <table>
-                      <tr>
-                        <td>
-                          <p>Мощьность двигателя:</p>
-                        </td>
-                        <td>200 л/c</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <p>Экологический класс:</p>
-                        </td>
-                        <td>ЕВРО-0</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <p>Топливная аппаратура:</p>
-                        </td>
-                        <td>ЯЗДА 334.1111005</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <p>Турбокомпрессор:</p>
-                        </td>
-                        <td>ТКР 7Н1</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <p>Применяемость с КПП:</p>
-                        </td>
-                        <td>14, 142, 15, 152</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <p>Привод вентилятора:</p>
-                        </td>
-                        <td>гидромуфта</td>
-                      </tr>
-                      <tr></tr>
-                      <tr></tr>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="modal" id="engineModal5" tabindex="-1" role="dialog" aria-labelledby="engineModal" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="vertical-alignment-helper">
-        <div class="modal-dialog vertical-align-center">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h4 class="modal-title">Двигатель КАМАЗ 74039.10-400</h4>
-              <button class="close" type="button" data-dismiss="modal" aria-label="close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <div class="container">
-                <div class="row">
-
-                  <div id="photoDescription" class="col">
-                    <img src="https://xn----7sbbaggflvddzks7f.xn--p1ai/wp-content/uploads/2017/07/eng2.jpg" alt=""
-                      class="img-thumbnail" />
-                  </div>
-
-                  <div id="description" class="col">
-                    <h2>Двигатель КАМАЗ 74039.10-400</h2>
-                    <table>
-                      <tr>
-                        <td>
-                          <p>Мощьность двигателя:</p>
-                        </td>
-                        <td>200 л/c</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <p>Экологический класс:</p>
-                        </td>
-                        <td>ЕВРО-0</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <p>Топливная аппаратура:</p>
-                        </td>
-                        <td>ЯЗДА 334.1111005</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <p>Турбокомпрессор:</p>
-                        </td>
-                        <td>ТКР 7Н1</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <p>Применяемость с КПП:</p>
-                        </td>
-                        <td>14, 142, 15, 152</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <p>Привод вентилятора:</p>
-                        </td>
-                        <td>гидромуфта</td>
-                      </tr>
-                      <tr></tr>
-                      <tr></tr>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="modal" id="engineModal6" tabindex="-1" role="dialog" aria-labelledby="engineModal" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="vertical-alignment-helper">
-        <div class="modal-dialog vertical-align-center">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h4 class="modal-title">Двигатель КАМАЗ 74039.10-400</h4>
-              <button class="close" type="button" data-dismiss="modal" aria-label="close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <div class="container">
-                <div class="row">
-
-                  <div id="photoDescription" class="col">
-                    <img src="https://xn----7sbbaggflvddzks7f.xn--p1ai/wp-content/uploads/2017/07/eng2.jpg" alt=""
-                      class="img-thumbnail" />
-                  </div>
-
-                  <div id="description" class="col">
-                    <h2>Двигатель КАМАЗ 74039.10-400</h2>
-                    <table>
-                      <tr>
-                        <td>
-                          <p>Мощьность двигателя:</p>
-                        </td>
-                        <td>200 л/c</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <p>Экологический класс:</p>
-                        </td>
-                        <td>ЕВРО-0</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <p>Топливная аппаратура:</p>
-                        </td>
-                        <td>ЯЗДА 334.1111005</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <p>Турбокомпрессор:</p>
-                        </td>
-                        <td>ТКР 7Н1</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <p>Применяемость с КПП:</p>
-                        </td>
-                        <td>14, 142, 15, 152</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <p>Привод вентилятора:</p>
-                        </td>
-                        <td>гидромуфта</td>
-                      </tr>
-                      <tr></tr>
-                      <tr></tr>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="modal" id="engineModal7" tabindex="-1" role="dialog" aria-labelledby="engineModal" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="vertical-alignment-helper">
-        <div class="modal-dialog vertical-align-center">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h4 class="modal-title">Двигатель КАМАЗ 74039.10-400</h4>
-              <button class="close" type="button" data-dismiss="modal" aria-label="close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <div class="container">
-                <div class="row">
-
-                  <div id="photoDescription" class="col">
-                    <img src="https://xn----7sbbaggflvddzks7f.xn--p1ai/wp-content/uploads/2017/07/eng2.jpg" alt=""
-                      class="img-thumbnail" />
-                  </div>
-
-                  <div id="description" class="col">
-                    <h2>Двигатель КАМАЗ 74039.10-400</h2>
-                    <table>
-                      <tr>
-                        <td>
-                          <p>Мощьность двигателя:</p>
-                        </td>
-                        <td>200 л/c</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <p>Экологический класс:</p>
-                        </td>
-                        <td>ЕВРО-0</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <p>Топливная аппаратура:</p>
-                        </td>
-                        <td>ЯЗДА 334.1111005</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <p>Турбокомпрессор:</p>
-                        </td>
-                        <td>ТКР 7Н1</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <p>Применяемость с КПП:</p>
-                        </td>
-                        <td>14, 142, 15, 152</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <p>Привод вентилятора:</p>
-                        </td>
-                        <td>гидромуфта</td>
-                      </tr>
-                      <tr></tr>
-                      <tr></tr>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="modal" id="engineModal8" tabindex="-1" role="dialog" aria-labelledby="engineModal" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="vertical-alignment-helper">
-        <div class="modal-dialog vertical-align-center">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h4 class="modal-title">Двигатель КАМАЗ 74039.10-400</h4>
-              <button class="close" type="button" data-dismiss="modal" aria-label="close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <div class="container">
-                <div class="row">
-
-                  <div id="photoDescription" class="col">
-                    <img src="https://xn----7sbbaggflvddzks7f.xn--p1ai/wp-content/uploads/2017/07/eng2.jpg" alt=""
-                      class="img-thumbnail" />
-                  </div>
-
-                  <div id="description" class="col">
-                    <h2>Двигатель КАМАЗ 74039.10-400</h2>
-                    <table>
-                      <tr>
-                        <td>
-                          <p>Мощьность двигателя:</p>
-                        </td>
-                        <td>200 л/c</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <p>Экологический класс:</p>
-                        </td>
-                        <td>ЕВРО-0</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <p>Топливная аппаратура:</p>
-                        </td>
-                        <td>ЯЗДА 334.1111005</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <p>Турбокомпрессор:</p>
-                        </td>
-                        <td>ТКР 7Н1</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <p>Применяемость с КПП:</p>
-                        </td>
-                        <td>14, 142, 15, 152</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <p>Привод вентилятора:</p>
-                        </td>
-                        <td>гидромуфта</td>
-                      </tr>
-                      <tr></tr>
-                      <tr></tr>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="modal" id="engineModal9" tabindex="-1" role="dialog" aria-labelledby="engineModal" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="vertical-alignment-helper">
-        <div class="modal-dialog vertical-align-center">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h4 class="modal-title">Двигатель КАМАЗ 74039.10-400</h4>
-              <button class="close" type="button" data-dismiss="modal" aria-label="close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <div class="container">
-                <div class="row">
-
-                  <div id="photoDescription" class="col">
-                    <img src="https://xn----7sbbaggflvddzks7f.xn--p1ai/wp-content/uploads/2017/07/eng2.jpg" alt=""
-                      class="img-thumbnail" />
-                  </div>
-
-                  <div id="description" class="col">
-                    <h2>Двигатель КАМАЗ 74039.10-400</h2>
-                    <table>
-                      <tr>
-                        <td>
-                          <p>Мощьность двигателя:</p>
-                        </td>
-                        <td>200 л/c</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <p>Экологический класс:</p>
-                        </td>
-                        <td>ЕВРО-0</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <p>Топливная аппаратура:</p>
-                        </td>
-                        <td>ЯЗДА 334.1111005</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <p>Турбокомпрессор:</p>
-                        </td>
-                        <td>ТКР 7Н1</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <p>Применяемость с КПП:</p>
-                        </td>
-                        <td>14, 142, 15, 152</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <p>Привод вентилятора:</p>
-                        </td>
-                        <td>гидромуфта</td>
-                      </tr>
-                      <tr></tr>
-                      <tr></tr>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="modal" id="engineModal10" tabindex="-1" role="dialog" aria-labelledby="engineModal" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="vertical-alignment-helper">
-        <div class="modal-dialog vertical-align-center">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h4 class="modal-title">Двигатель КАМАЗ 74039.10-400</h4>
-              <button class="close" type="button" data-dismiss="modal" aria-label="close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <div class="container">
-                <div class="row">
-
-                  <div id="photoDescription" class="col">
-                    <img src="https://xn----7sbbaggflvddzks7f.xn--p1ai/wp-content/uploads/2017/07/eng2.jpg" alt=""
-                      class="img-thumbnail" />
-                  </div>
-
-                  <div id="description" class="col">
-                    <h2>Двигатель КАМАЗ 74039.10-400</h2>
-                    <table>
-                      <tr>
-                        <td>
-                          <p>Мощьность двигателя:</p>
-                        </td>
-                        <td>200 л/c</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <p>Экологический класс:</p>
-                        </td>
-                        <td>ЕВРО-0</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <p>Топливная аппаратура:</p>
-                        </td>
-                        <td>ЯЗДА 334.1111005</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <p>Турбокомпрессор:</p>
-                        </td>
-                        <td>ТКР 7Н1</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <p>Применяемость с КПП:</p>
-                        </td>
-                        <td>14, 142, 15, 152</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <p>Привод вентилятора:</p>
-                        </td>
-                        <td>гидромуфта</td>
-                      </tr>
-                      <tr></tr>
-                      <tr></tr>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="modal" id="engineModal11" tabindex="-1" role="dialog" aria-labelledby="engineModal" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="vertical-alignment-helper">
-        <div class="modal-dialog vertical-align-center">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h4 class="modal-title">Двигатель КАМАЗ 74039.10-400</h4>
-              <button class="close" type="button" data-dismiss="modal" aria-label="close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <div class="container">
-                <div class="row">
-
-                  <div id="photoDescription" class="col">
-                    <img src="https://xn----7sbbaggflvddzks7f.xn--p1ai/wp-content/uploads/2017/07/eng2.jpg" alt=""
-                      class="img-thumbnail" />
-                  </div>
-
-                  <div id="description" class="col">
-                    <h2>Двигатель КАМАЗ 74039.10-400</h2>
-                    <table>
-                      <tr>
-                        <td>
-                          <p>Мощьность двигателя:</p>
-                        </td>
-                        <td>200 л/c</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <p>Экологический класс:</p>
-                        </td>
-                        <td>ЕВРО-0</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <p>Топливная аппаратура:</p>
-                        </td>
-                        <td>ЯЗДА 334.1111005</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <p>Турбокомпрессор:</p>
-                        </td>
-                        <td>ТКР 7Н1</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <p>Применяемость с КПП:</p>
-                        </td>
-                        <td>14, 142, 15, 152</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <p>Привод вентилятора:</p>
-                        </td>
-                        <td>гидромуфта</td>
-                      </tr>
-                      <tr></tr>
-                      <tr></tr>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="modal" id="engineModal12" tabindex="-1" role="dialog" aria-labelledby="engineModal" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="vertical-alignment-helper">
-        <div class="modal-dialog vertical-align-center">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h4 class="modal-title">Двигатель КАМАЗ 74039.10-400</h4>
-              <button class="close" type="button" data-dismiss="modal" aria-label="close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <div class="container">
-                <div class="row">
-
-                  <div id="photoDescription" class="col">
-                    <img src="https://xn----7sbbaggflvddzks7f.xn--p1ai/wp-content/uploads/2017/07/eng2.jpg" alt=""
-                      class="img-thumbnail" />
-                  </div>
-
-                  <div id="description" class="col">
-                    <h2>Двигатель КАМАЗ 74039.10-400</h2>
-                    <table>
-                      <tr>
-                        <td>
-                          <p>Мощьность двигателя:</p>
-                        </td>
-                        <td>200 л/c</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <p>Экологический класс:</p>
-                        </td>
-                        <td>ЕВРО-0</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <p>Топливная аппаратура:</p>
-                        </td>
-                        <td>ЯЗДА 334.1111005</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <p>Турбокомпрессор:</p>
-                        </td>
-                        <td>ТКР 7Н1</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <p>Применяемость с КПП:</p>
-                        </td>
-                        <td>14, 142, 15, 152</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <p>Привод вентилятора:</p>
-                        </td>
-                        <td>гидромуфта</td>
-                      </tr>
-                      <tr></tr>
-                      <tr></tr>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <div class="modal" id="license" tabindex="-1" role="dialog" aria-labelledby="license" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
@@ -1567,11 +836,11 @@
                   <p>© 2017 ООО ТД «Agregat», Все права защищены</p>
                 </li>
                 <li class="list-inline-item">
-                  <p><a href="#" class="nal-link" data-toggle="modal" data-target="#policy">Лицензионное соглашение</a>
+                  <p><a href="javascript:" class="nal-link" data-toggle="modal" data-target="#policy">Лицензионное соглашение</a>
                   </p>
                 </li>
                 <li class="list-inline-item">
-                  <p><a href="#" class="nal-link" data-toggle="modal" data-target="#license">Политика
+                  <p><a href="javascript:" class="nal-link" data-toggle="modal" data-target="#license">Политика
                       конфиденциальности</a></p>
                 </li>
               </ul>
