@@ -98,11 +98,16 @@ a:not([href]):not([tabindex]) {
 .image img {
   width:350px;
   height: 180px;
+  padding: 0; 
 }
 
 .image {
   
   
+}
+
+#models_container {
+  justify-content: center;
 }
 
 .image::after { 

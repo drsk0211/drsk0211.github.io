@@ -247,8 +247,9 @@
       var source = document.getElementById("dvigatel-item").innerHTML;
       var template = Handlebars.compile(source);
 
-      for (let index = 0; index < mods.length; index++) {
+      for (let index = 0; index < mods.length; index++) {       
         var rez1 = mods[index];
+        if(rez1.id < 0) continue;
         var html1 = template(rez1);
         $("#models_container").append(html1);
       }
