@@ -654,7 +654,8 @@ hr {
 
 .about-area .content {
   margin-top: 15px;
-  text-align: center;
+  /* text-align: center; */
+  line-height: 2em;
 }
 
 .about-area .content p {
@@ -674,15 +675,20 @@ hr {
   background: #272727;
 }
 
-#priemyshestva {
+.priemyshestva {
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-weight: 300;
+  font-family: roboto;
+  line-height: 1.3em;
+  font-size: 1.5em;
 }
 
-#priemyshestva img {
+.priemyshestva img {
   width: 64px;
-  
+  opacity: 0.5;
+  padding-bottom: 15px;
 }
 
 .top-nav-collapse {
@@ -1247,10 +1253,12 @@ iframe {
 }
 
 .testimonial-item .img-thumb img {
-  border-radius: 50%;
+  border-radius: 5%;
   display: inline-block;
   width: inherit;
   padding: 7px;
+  max-width: 340px;
+  max-height: 200px;
 }
 
 .testimonial-item .content {
@@ -1267,7 +1275,7 @@ iframe {
 }
 
 .testimonial-item .info h2 {
-  font-size: 16px;
+  font-size: 1.3em;
   font-weight: 700;
   text-transform: uppercase;
   line-height: 30px;
@@ -1504,8 +1512,9 @@ textarea {
 /* Footer Area Start */
 .footer-area {
   position: relative;
-  padding: 150px 0px 0px;
-  background: #fff;
+  padding-bottom: 100px;
+  /* padding: 0px 0px 0px; */
+  /* background: #fff; */
 }
 
 .footer-area .footer-titel {
@@ -1581,6 +1590,11 @@ textarea {
   background: transparent;
   color: #F63854;
 }
+.footer-area .icon-img{
+  opacity: 0.5;
+  padding-right: 10px;
+}
+
 
 #copyright .copyright-content {
   border-top: 1px solid #d5d4e9;
@@ -1596,6 +1610,7 @@ textarea {
   text-align: center;
   margin: 0;
 }
+
 
 #copyright p a {
   color: #F63854;
@@ -1752,7 +1767,8 @@ font-size: 30px;
 .geo__text {
   display: flex;
   flex-direction: column;
-  font-size: 15px;
+  font-size: 0.9em;
+  
 }
 
 .mail img {
@@ -1769,10 +1785,6 @@ font-size: 30px;
   align-items: center;
 }
 
-.phone__img {
-
-}
-
 .phone__number {
-  font-size: 16px;
+  font-size: 1.1em;
 }

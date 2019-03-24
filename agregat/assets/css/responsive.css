@@ -204,4 +204,17 @@
   .cta-text {
     margin-bottom: 30px;
   }
+  #hero-area li {
+    font-size: 0.8em;
+  }
+  
+  /* #hero-area h1 {
+    font-size: 1.5em;
+  }
+  
+  #hero-area h2 {
+    font-size: 1.3em;
+  } */
+
+
 }
