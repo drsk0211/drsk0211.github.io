@@ -91,9 +91,10 @@
               <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
                 <div class="contents">
                   <ul>
-                    <li>
-                      <h1 class="title text-left">Двигатели КамАЗ в наличии</h1><br>
-                      <h2 class="title">от официального дилера</h1>
+                    <li style="margin-bottom:0px;"> 
+                      <h1 class="title text-left w-100">Двигатели КамАЗ в наличии</h1> </li>
+                    <li style="margin-top:0px;">
+                      <h2 class="title w-100">от официального дилера</h1>
                     </li>
                     <li>&nbsp;</li>
                     <li><img src="assets/img/feature/mark.png" width="21px" alt=""> 20 моделей в наличии в Москве
@@ -116,7 +117,7 @@
                   <div class="form-group " id='default-suggestions'>
                     <div class="title" style="color:lightgray; padding-bottom:1em;">запросить предложение</div>
 
-                    <input type="email" class="form-control" id="inputEmail1" aria-describedby="emailHelp"
+                    <input type="email" class="form-control" id="input_contact" aria-describedby="emailHelp"
                       placeholder="ваш email или телефон"
                       onchange="$('#btnSend').addClass('btn-primary');$('#btnSend').removeClass('btn-outline-primary');">
                     <input class="typeahead form-control" type="text" placeholder="укажите модель" id="select">
@@ -127,7 +128,7 @@
                     <textarea id="request_comment" class="form-control hidden" placeholder="комментарий"
                       rows="3"></textarea>
                   </div>
-                  <input id="btnSend" class="btn btn-sm btn-outline-primary" type="button" value="отправить">
+                  <input id="btnSend" onclick="send_request();" class="btn btn-sm btn-outline-primary" type="button" value="отправить">
 
                   <!-- script для typeahaed  -->
                   <script>
@@ -171,6 +172,40 @@
 
                     });
 
+
+                    // --------- ОТСЫЛКА ФОРМЫ  -----------------------
+
+                    function send_request(){
+                        // соберем данные и присвоим переменным.
+                        var contact = $("#input_contact").val(); // контакты
+                        var good = $("#select").val(); // товар
+                        var comment = $("#request_comment").val();
+
+                        // проверим заполнение 
+                        if(contact === "" || contact === null){
+                          alert("Укажите, пожалуйста, ваши контактные данные.");
+                          return; // закончим
+                        }
+                        
+                        // присвоим значения input-ам  google -формы
+                        $("[name='entry.1519454606']").val(contact); // input google формы, там id нет, потому ищем по имени. и присваиваем
+                        $("[name='entry.191261818']").val(good); 
+                        $("[name='entry.1977316514']").val(comment); 
+                        $("[name='entry.1126040740']").val(new Date().toJSON()); 
+
+                        // берем форму по Id - и командой Submit - отправляем ее на сервер
+                        document.getElementById("mG61Hd").submit();
+
+                        alert("Заявка отправлена. Спасибо. Мы свяжемся с Вами в ближайшее время.");
+                        
+                        // очищу input
+                        $("#input_contact").val(""); // контакты
+                        $("#select").val(""); // товар
+                        $("#request_comment").val("");
+                    }
+
+                    // нужна глобальная переменная, чтобы не перенаправлял нас на сайт google - после отправки заявки
+                    var submitted;
                   </script>
 
                 </form>
@@ -1429,17 +1464,17 @@
         <div class="shape wow fadeInDown"></div>
         <div class="about-area">
           <div class="row">
-            <div class="col-lg-3 col-md-4 col-xs-12" id="priemyshestva"><img src="assets/img/feature/customer.png">4
-              тысячи
-              довольных клиентов</div>
-            <div class="col-lg-3 col-md-4 col-xs-12" id="priemyshestva"><img
-                src="assets/img/feature/percent_big.png">Отправка
-              по 10% авансу</div>
-            <div class="col-lg-3 col-md-4 col-xs-12" id="priemyshestva"><img
-                src="assets/img/feature/warranty.png"></i>Гарантия
-              на все агрегаты</div>
-            <div class="col-lg-3 col-md-4 col-xs-12" id="priemyshestva"><img
-                src="assets/img//feature/delivery.png">Доставка по всей России</div>
+              <div class="col-lg-3 col-md-4 col-xs-12" id="priemyshestva"><img src="assets/img/feature/warranty.png"></i>Гарантия
+                на все агрегаты</div>
+              <div class="col-lg-3 col-md-4 col-xs-12" id="priemyshestva"><img src="assets/img/feature/customer.png">
+                4 тысячи
+                довольных клиентов</div>
+              <div class="col-lg-3 col-md-4 col-xs-12" id="priemyshestva"><img src="assets/img//feature/delivery.png">Доставка по всей
+                России</div>
+              <div class="col-lg-3 col-md-4 col-xs-12" id="priemyshestva"><img src="assets/img/feature/percent_big.png">Отправим
+                по 10% авансу</div>
+        
+           
           </div>
         </div>
       </div>
@@ -1447,25 +1482,16 @@
         <div class="col-lg-8">
           <div class="about-area">
             <div class="site-heading text-center">
-              <h2 class="section-title">О компании</h2>
+              <!-- <h2 class="section-title">О компании</h2> -->
             </div>
             <div class="content">
               <div class="blog-lg-area-left">
-                <p style="text-align: justify;">ООО «ЧелныАгрегатЦентр» более восьми лет специализируется на оптовой
+                <p style="text-align: justify;font-size: 1.0em;">ООО «ЧелныАгрегатЦентр» более десяти лет специализируется на оптовой
                   торговле запасными частями и комплектующими для автомобилей КАМАЗ, а также поставке запчастей в
                   магазины и автотранспортные предприятия.</p>
-                <p style="text-align: justify;">Мы работаем не только с крупными заказами от сервисов или ремонтных
-                  баз, но и с мелкими заявками, которые насчитывают несколько позиций для ремонта одного автомобиля
-                  или автомобильного узла (двигателя, подвески, коробки передач и так далее).</p>
-                <p style="text-align: justify;">За годы своей работы наши специалисты овладели всеми тонкостями и
-                  нюансами ведения оптовой торговли запасными частями и комплектующими. Мы в полном объеме владеем
-                  всей необходимой информацией, в том числе о качестве и производителе реализуемых запчастей,
-                  возможности использования «неродных» деталей и узлов, а также данными о том, какие детали можно
-                  подобрать к моделям, уже снятым с производства.</p>
-                <p style="text-align: justify;">Помимо всего прочего, менеджеры нашей компании всегда помогут вам
-                  укомплектовать ваш заказ даже в том случае, если вы не знаете артикулов запасных частей или
-                  каталожных номеров. Для этого у нас есть полная база заводских спецификаций для каждой модели
-                  автомобиля КАМАЗ.</p>
+                <p style="text-align: justify;font-size: 1.0em;">За годы своей работы наши специалисты овладели всеми тонкостями и
+                  нюансами оптовой торговли запасными частями и комплектующими. </p>
+                
               </div>
             </div>
           </div>
@@ -1523,8 +1549,8 @@
                 <img src="assets/img/feature/phone.png" alt="">
               </div>
               <div class="phone__number">
-                +7 (8552) 44 37 13<br>
-                +7 963 123 0381
+                +7 (8552) 44-37-13<br>
+                +7 (938) 358-30-07
               </div>
             </div>
           </div>
@@ -1561,9 +1587,9 @@
   </a>
 
   <!-- Preloader -->
-  <div id="preloader">
+  <!-- <div id="preloader">
     <div class="loader" id="loader-1"></div>
-  </div>
+  </div> -->
   <!-- End Preloader -->
 
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -1573,12 +1599,228 @@
   <script src="assets/js/owl.carousel.min.js"></script>
   <script src="assets/js/wow.js"></script>
   <script src="assets/js/jquery.nav.js"></script>
-  <script src="assets/js/scrolling-nav.js"></script>ё
+  <script src="assets/js/scrolling-nav.js"></script>
   <script src="assets/js/jquery.easing.min.js"></script>
   <script src="assets/js/jquery.counterup.min.js"></script>
   <script src="assets/js/waypoints.min.js"></script>
   <script src="assets/js/main.js"></script>
   <script src="assets/js/typeahead.bundle.min.js"></script>
+
+
+
+  <!-- невидимая google-форма для заявки -->
+  <div class="hidden">
+
+      <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted)
+      {window.location.reload();}"> </iframe>
+
+      <form action="https://docs.google.com/forms/d/e/1FAIpQLSeApDUv5yqExW2QvXXHUb_f9l4uqxRKzEC5ImPI4E34amM52Q/formResponse"
+         method="POST" id="mG61Hd" target="hidden_iframe" onsubmit="submitted=true;">
+        <div class="freebirdFormviewerViewFormCard exportFormCard">
+          <div class="freebirdFormviewerViewAccentBanner freebirdAccentBackground"></div>
+          <div class="freebirdFormviewerViewFormContent">
+            <div class="freebirdFormviewerViewNoPadding">
+              <div class="freebirdFormviewerViewHeaderHeader exportHeader">
+                <div class="freebirdFormviewerViewHeaderTitleRow">
+                  <div class="freebirdFormviewerViewHeaderTitle exportFormTitle freebirdCustomFont" dir="auto" role="heading"
+                    aria-level="1">Камаз.Запчасти.Заявка</div>
+                </div>
+                <div jsname="F0H8Yc" class="freebirdCommonViewSecurequizSecureQuizBannerContainer"></div>
+              </div>
+            </div>
+            <div class="freebirdFormviewerViewItemList" role="list">
+              <div class="freebirdFormviewerViewNumberedItemContainer">
+                <div role="listitem" class="freebirdFormviewerViewItemsItemItem freebirdFormviewerViewItemsTextTextItem"
+                  jsname="ibnC6b" jscontroller="rDGJeb" jsaction="sPvj8e:e4JwSe,Dlbleb;O22p3e:e4JwSe,F0zejc;"
+                  data-item-id="1804223789">
+                  <div class="freebirdFormviewerViewItemsItemItemHeader">
+                    <div class="freebirdFormviewerViewItemsItemItemTitleContainer">
+                      <div class="freebirdFormviewerViewItemsItemItemTitle exportItemTitle freebirdCustomFont" dir="auto"
+                        role="heading" aria-level="2" aria-describedby="i.desc.1804223789">Контакты</div>
+                      <div class="freebirdFormviewerViewItemsItemItemHelpText" id="i.desc.1804223789" dir="auto"></div>
+                    </div>
+                  </div>
+                  <div class="freebirdFormviewerViewItemsTextItemWrapper">
+                    <div
+                      class="quantumWizTextinputPaperinputEl freebirdFormviewerViewItemsTextShortText freebirdThemedInput modeLight"
+                      jscontroller="pxq3x" jsaction="clickonly:KjsqPd; focus:Jt1EX; blur:fpfTEe; input:Lg5SV;" jsshadow=""
+                      jsname="W85ice">
+                      <div class="quantumWizTextinputPaperinputMainContent exportContent">
+                        <div class="quantumWizTextinputPaperinputContentArea exportContentArea">
+                          <div class="quantumWizTextinputPaperinputInputArea"><input type="text"
+                              class="quantumWizTextinputPaperinputInput exportInput" jsname="YPqjbf" autocomplete="off"
+                              tabindex="0" aria-label="Контакты" aria-describedby="i.desc.1804223789 i.err.1804223789"
+                              name="entry.1519454606" value="" dir="auto" data-initial-dir="auto" data-initial-value=""
+                              aria-invalid="false">
+                            <div jsname="LwH6nd" class="quantumWizTextinputPaperinputPlaceholder exportLabel">Мой ответ</div>
+                          </div>
+                          <div class="quantumWizTextinputPaperinputUnderline exportUnderline"></div>
+                          <div jsname="XmnwAc"
+                            class="quantumWizTextinputPaperinputFocusUnderline exportFocusUnderline animationInitialized"
+                            style="transform-origin: 152.5px center;"></div>
+                        </div>
+                      </div>
+                      <div class="quantumWizTextinputPaperinputCounterErrorHolder">
+                        <div jsname="ty6ygf" class="quantumWizTextinputPaperinputHint exportHint"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="freebirdFormviewerViewItemsItemGradingGradingBox freebirdFormviewerViewItemsItemGradingFeedbackBox"
+                    jsname="R7fTud"></div>
+                  <div jsname="XbIQze" class="freebirdFormviewerViewItemsItemErrorMessage" id="i.err.1804223789" role="alert">
+                  </div>
+                </div>
+              </div>
+              <div class="freebirdFormviewerViewNumberedItemContainer">
+                <div role="listitem" class="freebirdFormviewerViewItemsItemItem freebirdFormviewerViewItemsTextTextItem"
+                  jsname="ibnC6b" jscontroller="rDGJeb" jsaction="sPvj8e:e4JwSe,Dlbleb;O22p3e:e4JwSe,F0zejc;"
+                  data-item-id="2086922311">
+                  <div class="freebirdFormviewerViewItemsItemItemHeader">
+                    <div class="freebirdFormviewerViewItemsItemItemTitleContainer">
+                      <div class="freebirdFormviewerViewItemsItemItemTitle exportItemTitle freebirdCustomFont" dir="auto"
+                        role="heading" aria-level="2" aria-describedby="i.desc.2086922311">Товар</div>
+                      <div class="freebirdFormviewerViewItemsItemItemHelpText" id="i.desc.2086922311" dir="auto"></div>
+                    </div>
+                  </div>
+                  <div class="freebirdFormviewerViewItemsTextItemWrapper">
+                    <div
+                      class="quantumWizTextinputPaperinputEl freebirdFormviewerViewItemsTextShortText freebirdThemedInput modeLight"
+                      jscontroller="pxq3x" jsaction="clickonly:KjsqPd; focus:Jt1EX; blur:fpfTEe; input:Lg5SV;" jsshadow=""
+                      jsname="W85ice">
+                      <div class="quantumWizTextinputPaperinputMainContent exportContent">
+                        <div class="quantumWizTextinputPaperinputContentArea exportContentArea">
+                          <div class="quantumWizTextinputPaperinputInputArea"><input type="text"
+                              class="quantumWizTextinputPaperinputInput exportInput" jsname="YPqjbf" autocomplete="off"
+                              tabindex="0" aria-label="Товар" aria-describedby="i.desc.2086922311 i.err.2086922311"
+                              name="entry.191261818" value="" dir="auto" data-initial-dir="auto" data-initial-value=""
+                              aria-invalid="false">
+                            <div jsname="LwH6nd" class="quantumWizTextinputPaperinputPlaceholder exportLabel">Мой ответ</div>
+                          </div>
+                          <div class="quantumWizTextinputPaperinputUnderline exportUnderline"></div>
+                          <div jsname="XmnwAc"
+                            class="quantumWizTextinputPaperinputFocusUnderline exportFocusUnderline animationInitialized"
+                            style="transform-origin: 103.5px center;"></div>
+                        </div>
+                      </div>
+                      <div class="quantumWizTextinputPaperinputCounterErrorHolder">
+                        <div jsname="ty6ygf" class="quantumWizTextinputPaperinputHint exportHint"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="freebirdFormviewerViewItemsItemGradingGradingBox freebirdFormviewerViewItemsItemGradingFeedbackBox"
+                    jsname="R7fTud"></div>
+                  <div jsname="XbIQze" class="freebirdFormviewerViewItemsItemErrorMessage" id="i.err.2086922311" role="alert">
+                  </div>
+                </div>
+              </div>
+              <div class="freebirdFormviewerViewNumberedItemContainer">
+                <div role="listitem" class="freebirdFormviewerViewItemsItemItem freebirdFormviewerViewItemsTextTextItem"
+                  jsname="ibnC6b" jscontroller="rDGJeb" jsaction="sPvj8e:e4JwSe,Dlbleb;O22p3e:e4JwSe,F0zejc;"
+                  data-item-id="640437418">
+                  <div class="freebirdFormviewerViewItemsItemItemHeader">
+                    <div class="freebirdFormviewerViewItemsItemItemTitleContainer">
+                      <div class="freebirdFormviewerViewItemsItemItemTitle exportItemTitle freebirdCustomFont" dir="auto"
+                        role="heading" aria-level="2" aria-describedby="i.desc.640437418">Комментарий</div>
+                      <div class="freebirdFormviewerViewItemsItemItemHelpText" id="i.desc.640437418" dir="auto"></div>
+                    </div>
+                  </div>
+                  <div
+                    class="quantumWizTextinputPapertextareaEl modeLight freebirdFormviewerViewItemsTextLongText freebirdThemedInput"
+                    jscontroller="pxq3x" jsaction="clickonly:KjsqPd; focus:Jt1EX; blur:fpfTEe; input:Lg5SV;" jsshadow=""
+                    jsname="W85ice">
+                    <div class="quantumWizTextinputPapertextareaMainContent exportContent">
+                      <div class="quantumWizTextinputPapertextareaPlaceholder exportLabel" jsname="LwH6nd">Мой ответ</div>
+                      <div class="quantumWizTextinputPapertextareaContentArea exportContentArea"><textarea
+                          class="quantumWizTextinputPapertextareaInput exportTextarea" jsname="YPqjbf" data-rows="1"
+                          tabindex="0" aria-label="Комментарий" jscontroller="gZjhIf"
+                          jsaction="input:Lg5SV;ti6hGc:XMgOHc;rcuQ6b:WYd;" name="entry.1977316514" dir="auto"
+                          data-initial-dir="auto" data-initial-value="" aria-describedby="i.desc.640437418 i.err.640437418"
+                          style="height: 24px;"></textarea></div>
+                      <div class="quantumWizTextinputPapertextareaUnderline exportUnderline"></div>
+                      <div jsname="XmnwAc" class="quantumWizTextinputPapertextareaFocusUnderline exportFocusUnderline"></div>
+                    </div>
+                    <div class="quantumWizTextinputPapertextareaCounterErrorHolder">
+                      <div jsname="ty6ygf" class="quantumWizTextinputPapertextareaHint exportHint"></div>
+                    </div>
+                  </div>
+                  <div
+                    class="freebirdFormviewerViewItemsItemGradingGradingBox freebirdFormviewerViewItemsItemGradingFeedbackBox"
+                    jsname="R7fTud"></div>
+                  <div jsname="XbIQze" class="freebirdFormviewerViewItemsItemErrorMessage" id="i.err.640437418" role="alert">
+                  </div>
+                </div>
+              </div>
+              <div class="freebirdFormviewerViewNumberedItemContainer">
+                <div role="listitem" class="freebirdFormviewerViewItemsItemItem freebirdFormviewerViewItemsTextTextItem"
+                  jsname="ibnC6b" jscontroller="rDGJeb" jsaction="sPvj8e:e4JwSe,Dlbleb;O22p3e:e4JwSe,F0zejc;"
+                  data-item-id="301332701">
+                  <div class="freebirdFormviewerViewItemsItemItemHeader">
+                    <div class="freebirdFormviewerViewItemsItemItemTitleContainer">
+                      <div class="freebirdFormviewerViewItemsItemItemTitle exportItemTitle freebirdCustomFont" dir="auto"
+                        role="heading" aria-level="2" aria-describedby="i.desc.301332701">Время</div>
+                      <div class="freebirdFormviewerViewItemsItemItemHelpText" id="i.desc.301332701" dir="auto"></div>
+                    </div>
+                  </div>
+                  <div class="freebirdFormviewerViewItemsTextItemWrapper">
+                    <div
+                      class="quantumWizTextinputPaperinputEl freebirdFormviewerViewItemsTextShortText freebirdThemedInput modeLight"
+                      jscontroller="pxq3x" jsaction="clickonly:KjsqPd; focus:Jt1EX; blur:fpfTEe; input:Lg5SV;" jsshadow=""
+                      jsname="W85ice">
+                      <div class="quantumWizTextinputPaperinputMainContent exportContent">
+                        <div class="quantumWizTextinputPaperinputContentArea exportContentArea">
+                          <div class="quantumWizTextinputPaperinputInputArea"><input type="text"
+                              class="quantumWizTextinputPaperinputInput exportInput" jsname="YPqjbf" autocomplete="off"
+                              tabindex="0" aria-label="Время" aria-describedby="i.desc.301332701 i.err.301332701"
+                              name="entry.1126040740" value="" dir="auto" data-initial-dir="auto" data-initial-value="">
+                            <div jsname="LwH6nd" class="quantumWizTextinputPaperinputPlaceholder exportLabel">Мой ответ</div>
+                          </div>
+                          <div class="quantumWizTextinputPaperinputUnderline exportUnderline"></div>
+                          <div jsname="XmnwAc" class="quantumWizTextinputPaperinputFocusUnderline exportFocusUnderline"></div>
+                        </div>
+                      </div>
+                      <div class="quantumWizTextinputPaperinputCounterErrorHolder">
+                        <div jsname="ty6ygf" class="quantumWizTextinputPaperinputHint exportHint"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="freebirdFormviewerViewItemsItemGradingGradingBox freebirdFormviewerViewItemsItemGradingFeedbackBox"
+                    jsname="R7fTud"></div>
+                  <div jsname="XbIQze" class="freebirdFormviewerViewItemsItemErrorMessage" id="i.err.301332701" role="alert">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="freebirdFormviewerViewNavigationNavControls" jscontroller="lSvzH"
+              jsaction="rcuQ6b:npT2md;JIbuQc:Gl574d(QR6bsb),V3upec(GeGHKb),HiUbje(M2UYVd),NPBnCf(OCpkoe);"
+              data-shuffle-seed="4565707331092832681" data-should-execute-invisible-captcha-challenge="false"
+              data-is-receipt-checked="false">
+              <div class="freebirdFormviewerViewNavigationButtonsAndProgress">
+                <div class="freebirdFormviewerViewNavigationButtons">
+                  <div role="button"
+                    class="quantumWizButtonEl quantumWizButtonPaperbuttonEl quantumWizButtonPaperbuttonFlat quantumWizButtonPaperbuttonDark quantumWizButtonPaperbutton2El2 freebirdFormviewerViewNavigationSubmitButton"
+                    jscontroller="VXdfxd"
+                    jsaction="click:cOuCgd; mousedown:UX7yZ; mouseup:lbsD7e; mouseenter:tfO1Yc; mouseleave:JywGue; focus:AHmuwe; blur:O22p3e; contextmenu:mg9Pef;touchstart:p6p2H; touchmove:FwuNnf; touchend:yfqBxc(preventMouseEvents=true|preventDefault=true); touchcancel:JMtRjd;"
+                    jsshadow="" jsname="M2UYVd" aria-disabled="false" tabindex="0">
+                    <div class="quantumWizButtonPaperbuttonRipple exportInk" jsname="ksKsZd"></div>
+                    <div class="quantumWizButtonPaperbuttonFocusOverlay exportOverlay"></div>
+                    <content class="quantumWizButtonPaperbuttonContent"><span
+                        class="quantumWizButtonPaperbuttonLabel exportLabel">Отправить</span></content>
+                  </div>
+                </div>
+              </div>
+              <div class="freebirdFormviewerViewNavigationPasswordWarning">Никогда не используйте формы Google для передачи
+                паролей.</div>
+            </div><input type="hidden" name="fvv" value="1"><input type="hidden" name="draftResponse" value="[null,null,&quot;4565707331092832681&quot;]
+      "><input type="hidden" name="pageHistory" value="0"><input type="hidden" name="fbzx" value="4565707331092832681">
+          </div>
+        </div>
+      </form>
+    
+
+  </div>
 
 
 </body>
