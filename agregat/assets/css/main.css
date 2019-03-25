@@ -1834,3 +1834,30 @@ font-size: 30px;
 .phone__number {
   font-size: 1.1em;
 }
+
+.characteristic__name {
+  display: table-cell;
+  padding: 10px;
+  font-size: 15px;
+}
+
+.charasteritstic__value {
+  display: table cell;
+  padding: 10px;
+  font-size: 15px;
+  text-align: left;
+}
+
+.characteristic__row {
+  display: table-row;
+}
+
+.characteristic__table {
+  display: table;
+  padding: 5px;
+}
+
+.services {
+  text-align: center;
+  padding-top: 25px;
+}
