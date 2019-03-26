@@ -1719,7 +1719,7 @@ font-size: 30px;
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
-  overflow-y: hidden !important;     
+     
 }
 
 #license{
@@ -1727,6 +1727,15 @@ font-size: 30px;
   left: 50%;
   top: 50%;
   transform: translate(-50%,-50%);
+  width: 66.6667%;
+}
+
+#engineModal_one{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  width: 50%;
 }
 
 #policy{
@@ -1734,6 +1743,17 @@ font-size: 30px;
   left: 50%;
   top: 50%;
   transform: translate(-50%,-50%);
+  width: 66.6667%;
+}
+
+.modal-dialog {
+    margin: 0px;
+    max-width: 100%;
+    width: 100%;
+}
+
+.vertical-alignment-helper {
+  width: 100%;
 }
 
 #profit {
@@ -1855,6 +1875,7 @@ font-size: 30px;
   font-size: 0.9em;
   text-align: left;
   font-weight: 400;
+  width: 600px;
 }
 
 .characteristic__row {
@@ -1874,4 +1895,8 @@ font-size: 30px;
 .services {
   text-align: center;
   padding-top: 25px;
+}
+
+.owl-nav {
+  hid
 }
