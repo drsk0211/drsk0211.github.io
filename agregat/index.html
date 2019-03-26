@@ -8,8 +8,8 @@
 
   <title>Двигатели КамАЗ в наличии от официального дилера с доставкой по России от 2 дней | Челныагрегатцентр, без
     предоплаты</title>
-    <meta name="Keywords" content="">
-    <meta name="description" content="Сайт об HTML и создании сайтов"> 
+  <meta name="Keywords" content="">
+  <meta name="description" content="Сайт об HTML и создании сайтов">
   <!--title icon-->
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <!--Avesome icons-->
@@ -47,7 +47,8 @@
         <nav class="navbar navbar-expand-lg bg-inverse fixed-top scrolling-navbar">
           <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
-            <a href="index.html" class="navbar-brand" style="display: contents;"><img src="assets/img/logo_7.png" style="max-width: 450px;"></a>
+            <a href="index.html" class="navbar-brand" style="display: contents;"><img src="assets/img/logo_7.png"
+                style="max-width: 450px;"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
               aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
               <i class="lni-menu"></i>
@@ -94,16 +95,20 @@
               <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
                 <div class="contents">
                   <ul>
-                    <li style="margin-bottom:0px;"> 
-                      <h1 class="title text-left w-100">Двигатели КамАЗ в наличии</h1> </li>
+                    <li style="margin-bottom:0px;">
+                      <h1 class="title text-left w-100">Двигатели КамАЗ в наличии</h1>
+                    </li>
                     <li style="margin-top:0px;">
                       <h2 class="title w-100">от официального дилера</h1>
                     </li>
                     <li>&nbsp;</li>
-                    <li><img src="assets/img/feature/mark.png" width="21px" alt=""> &nbsp;&nbsp;20 моделей в наличии в Москве
+                    <li><img src="assets/img/feature/mark.png" width="21px" alt=""> &nbsp;&nbsp;20 моделей в наличии в
+                      Москве
                       и Наб.Челнах</li>
-                    <li><img src="assets/img/feature/mark.png" width="21px" alt=""></i> &nbsp;&nbsp;10 лет на рынке </li>
-                    <li><img src="assets/img/feature/mark.png" width="21px" alt=""></i> &nbsp;&nbsp;Гарантия на все агрегаты</li>
+                    <li><img src="assets/img/feature/mark.png" width="21px" alt=""></i> &nbsp;&nbsp;10 лет на рынке
+                    </li>
+                    <li><img src="assets/img/feature/mark.png" width="21px" alt=""></i> &nbsp;&nbsp;Гарантия на все
+                      агрегаты</li>
                   </ul>
                 </div>
               </div>
@@ -120,17 +125,18 @@
                   <div class="form-group " id='default-suggestions'>
                     <div class="title" style="color:lightgray; padding-bottom:1em;">запросить предложение</div>
 
-                    <input type="tel" class="form-control" id="input_contact"
-                      placeholder="ваш телефон или email" name="phone" required autocomplete="tel"
+                    <input type="tel" class="form-control" id="input_contact" placeholder="ваш телефон или email"
+                      name="phone" required autocomplete="tel"
                       onchange="$('#btnSend').addClass('btn-primary');$('#btnSend').removeClass('btn-outline-primary');">
-                      <input class="typeahead form-control" type="text" placeholder="укажите модель" id="select">
+                    <input class="typeahead form-control" type="text" placeholder="укажите модель" id="select">
                     <a id="request_comment_link" href="javascript:"
                       onclick="$('#request_comment_link').addClass('hidden'); $('#request_comment').removeClass('hidden');"
                       class="small" style="color:lightgray;">добавить комментарий </a>
                     <textarea id="request_comment" class="form-control hidden" placeholder="комментарий"
                       rows="3"></textarea>
                   </div>
-                  <input id="btnSend" onclick="send_request();" class="btn btn-sm btn-outline-primary" type="button" value="отправить">
+                  <input id="btnSend" onclick="send_request();" class="btn btn-sm btn-outline-primary" type="button"
+                    value="отправить">
 
                   <!-- script для typeahaed  -->
                   <script>
@@ -177,33 +183,33 @@
 
                     // --------- ОТСЫЛКА ФОРМЫ  -----------------------
 
-                    function send_request(){
-                        // соберем данные и присвоим переменным.
-                        var contact = $("#input_contact").val(); // контакты
-                        var good = $("#select").val(); // товар
-                        var comment = $("#request_comment").val();
+                    function send_request() {
+                      // соберем данные и присвоим переменным.
+                      var contact = $("#input_contact").val(); // контакты
+                      var good = $("#select").val(); // товар
+                      var comment = $("#request_comment").val();
 
-                        // проверим заполнение 
-                        if(contact === "" || contact === null){
-                          alert("Укажите, пожалуйста, ваши контактные данные.");
-                          return; // закончим
-                        }
-                        
-                        // присвоим значения input-ам  google -формы
-                        $("[name='entry.1519454606']").val(contact); // input google формы, там id нет, потому ищем по имени. и присваиваем
-                        $("[name='entry.191261818']").val(good); 
-                        $("[name='entry.1977316514']").val(comment); 
-                        $("[name='entry.1126040740']").val(new Date().toJSON()); 
+                      // проверим заполнение 
+                      if (contact === "" || contact === null) {
+                        alert("Укажите, пожалуйста, ваши контактные данные.");
+                        return; // закончим
+                      }
 
-                        // берем форму по Id - и командой Submit - отправляем ее на сервер
-                        document.getElementById("mG61Hd").submit();
+                      // присвоим значения input-ам  google -формы
+                      $("[name='entry.1519454606']").val(contact); // input google формы, там id нет, потому ищем по имени. и присваиваем
+                      $("[name='entry.191261818']").val(good);
+                      $("[name='entry.1977316514']").val(comment);
+                      $("[name='entry.1126040740']").val(new Date().toJSON());
 
-                        alert("Заявка отправлена. Спасибо. Мы свяжемся с Вами в ближайшее время.");
-                        
-                        // очищу input
-                        $("#input_contact").val(""); // контакты
-                        $("#select").val(""); // товар
-                        $("#request_comment").val("");
+                      // берем форму по Id - и командой Submit - отправляем ее на сервер
+                      document.getElementById("mG61Hd").submit();
+
+                      alert("Заявка отправлена. Спасибо. Мы свяжемся с Вами в ближайшее время.");
+
+                      // очищу input
+                      $("#input_contact").val(""); // контакты
+                      $("#select").val(""); // товар
+                      $("#request_comment").val("");
                     }
 
                     // нужна глобальная переменная, чтобы не перенаправлял нас на сайт google - после отправки заявки
@@ -232,7 +238,7 @@
       </div>
       <div class="row" id="models_container">
         <!-- Services item -->
-       
+
 
 
       </div>
@@ -240,43 +246,43 @@
   </section>
 
 
-<script>
-  var mods;
-  $.getJSON("models.json", function(json) {
+  <script>
+    var mods;
+    $.getJSON("models.json", function (json) {
       mods = json;
-      if(mods == null || mods.length == 0) return;
+      if (mods == null || mods.length == 0) return;
       var source = document.getElementById("dvigatel-item").innerHTML;
       var template = Handlebars.compile(source);
 
-      for (let index = 0; index < mods.length; index++) {       
+      for (let index = 0; index < mods.length; index++) {
         var rez1 = mods[index];
-        if(rez1.id < 0) continue;
+        if (rez1.id < 0) continue;
         var html1 = template(rez1);
         $("#models_container").append(html1);
       }
-      
-      
-  });
+
+
+    });
 
 
     function show_dvigatel_popup(id) {
-        var source = document.getElementById("dvigatel-popup-template").innerHTML;
-        var template = Handlebars.compile(source);
-        if(mods == null || mods.length == 0) return;
+      var source = document.getElementById("dvigatel-popup-template").innerHTML;
+      var template = Handlebars.compile(source);
+      if (mods == null || mods.length == 0) return;
 
-        var rez = mods.find(x => x.id == id);
-        if (rez != null) {
-          var html = template(rez);
-          $("#popup_container").html("");
-          $("#popup_container").append(html);
-          $('#engineModal_one').modal('show');
-        }
+      var rez = mods.find(x => x.id == id);
+      if (rez != null) {
+        var html = template(rez);
+        $("#popup_container").html("");
+        $("#popup_container").append(html);
+        $('#engineModal_one').modal('show');
+      }
 
     }
-</script>
+  </script>
 
 
-<div id="popup_container"></div>
+  <div id="popup_container"></div>
   <!-- Modal windows -------------------------->
   <script id="dvigatel-item" type="text/x-handlebars-template">
     <div class="engine col-md-6 col-lg-4 col-xs-12">
@@ -292,7 +298,7 @@
 
   <!-- Modal windows -------------------------->
   <script id="dvigatel-popup-template" type="text/x-handlebars-template">
-  
+
     <div class="modal" id="engineModal_one" tabindex="-1" role="dialog" aria-labelledby="engineModal" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="vertical-alignment-helper">
@@ -607,7 +613,7 @@
   <!-- Call To Action Section Start -->
 
 
-  
+
 
 
   <!-- Call To Action Section Start -->
@@ -632,21 +638,28 @@
   <section id="priemyshestva" class="section-padding  bg-gray">
     <div class="container text-center justify-content-center">
       <div class="section-header">
+        <h1>Наши преимущества</ h1>
+      </div>
+      <div class="section-header">
+
         <!-- <h1 class="section-title wow fadeInDown">Нащи преимущества</h1> -->
         <div class="shape wow fadeInDown"></div>
         <div class="about-area">
           <div class="row">
-              <div class="col-lg-3 col-md-4 col-xs-12 priemyshestva"><img src="assets/img/feature/warranty.png"></i>Гарантия
-                на все агрегаты</div>
-              <div class="col-lg-3 col-md-4 col-xs-12 priemyshestva"><img src="assets/img/feature/customer.png">
-                4 тысячи
-                клиентов</div>
-              <div class="col-lg-3 col-md-4 col-xs-12 priemyshestva"><img src="assets/img//feature/delivery.png">Доставка по всей
-                России</div>
-              <div class="col-lg-3 col-md-4 col-xs-12 priemyshestva"><img src="assets/img/feature/percent_big.png">Отправим
-                по 10% авансу</div>
-        
-           
+            <div class="col-lg-3 col-md-4 col-xs-12 priemyshestva"><img
+                src="assets/img/feature/warranty.png"></i>Гарантия
+              на все агрегаты</div>
+            <div class="col-lg-3 col-md-4 col-xs-12 priemyshestva"><img src="assets/img/feature/customer.png">
+              4 тысячи
+              клиентов</div>
+            <div class="col-lg-3 col-md-4 col-xs-12 priemyshestva"><img src="assets/img//feature/delivery.png">Доставка
+              по всей
+              России</div>
+            <div class="col-lg-3 col-md-4 col-xs-12 priemyshestva"><img
+                src="assets/img/feature/percent_big.png">Отправим
+              по 10% авансу</div>
+
+
           </div>
         </div>
       </div>
@@ -658,12 +671,14 @@
             </div>
             <div class="content" style="padding-top:3em;">
               <div class="blog-lg-area-left">
-                <p style="text-align: justify;font-size: 1.2em;">ООО «ЧелныАгрегатЦентр» более десяти лет специализируется на оптовой
+                <p style="text-align: justify;font-size: 1.2em;">ООО «ЧелныАгрегатЦентр» более десяти лет
+                  специализируется на оптовой
                   торговле запасными частями и комплектующими для автомобилей КАМАЗ, а также поставке запчастей в
                   магазины и автотранспортные предприятия.</p>
-                <p style="text-align: justify;font-size: 1.2em;">За годы своей работы наши специалисты овладели всеми тонкостями и
+                <p style="text-align: justify;font-size: 1.2em;">За годы своей работы наши специалисты овладели всеми
+                  тонкостями и
                   нюансами оптовой торговли запасными частями и комплектующими. </p>
-                
+
               </div>
             </div>
           </div>
@@ -673,20 +688,914 @@
     </div>
   </section>
 
+  <section id="priemyshestva" class="section-padding  bg-gray">
+    <div class="container text-center justify-content-center">
+      <div class="section-header">
+        <h1>Прайс-лист</h1>
+      </div>
+      <div class="section-header">
+        <div class="about-area_1">
+          
 
-<!-- Направления Section Start -->
-<section id="projects" class="section-padding">
+<style type = 'text/css'>
+<!--
+.flxmain_table {table-layout:fixed; border-collapse:collapse;border-spacing: 0}
+table.flxmain_table td {overflow:hidden;padding: 0 1.5pt}
+.flxmain_bordered_table {table-layout:fixed; border-collapse:collapse;border-spacing: 0;border:1px solid silver}
+.flxmain_bordered_table td {overflow:hidden;padding: 0 1.5pt;border:1px solid silver}
+ .imagediv {position:absolute;border:none}
+ table td.imagecell {vertical-align:top;text-align:left;padding:0}
+table td.flxHeading {background-color:#E7E7E7;text-align:center;border: 1px solid black;font-family:helvetica,arial,sans-serif;font-size:10pt}
+ .flx0 {
+  background-color:white;
+  color:black;
+  font-size:10pt;
+  font-weight:normal;
+  font-style:normal;
+  font-family:'Times New Roman';
+  text-align:left;
+  vertical-align:bottom;
+  white-space:nowrap;
+ }
+
+ .flx1 {
+  background-color:white;
+  color:black;
+  font-size:17pt;
+  font-weight:normal;
+  font-style:normal;
+  font-family:'Times New Roman';
+  text-align:left;
+  vertical-align:bottom;
+  white-space:nowrap;
+ }
+
+ .flx2 {
+  background-color:white;
+  color:black;
+  font-size:24pt;
+  font-weight:bold;
+  font-style:normal;
+  font-family:'Times New Roman';
+  text-align:center;
+  vertical-align:bottom;
+  white-space:normal;
+ }
+
+ .flx3 {
+  background-color:white;
+  color:black;
+  font-size:17pt;
+  font-weight:bold;
+  font-style:normal;
+  font-family:'Times New Roman';
+  text-align:center;
+  vertical-align:middle;
+  white-space:normal;
+ }
+
+ .flx4 {
+  background-color:white;
+  color:black;
+  font-size:17pt;
+  font-weight:bold;
+  font-style:normal;
+  font-family:'Times New Roman';
+  text-align:center;
+  vertical-align:middle;
+  white-space:nowrap;
+ }
+
+ .flx5 {
+  background-color:white;
+  color:black;
+  font-size:18pt;
+  font-weight:bold;
+  font-style:normal;
+  font-family:'Times New Roman';
+  text-align:center;
+  vertical-align:middle;
+  white-space:normal;
+ }
+
+ .flx6 {
+  background-color:white;
+  color:black;
+  font-size:17pt;
+  font-weight:normal;
+  font-style:normal;
+  font-family:'Times New Roman';
+  text-align:center;
+  vertical-align:middle;
+  white-space:normal;
+ }
+
+ .flx7 {
+  background-color:white;
+  color:black;
+  font-size:18pt;
+  font-weight:normal;
+  font-style:normal;
+  font-family:'Times New Roman';
+  text-align:center;
+  vertical-align:middle;
+  white-space:normal;
+ }
+
+ .flx8 {
+  background-color:yellow;
+  color:black;
+  font-size:28pt;
+  font-weight:bold;
+  font-style:normal;
+  font-family:'Times New Roman';
+  text-align:center;
+  vertical-align:bottom;
+  white-space:normal;
+ }
+
+ .flx9 {
+  background-color:yellow;
+  color:black;
+  font-size:28pt;
+  font-weight:normal;
+  font-style:normal;
+  font-family:'Times New Roman';
+  text-align:center;
+  vertical-align:bottom;
+  white-space:normal;
+ }
+
+ .flx10 {
+  background-color:white;
+  color:black;
+  font-size:20pt;
+  font-weight:normal;
+  font-style:normal;
+  font-family:'Times New Roman';
+  text-align:left;
+  vertical-align:bottom;
+  white-space:nowrap;
+ }
+
+ .flx11 {
+  background-color:white;
+  color:black;
+  font-size:20pt;
+  font-weight:normal;
+  font-style:normal;
+  font-family:'Times New Roman';
+  text-align:center;
+  vertical-align:bottom;
+  white-space:nowrap;
+ }
+
+ .flx12 {
+  background-color:white;
+  color:black;
+  font-size:22pt;
+  font-weight:normal;
+  font-style:normal;
+  font-family:'Times New Roman';
+  text-align:left;
+  vertical-align:bottom;
+  white-space:nowrap;
+ }
+
+ .flx13 {
+  background-color:white;
+  color:black;
+  font-size:22pt;
+  font-weight:normal;
+  font-style:normal;
+  font-family:'Times New Roman';
+  text-align:center;
+  vertical-align:middle;
+  white-space:nowrap;
+ }
+
+ .flx14 {
+  background-color:white;
+  color:black;
+  font-size:22pt;
+  font-weight:normal;
+  font-style:normal;
+  font-family:'Times New Roman';
+  text-align:center;
+  vertical-align:bottom;
+  white-space:nowrap;
+ }
+
+ .flx15 {
+  background-color:white;
+  color:black;
+  font-size:20pt;
+  font-weight:normal;
+  font-style:normal;
+  font-family:'Times New Roman';
+  text-align:left;
+  vertical-align:middle;
+  white-space:nowrap;
+ }
+
+ .flx16 {
+  background-color:white;
+  color:black;
+  font-size:20pt;
+  font-weight:normal;
+  font-style:normal;
+  font-family:'Times New Roman';
+  text-align:center;
+  vertical-align:middle;
+  white-space:nowrap;
+ }
+
+ .flx17 {
+  background-color:white;
+  color:black;
+  font-size:20pt;
+  font-weight:normal;
+  font-style:normal;
+  font-family:'Times New Roman';
+  text-align:left;
+  vertical-align:middle;
+  white-space:normal;
+ }
+
+ .flx18 {
+  background-color:white;
+  color:black;
+  font-size:20pt;
+  font-weight:normal;
+  font-style:normal;
+  font-family:'Times New Roman';
+  text-align:center;
+  vertical-align:bottom;
+  white-space:normal;
+ }
+
+ .flx19 {
+  background-color:white;
+  color:black;
+  font-size:20pt;
+  font-weight:bold;
+  font-style:normal;
+  font-family:'Times New Roman';
+  text-align:center;
+  vertical-align:middle;
+  white-space:normal;
+ }
+
+ .flx20 {
+  background-color:white;
+  color:black;
+  font-size:20pt;
+  font-weight:bold;
+  font-style:normal;
+  font-family:'Times New Roman';
+  text-align:center;
+  vertical-align:middle;
+  white-space:nowrap;
+ }
+
+ .flx21 {
+  background-color:white;
+  color:black;
+  font-size:10pt;
+  font-weight:bold;
+  font-style:normal;
+  font-family:Arial;
+  text-align:center;
+  vertical-align:bottom;
+  white-space:normal;
+ }
+
+ .flx22 {
+  background-color:white;
+  color:black;
+  font-size:20pt;
+  font-weight:normal;
+  font-style:normal;
+  font-family:'Times New Roman';
+  text-align:center;
+  vertical-align:middle;
+  white-space:normal;
+ }
+
+ .flx23 {
+  background-color:white;
+  color:black;
+  font-size:24pt;
+  font-weight:bold;
+  font-style:normal;
+  font-family:'Times New Roman';
+  text-align:center;
+  vertical-align:middle;
+  white-space:nowrap;
+ }
+
+ .flx24 {
+  background-color:white;
+  color:black;
+  font-size:24pt;
+  font-weight:normal;
+  font-style:normal;
+  font-family:Arial;
+  text-align:center;
+  vertical-align:middle;
+  white-space:nowrap;
+ }
+
+ .flx25 {
+  background-color:yellow;
+  color:black;
+  font-size:28pt;
+  font-weight:bold;
+  font-style:normal;
+  font-family:'Times New Roman';
+  text-align:center;
+  vertical-align:bottom;
+  white-space:nowrap;
+ }
+
+ .flx26 {
+  background-color:white;
+  color:black;
+  font-size:22pt;
+  font-weight:normal;
+  font-style:normal;
+  font-family:'Times New Roman';
+  text-align:left;
+  vertical-align:bottom;
+  white-space:normal;
+ }
+
+ .flx27 {
+  background-color:white;
+  color:black;
+  font-size:24pt;
+  font-weight:normal;
+  font-style:normal;
+  font-family:'Times New Roman';
+  text-align:center;
+  vertical-align:middle;
+  white-space:nowrap;
+ }
+
+ .flx28 {
+  background-color:yellow;
+  color:black;
+  font-size:28pt;
+  font-weight:normal;
+  font-style:normal;
+  font-family:'Times New Roman';
+  text-align:center;
+  vertical-align:bottom;
+  white-space:nowrap;
+ }
+
+ .flx29 {
+  background-color:white;
+  color:black;
+  font-size:20pt;
+  font-weight:bold;
+  font-style:normal;
+  font-family:Arial;
+  text-align:center;
+  vertical-align:middle;
+  white-space:nowrap;
+ }
+
+ .flx30 {
+  background-color:white;
+  color:black;
+  font-size:22pt;
+  font-weight:normal;
+  font-style:normal;
+  font-family:'Times New Roman';
+  text-align:left;
+  vertical-align:middle;
+  white-space:nowrap;
+ }
+
+ .flx31 {
+  background-color:white;
+  color:black;
+  font-size:22pt;
+  font-weight:normal;
+  font-style:normal;
+  font-family:Arial;
+  text-align:left;
+  vertical-align:middle;
+  white-space:nowrap;
+ }
+
+ .flx32 {
+  background-color:white;
+  color:black;
+  font-size:24pt;
+  font-weight:normal;
+  font-style:normal;
+  font-family:'Times New Roman';
+  text-align:left;
+  vertical-align:bottom;
+  white-space:nowrap;
+ }
+
+ .flx33 {
+  background-color:white;
+  color:black;
+  font-size:24pt;
+  font-weight:normal;
+  font-style:normal;
+  font-family:'Times New Roman';
+  text-align:center;
+  vertical-align:bottom;
+  white-space:nowrap;
+ }
+
+ .flx34 {
+  background-color:white;
+  color:black;
+  font-size:24pt;
+  font-weight:normal;
+  font-style:normal;
+  font-family:'Times New Roman';
+  text-align:center;
+  vertical-align:bottom;
+  white-space:normal;
+ }
+
+ .flx35 {
+  background-color:white;
+  color:black;
+  font-size:17pt;
+  font-weight:normal;
+  font-style:normal;
+  font-family:'Times New Roman';
+  text-align:center;
+  vertical-align:bottom;
+  white-space:nowrap;
+ }
+
+ .flx36 {
+  background-color:white;
+  color:black;
+  font-size:17pt;
+  font-weight:normal;
+  font-style:normal;
+  font-family:'Times New Roman';
+  text-align:center;
+  vertical-align:middle;
+  white-space:nowrap;
+ }
+
+ .flx37 {
+  background-color:white;
+  color:black;
+  font-size:18pt;
+  font-weight:bold;
+  font-style:normal;
+  font-family:'Times New Roman';
+  text-align:center;
+  vertical-align:middle;
+  white-space:nowrap;
+ }
+
+ .flx38 {
+  background-color:white;
+  color:black;
+  font-size:18pt;
+  font-weight:bold;
+  font-style:normal;
+  font-family:Arial;
+  text-align:center;
+  vertical-align:bottom;
+  white-space:nowrap;
+ }
+
+ .flx39 {
+  background-color:white;
+  color:black;
+  font-size:18pt;
+  font-weight:normal;
+  font-style:normal;
+  font-family:'Times New Roman';
+  text-align:left;
+  vertical-align:bottom;
+  white-space:nowrap;
+ }
+
+ .flx40 {
+  background-color:white;
+  color:black;
+  font-size:20pt;
+  font-weight:normal;
+  font-style:normal;
+  font-family:Arial;
+  text-align:center;
+  vertical-align:middle;
+  white-space:normal;
+ }
+
+ .flx41 {
+  background-color:white;
+  color:black;
+  font-size:22pt;
+  font-weight:normal;
+  font-style:normal;
+  font-family:'Times New Roman';
+  text-align:center;
+  vertical-align:middle;
+  white-space:normal;
+ }
+
+ .flx42 {
+  background-color:white;
+  color:black;
+  font-size:22pt;
+  font-weight:normal;
+  font-style:normal;
+  font-family:Arial;
+  text-align:center;
+  vertical-align:middle;
+  white-space:normal;
+ }
+
+ .flx43 {
+  background-color:white;
+  color:black;
+  font-size:24pt;
+  font-weight:bold;
+  font-style:normal;
+  font-family:'Times New Roman';
+  text-align:center;
+  vertical-align:middle;
+  white-space:normal;
+ }
+
+ .flx44 {
+  background-color:white;
+  color:black;
+  font-size:24pt;
+  font-weight:bold;
+  font-style:normal;
+  font-family:Arial;
+  text-align:center;
+  vertical-align:middle;
+  white-space:normal;
+ }
+
+ .flx45 {
+  background-color:white;
+  color:black;
+  font-size:24pt;
+  font-weight:normal;
+  font-style:normal;
+  font-family:Arial;
+  text-align:center;
+  vertical-align:bottom;
+  white-space:nowrap;
+ }
+
+ .flx46 {
+  background-color:#8eb4e3;
+  color:black;
+  font-size:26pt;
+  font-weight:bold;
+  font-style:normal;
+  font-family:'Times New Roman';
+  text-align:center;
+  vertical-align:bottom;
+  white-space:nowrap;
+ }
+
+ .flx47 {
+  background-color:#8eb4e3;
+  color:black;
+  font-size:26pt;
+  font-weight:normal;
+  font-style:normal;
+  font-family:'Times New Roman';
+  text-align:center;
+  vertical-align:bottom;
+  white-space:nowrap;
+ }
+
+ .flx48 {
+  background-color:white;
+  color:black;
+  font-size:20pt;
+  font-weight:bold;
+  font-style:normal;
+  font-family:'Times New Roman';
+  text-align:center;
+  vertical-align:bottom;
+  white-space:nowrap;
+ }
+
+ .flx49 {
+  background-color:white;
+  color:black;
+  font-size:20pt;
+  font-weight:bold;
+  font-style:normal;
+  font-family:Arial;
+  text-align:center;
+  vertical-align:bottom;
+  white-space:nowrap;
+ }
+
+ .flx50 {
+  background-color:#8eb4e3;
+  color:black;
+  font-size:24pt;
+  font-weight:bold;
+  font-style:normal;
+  font-family:'Times New Roman';
+  text-align:center;
+  vertical-align:bottom;
+  white-space:nowrap;
+ }
+
+ .flx51 {
+  background-color:white;
+  color:black;
+  font-size:10pt;
+  font-weight:normal;
+  font-style:normal;
+  font-family:Arial;
+  text-align:left;
+  vertical-align:bottom;
+  white-space:nowrap;
+ }
+
+ .flx52 {
+  background-color:white;
+  color:black;
+  font-size:14pt;
+  font-weight:normal;
+  font-style:normal;
+  font-family:'Times New Roman';
+  text-align:left;
+  vertical-align:bottom;
+  white-space:nowrap;
+ }
+
+-->
+</style>
+</head>
+<body>
+<table class='flxmain_bordered_table' border='1' cellpadding='0' cellspacing='0' style='width:1317.35pt' summary="Excel Sheet: Прейскурант c 01.01.16">
+ <col class='flx0' style ='width:32.35pt;'>
+ <col class='flx0' style ='width:275.48pt;'>
+ <col class='flx0' style ='width:402.56pt;'>
+ <col class='flx0' span='2' style ='width:144.44pt;'>
+ <col class='flx0' style ='width:137.34pt;'>
+ <col class='flx0' style ='width:180.74pt;'>
+  <tr style='display:none'>
+    <td style = 'padding:0;width:32.35pt;'></td>
+    <td style = 'padding:0;width:275.48pt;'></td>
+    <td style = 'padding:0;width:402.56pt;'></td>
+    <td style = 'padding:0;width:144.44pt;'></td>
+    <td style = 'padding:0;width:144.44pt;'></td>
+    <td style = 'padding:0;width:137.34pt;'></td>
+    <td style = 'padding:0;width:180.74pt;'></td>
+  </tr>
+ 
+ 
+ <tr class='flx1' style='height:21.85pt;'>
+  <td class='flx3' style ='border-left:medium solid black;border-top:medium solid black;border-right:1px solid black;border-bottom:medium solid black;' colspan = '1' rowspan ='3'><span class='flx3' style ='height:175.51pt;'>№ п/п</span></td>
+  <td class='flx3' style ='border-left:1px solid black;border-top:medium solid black;border-right:1px solid black;border-bottom:medium solid black;' colspan = '1' rowspan ='3'>Модель и комплектация</td>
+  <td class='flx4' style ='border-left:1px solid black;border-top:medium solid black;border-right:1px solid black;border-bottom:medium solid black;' colspan = '1' rowspan ='3'>Особенности комплектации</td>
+  <td class='flx4' style ='border-left:1px solid black;border-top:medium solid black;border-right:medium solid black;border-bottom:1px solid black;' colspan = '4' rowspan ='1'>Прейскурантная цена, руб.&nbsp;</td>
+</tr>
+ <tr class='flx1' style='height:21.85pt;'>
+  <td class='flx3' style ='border-left:1px solid black;border-top:1px solid black;border-right:1px solid black;border-bottom:medium solid black;' colspan = '1' rowspan ='2'><span class='flx3' style ='height:153.66pt;'>Новый, завод &nbsp;гарантия 1 год</span></td>
+  <td class='flx5' style ='border-left:1px solid black;border-top:1px solid black;border-right:1px solid black;border-bottom:medium solid black;' colspan = '1' rowspan ='2'><span class='flx5' style ='height:153.66pt;'>Новый &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(дочернее предприятие) гарантия 1 год</span></td>
+  <td class='flx4' style ='border-left:1px solid black;border-top:1px solid black;border-right:medium solid black;border-bottom:1px solid black;' colspan = '2' rowspan ='1'>ООО &quot;ЧелныАгрегатЦентр&quot;</td>
+</tr>
+ <tr class='flx1' style='height:131.81pt;'>
+  <td class='flx5' style ='border-left:1px solid black;border-top:1px solid black;border-right:1px solid black;border-bottom:medium solid black;'>Кап. ремонт по максимуму из новых деталей ОАО КАМАЗ* 12мес.</td>
+  <td class='flx3' style ='border-left:1px solid black;border-top:1px solid black;border-right:medium solid black;border-bottom:medium solid black;'>Кап. ремонт стандарт** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;гарантия 6 мес.</td>
+</tr>
+ <tr class='flx1' style='height:34.96pt;'>
+  <td class='flx8' style ='border-left:medium solid black;border-top:1px none black;border-right:medium solid black;border-bottom:1px none black;' colspan = '7' rowspan ='1'>СИЛОВЫЕ АГРЕГАТЫ (300ая комплектация, с навесным оборудованием)</td>
+</tr>
+ <tr class='flx1' style='height:26.22pt;'>
+  <td class='flx1' style ='border-left:medium solid black;border-top:medium solid black;border-right:1px none black;border-bottom:1px solid black;text-align:right;'>1</td>
+  <td class='flx10' style ='border-left:medium solid black;border-top:medium solid black;border-right:1px solid black;border-bottom:1px solid black;'>740.10-300 с 15 КПП</td>
+  <td class='flx10' style ='border-left:1px solid black;border-top:medium solid black;border-right:1px solid black;border-bottom:1px solid black;'>210 л.с.*, сцепление 14, ТНВД 33-02</td>
+  <td class='flx11' style ='border-left:1px solid black;border-top:medium solid black;border-right:1px solid black;border-bottom:1px solid black;'>запрос</td>
+  <td class='flx11' style ='border-left:1px solid black;border-top:medium solid black;border-right:1px solid black;border-bottom:1px solid black;'>запрос</td>
+  <td class='flx11' style ='border-left:1px solid black;border-top:medium solid black;border-right:1px solid black;border-bottom:1px solid black;'>запрос</td>
+  <td class='flx11' style ='border-left:1px solid black;border-top:medium solid black;border-right:1px solid black;border-bottom:1px solid black;'>запрос</td>
+</tr>
+ <tr class='flx1' style='height:26.22pt;'>
+  <td class='flx1' style ='border-left:medium solid black;border-top:1px solid black;border-right:1px none black;border-bottom:1px solid black;text-align:right;'>2</td>
+  <td class='flx10' style ='border-left:medium solid black;border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;'>740.11-300 с 152 КПП</td>
+  <td class='flx10' style ='border-left:1px solid black;border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;'>240 л.с.*, сцепление 142, ТНВД 337-40</td>
+  <td class='flx11' style ='border-left:1px solid black;border-top:medium solid black;border-right:1px solid black;border-bottom:1px solid black;'>запрос</td>
+  <td class='flx11' style ='border-left:1px solid black;border-top:medium solid black;border-right:1px solid black;border-bottom:1px solid black;'>запрос</td>
+  <td class='flx11' style ='border-left:1px solid black;border-top:medium solid black;border-right:1px solid black;border-bottom:1px solid black;'>запрос</td>
+  <td class='flx11' style ='border-left:1px solid black;border-top:medium solid black;border-right:1px solid black;border-bottom:1px solid black;'>запрос</td>
+</tr>
+ <tr class='flx1' style='height:26.22pt;'>
+  <td class='flx1' style ='border-left:medium solid black;border-top:1px solid black;border-right:1px none black;border-bottom:medium solid black;text-align:right;'>3</td>
+  <td class='flx10' style ='border-left:medium solid black;border-top:1px solid black;border-right:1px solid black;border-bottom:medium solid black;'>740.13-300 с 152 КПП</td>
+  <td class='flx10' style ='border-left:1px solid black;border-top:1px solid black;border-right:1px solid black;border-bottom:medium solid black;'>260 л.с.*, сцепление 142, ТНВД 337-42</td>
+  <td class='flx11' style ='border-left:1px solid black;border-top:medium solid black;border-right:1px solid black;border-bottom:1px solid black;'>запрос</td>
+  <td class='flx11' style ='border-left:1px solid black;border-top:medium solid black;border-right:1px solid black;border-bottom:1px solid black;'>запрос</td>
+  <td class='flx11' style ='border-left:1px solid black;border-top:medium solid black;border-right:1px solid black;border-bottom:1px solid black;'>запрос</td>
+  <td class='flx11' style ='border-left:1px solid black;border-top:medium solid black;border-right:1px solid black;border-bottom:1px solid black;'>запрос</td>
+</tr>
+ <tr class='flx1' style='height:34.23pt;'>
+  <td class='flx8' style ='border-left:medium solid black;border-top:medium solid black;border-right:medium solid black;border-bottom:medium solid black;' colspan = '7' rowspan ='1'>ДВИГАТЕЛИ (400ая комплектация, с навесным оборудованием)</td>
+</tr>
+ <tr class='flx1' style='height:27.67pt;'>
+  <td class='flx1' style ='border-left:medium solid black;border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;text-align:right;'>1</td>
+  <td class='flx12' style ='border-left:1px none black;border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;'>74009.10-400 (ЕВРО-0)</td>
+  <td class='flx12' style ='border-left:1px solid black;border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;'>210 л.с.*, ТНВД 33-02</td>
+  <td class='flx11' style ='border-left:1px solid black;border-top:medium solid black;border-right:1px solid black;border-bottom:1px solid black;'>запрос</td>
+  <td class='flx13' style ='border-left:1px solid black;border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;'>325,000.00 ₽</td>
+  <td class='flx13' style ='border-left:1px solid black;border-top:1px none black;border-right:1px solid black;border-bottom:1px solid black;'>245,000.00 ₽</td>
+  <td class='flx14' style ='border-left:1px solid black;border-top:1px none black;border-right:medium solid black;border-bottom:1px solid black;'>220,000.00 ₽</td>
+</tr>
+ <tr class='flx1' style='height:27.67pt;'>
+  <td class='flx1' style ='border-left:medium solid black;border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;text-align:right;'>2</td>
+  <td class='flx12' style ='border-left:1px none black;border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;'>74009.10-403 (УРАЛ)</td>
+  <td class='flx12' style ='border-left:1px solid black;border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;'>210 л.с.*, ТНВД 33-10</td>
+  <td class='flx11' style ='border-left:1px solid black;border-top:medium solid black;border-right:1px solid black;border-bottom:1px solid black;'>запрос</td>
+  <td class='flx13' style ='border-left:1px solid black;border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;'>345,000.00 ₽</td>
+  <td class='flx13' style ='border-left:1px solid black;border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;'>252,200.00 ₽</td>
+  <td class='flx14' style ='border-left:1px solid black;border-top:1px solid black;border-right:medium solid black;border-bottom:1px solid black;'>230,000.00 ₽</td>
+</tr>
+ <tr class='flx1' style='height:27.67pt;'>
+  <td class='flx1' style ='border-left:medium solid black;border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;text-align:right;'>3</td>
+  <td class='flx12' style ='border-left:1px none black;border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;'>74039.10-400 (турбо)</td>
+  <td class='flx12' style ='border-left:1px solid black;border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;'>260 л.с.*, ТНВД 334</td>
+  <td class='flx11' style ='border-left:1px solid black;border-top:medium solid black;border-right:1px solid black;border-bottom:1px solid black;'>запрос</td>
+  <td class='flx13' style ='border-left:1px solid black;border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;'>390,000.00 ₽</td>
+  <td class='flx13' style ='border-left:1px solid black;border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;'>308,920.00 ₽</td>
+  <td class='flx14' style ='border-left:1px solid black;border-top:1px solid black;border-right:medium solid black;border-bottom:1px solid black;'>265,000.00 ₽</td>
+</tr>
+ <tr class='flx1' style='height:27.67pt;'>
+  <td class='flx1' style ='border-left:medium solid black;border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;text-align:right;'>4</td>
+  <td class='flx12' style ='border-left:1px none black;border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;'>740.11-400 (ЕВРО-1)</td>
+  <td class='flx12' style ='border-left:1px solid black;border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;'>240 л.с.*, ТНВД 337-40</td>
+  <td class='flx11' style ='border-left:1px solid black;border-top:medium solid black;border-right:1px solid black;border-bottom:1px solid black;'>запрос</td>
+  <td class='flx13' style ='border-left:1px solid black;border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;'>445,000.00 ₽</td>
+  <td class='flx13' style ='border-left:1px solid black;border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;'>351,220.00 ₽</td>
+  <td class='flx14' style ='border-left:1px solid black;border-top:1px solid black;border-right:medium solid black;border-bottom:1px solid black;'>320,000.00 ₽</td>
+</tr>
+ <tr class='flx1' style='height:27.67pt;'>
+  <td class='flx1' style ='border-left:medium solid black;border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;text-align:right;'>5</td>
+  <td class='flx12' style ='border-left:1px solid black;border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;'>740.13-400 (ЕВРО-1)</td>
+  <td class='flx12' style ='border-left:1px solid black;border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;'>260 л.с.*, ТНВД 337-42</td>
+  <td class='flx11' style ='border-left:1px solid black;border-top:medium solid black;border-right:1px solid black;border-bottom:1px solid black;'>запрос</td>
+  <td class='flx13' style ='border-left:1px solid black;border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;'>470,000.00 ₽</td>
+  <td class='flx13' style ='border-left:1px solid black;border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;'>361,150.00 ₽</td>
+  <td class='flx14' style ='border-left:1px solid black;border-top:1px solid black;border-right:medium solid black;border-bottom:1px solid black;'>320,000.00 ₽</td>
+</tr>
+ <tr class='flx1' style='height:27.67pt;'>
+  <td class='flx1' style ='border-left:medium solid black;border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;text-align:right;'>6</td>
+  <td class='flx12' style ='border-left:1px solid black;border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;'>740.30-400 (ЕВРО-2)</td>
+  <td class='flx12' style ='border-left:1px solid black;border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;'>260 л.с.*, ТНВД 337-20</td>
+  <td class='flx11' style ='border-left:1px solid black;border-top:medium solid black;border-right:1px solid black;border-bottom:1px solid black;'>запрос</td>
+  <td class='flx13' style ='border-left:1px solid black;border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;'>580,000.00 ₽</td>
+  <td class='flx13' style ='border-left:1px solid black;border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;'>452,740.00 ₽</td>
+  <td class='flx14' style ='border-left:1px solid black;border-top:1px solid black;border-right:medium solid black;border-bottom:1px solid black;'>395,000.00 ₽</td>
+</tr>
+ <tr class='flx1' style='height:27.67pt;'>
+  <td class='flx1' style ='border-left:medium solid black;border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;text-align:right;'>7</td>
+  <td class='flx12' style ='border-left:1px solid black;border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;'>740.31-400 (ЕВРО-2)</td>
+  <td class='flx12' style ='border-left:1px solid black;border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;'>240 л.с.*, ТНВД 337-20.05</td>
+  <td class='flx11' style ='border-left:1px solid black;border-top:medium solid black;border-right:1px solid black;border-bottom:1px solid black;'>запрос</td>
+  <td class='flx13' style ='border-left:1px solid black;border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;'>540,000.00 ₽</td>
+  <td class='flx13' style ='border-left:1px solid black;border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;'>445,520.00 ₽</td>
+  <td class='flx14' style ='border-left:1px solid black;border-top:1px solid black;border-right:medium solid black;border-bottom:1px solid black;'>395,000.00 ₽</td>
+</tr>
+ <tr class='flx1' style='height:27.67pt;'>
+  <td class='flx1' style ='border-left:medium solid black;border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;text-align:right;'>8</td>
+  <td class='flx12' style ='border-left:1px solid black;border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;'>740.50-400 (ЕВРО-2)</td>
+  <td class='flx12' style ='border-left:1px solid black;border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;'>360 л.с.*, ТНВД 337-20.04</td>
+  <td class='flx11' style ='border-left:1px solid black;border-top:medium solid black;border-right:1px solid black;border-bottom:1px solid black;'>запрос</td>
+  <td class='flx13' style ='border-left:1px solid black;border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;'>595,000.00 ₽</td>
+  <td class='flx13' style ='border-left:1px solid black;border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;'>475,920.00 ₽</td>
+  <td class='flx14' style ='border-left:1px solid black;border-top:1px solid black;border-right:medium solid black;border-bottom:1px solid black;'>410,000.00 ₽</td>
+</tr>
+ <tr class='flx1' style='height:27.67pt;'>
+  <td class='flx1' style ='border-left:medium solid black;border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;text-align:right;'>9</td>
+  <td class='flx12' style ='border-left:1px solid black;border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;'>740.51-400 (ЕВРО-2)</td>
+  <td class='flx12' style ='border-left:1px solid black;border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;'>320 л.с.*, ТНВД 337-20.03</td>
+  <td class='flx11' style ='border-left:1px solid black;border-top:medium solid black;border-right:1px solid black;border-bottom:1px solid black;'>запрос</td>
+  <td class='flx13' style ='border-left:1px solid black;border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;'>590,000.00 ₽</td>
+  <td class='flx13' style ='border-left:1px solid black;border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;'>465,140.00 ₽</td>
+  <td class='flx14' style ='border-left:1px solid black;border-top:1px solid black;border-right:medium solid black;border-bottom:1px solid black;'>410,000.00 ₽</td>
+</tr>
+ <tr class='flx1' style='height:26.95pt;'>
+  <td class='flx1' style ='border-left:medium solid black;border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;text-align:right;'>10</td>
+  <td class='flx12' style ='border-left:1px solid black;border-top:1px solid black;border-right:1px solid black;'>740.62-400 (ЕВРО-2)</td>
+  <td class='flx12' style ='border-left:1px solid black;border-top:1px solid black;border-right:1px solid black;'>280 л.с.*, ТНВД Bosch</td>
+  <td class='flx11' style ='border-left:1px solid black;border-top:medium solid black;border-right:1px solid black;border-bottom:1px solid black;'>запрос</td>
+  <td class='flx13' style ='border-left:1px solid black;border-top:1px solid black;border-right:1px solid black;'>650,000.00 ₽</td>
+  <td class='flx13' style ='border-left:1px solid black;border-top:1px solid black;border-right:1px solid black;'>560,000.00 ₽</td>
+  <td class='flx14' style ='border-left:1px solid black;border-top:1px solid black;border-right:medium solid black;'>500,000.00 ₽</td>
+</tr>
+ <tr class='flx10' style='height:34.96pt;'>
+  <td class='flx15' style ='border-top:1px none black;' colspan = '6'>* в мотор устанавливается новый коленвал вал, поршневая группа, всё новое заводское навесное, гарантия повышена.</td>
+  <td class = 'flx16'></td>
+
+</tr>
+ <tr class='flx10' style='height:26.41pt;'>
+  <td class='flx17' style ='border-bottom:medium solid black;' colspan = '7' rowspan ='1'>**в мотор устанавливается новая поршневая группа и частично новое навесное, ремонт сделан качественно, гарантия 6 мес.</td>
+</tr>
+ <tr class='flx1' style='height:25.49pt;'>
+  <td class = 'flx10' style = 'border-left:medium solid black;border-top:medium solid black;border-right:1px solid black;border-bottom:1px solid black;'></td>
+
+  <td class='flx10' style ='border-left:1px solid black;border-top:medium solid black;border-right:1px solid black;border-bottom:1px solid black;' colspan = '2' rowspan ='1'>Подставка деревянная под ДВС (универсальная)</td>
+  <td class='flx11' style ='border-left:1px solid black;border-top:medium solid black;border-right:1px solid black;border-bottom:1px solid black;' colspan = '2' rowspan ='1'></td>
+  <td class='flx18' style ='border-left:1px solid black;border-top:medium solid black;border-right:medium solid black;border-bottom:1px solid black;' colspan = '2' rowspan ='1'>1,500</td>
+</tr>
+ <tr class='flx1' style='height:26.22pt;'>
+  <td class = 'flx10' style = 'border-left:medium solid black;border-top:1px solid black;border-right:1px solid black;border-bottom:medium solid black;'></td>
+
+  <td class='flx10' style ='border-left:1px solid black;border-top:1px solid black;border-right:1px solid black;border-bottom:medium solid black;' colspan = '2' rowspan ='1'>Подставка деревянная под силовой агрегат</td>
+  <td class='flx11' style ='border-left:1px solid black;border-top:1px solid black;border-right:1px solid black;border-bottom:medium solid black;' colspan = '2' rowspan ='1'></td>
+  <td class='flx18' style ='border-left:1px solid black;border-top:1px solid black;border-right:medium solid black;border-bottom:medium solid black;' colspan = '2' rowspan ='1'>2,500</td>
+</tr>
+ <tr  style='height:33.69pt;'>
+  <td class='flx8' style ='border-left:medium solid black;border-top:medium solid black;border-right:medium solid black;border-bottom:medium solid black;' colspan = '7' rowspan ='1'>ДВИГАТЕЛИ CUMMINS на технику КАМАЗ</td>
+</tr>
+ <tr class='flx1' style='height:30.05pt;'>
+  <td class='flx19' style ='border-left:1px solid black;border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;' colspan = '1' rowspan ='3'><span class='flx19' style ='height:121.81pt;'>№ п/п</span></td>
+  <td class='flx19' style ='border-left:1px solid black;border-top:medium solid black;border-right:1px solid black;border-bottom:medium solid black;' colspan = '1' rowspan ='3'>Модель и комплектация</td>
+  <td class='flx20' style ='border-left:1px solid black;border-top:medium solid black;border-right:1px solid black;' colspan = '1' rowspan ='3'>Особенности комплектации</td>
+  <td class='flx20' style ='border-left:1px solid black;border-top:medium solid black;border-right:medium solid black;border-bottom:1px solid black;' colspan = '4' rowspan ='1'>Прейскурантная цена, руб.&nbsp;</td>
+</tr>
+ <tr class='flx1' style='height:64.09pt;'>
+  <td class='flx19' style ='border-left:1px solid black;border-top:1px solid black;border-right:1px solid black;border-bottom:1px none black;' colspan = '1' rowspan ='2'>Новый&nbsp;</td>
+  <td class='flx19' style ='border-left:1px solid black;border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;' colspan = '2' rowspan ='1'><span class='flx19' style ='height:64.09pt;'>Заводские комплектации без навесного</span></td>
+  <td class='flx3' style ='border-left:1px solid black;border-top:1px solid black;border-right:medium solid black;border-bottom:1px solid black;' colspan = '1' rowspan ='1'>ООО &quot;ЧАЦ&quot;</td>
+</tr>
+ <tr class='flx1' style='height:27.67pt;'>
+  <td class='flx20' style ='border-left:1px solid black;border-top:1px solid black;border-right:1px none black;border-bottom:1px solid black;'>2ая</td>
+  <td class='flx20' style ='border-left:1px solid black;border-top:1px solid black;border-right:1px none black;border-bottom:1px solid black;'>3яя</td>
+  <td class='flx3' style ='border-left:1px solid black;border-top:1px solid black;border-right:medium solid black;border-bottom:1px solid black;' colspan = '1' rowspan ='1'>Кап. Ремонт</td>
+</tr>
+ <tr  style='height:24.03pt;'>
+  <td class='flx1' style ='border-left:medium solid black;border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;text-align:right;'>1</td>
+  <td class='flx12' style ='border-left:1px solid black;border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;'>4ISBe 185 1ая</td>
+  <td class='flx12' style ='border-left:1px solid black;border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;'>(183 л.с., &laquo;Евро-3&raquo;, &laquo;Евро-4&raquo;);&nbsp;</td>
+  <td class='flx16' style ='border-left:1px solid black;border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;'>670,000.00 ₽</td>
+  <td class='flx16' style ='border-left:1px solid black;border-top:1px solid black;border-right:1px none black;border-bottom:1px solid black;'>450,000.00 ₽</td>
+  <td class='flx16' style ='border-left:1px solid black;border-top:1px solid black;border-right:1px none black;border-bottom:1px solid black;'>200,000.00 ₽</td>
+  <td class='flx16' style ='border-left:1px solid black;border-top:1px solid black;border-bottom:1px solid black;'>400,000.00 ₽</td>
+</tr>
+ <tr  style='height:22.58pt;'>
+  <td class='flx1' style ='border-left:medium solid black;border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;text-align:right;'>2</td>
+  <td class='flx12' style ='border-left:1px solid black;border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;'><div class='flx12' style ='height:22.58pt;'>6ISBe 185 1ая</div></td>
+  <td class='flx12' style ='border-left:1px solid black;border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;'><div class='flx12' style ='height:22.58pt;'>(183 л.с., &laquo;Евро-3&raquo;);&nbsp;</div></td>
+  <td class='flx16' style ='border-left:1px solid black;border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;'>670,000.00 ₽</td>
+  <td class='flx16' style ='border-left:1px solid black;border-top:1px solid black;border-right:1px none black;border-bottom:1px solid black;'>450,000.00 ₽</td>
+  <td class='flx16' style ='border-left:1px solid black;border-top:1px solid black;border-right:1px none black;border-bottom:1px solid black;'>200,000.00 ₽</td>
+  <td class='flx16' style ='border-left:1px solid black;border-top:1px solid black;border-bottom:1px solid black;'>410,000.00 ₽</td>
+</tr>
+ <tr  style='height:21.12pt;'>
+  <td class='flx1' style ='border-left:medium solid black;border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;text-align:right;'>3</td>
+  <td class='flx12' style ='border-left:1px solid black;border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;'><div class='flx12' style ='height:21.12pt;'>6ISBe 210 1ая</div></td>
+  <td class='flx12' style ='border-left:1px solid black;border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;'><div class='flx12' style ='height:21.12pt;'>(207 л.с., &laquo;Евро-3&raquo;);&nbsp;</div></td>
+  <td class='flx16' style ='border-left:1px solid black;border-top:1px solid black;border-right:1px solid black;border-bottom:1px solid black;'><div class='flx16' style ='height:21.12pt;'>805,000.00 ₽</div></td>
+  <td class='flx16' style ='border-left:1px solid black;border-top:1px solid black;border-right:1px none black;border-bottom:1px solid black;'><div class='flx16' style ='height:21.12pt;'>450,000.00 ₽</div></td>
+  <td class='flx16' style ='border-left:1px solid black;border-top:1px solid black;border-right:1px none black;border-bottom:1px solid black;'><div class='flx16' style ='height:21.12pt;'>200,000.00 ₽</div></td>
+  <td class='flx16' style ='border-left:1px solid black;border-top:1px solid black;border-bottom:1px solid black;'><div class='flx16' style ='height:21.12pt;'>420,000.00 ₽</div></td>
+</tr>
+ 
+</table>
+
+
+          
+      </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- Направления Section Start -->
+  <section id="projects" class="section-padding">
     <div class="container">
       <div class="text-center justify-content-center">
         <div class="section-header">
-            <h1 class="section-title">Другие направления </h1> 
-            <div class="shape wow fadeInDown"></div>
+          <h1 class="section-title">Другие направления </h1>
+          <div class="shape wow fadeInDown"></div>
         </div>
       </div>
       <div class="row justify-content-center">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
           <div id="testimonials" class="owl-carousel" data-wow-delay="0">
-            
+
             <div class="item">
               <div class="testimonial-item">
                 <div class="img-thumb">
@@ -696,22 +1605,22 @@
                   <h2><a href="#">Кабины</a></h2>
                   <h3><a href="#">Новые и ремонтные кабина КамАЗ</a></h3>
                 </div>
-                
+
               </div>
             </div>
 
             <div class="item">
-                <div class="testimonial-item">
-                  <div class="img-thumb">
-                    <img src="assets/img/projects/parts.jpg" alt="">
-                  </div>
-                  <div class="info">
-                    <h2><a href="#">Запчасти КамАЗ</a></h2>
-                    <h3><a href="#">Комплектуем заявки по запчастям КамАЗ</a></h3>
-                  </div>
-                
+              <div class="testimonial-item">
+                <div class="img-thumb">
+                  <img src="assets/img/projects/parts.jpg" alt="">
                 </div>
+                <div class="info">
+                  <h2><a href="#">Запчасти КамАЗ</a></h2>
+                  <h3><a href="#">Комплектуем заявки по запчастям КамАЗ</a></h3>
+                </div>
+
               </div>
+            </div>
 
 
             <div class="item">
@@ -723,10 +1632,10 @@
                   <h2><a href="#">Редукторы камаз</a></h2>
                   <h3><a href="#">Широкий выбор в редукторов в наличии</a></h3>
                 </div>
-               
+
               </div>
             </div>
-            
+
             <div class="item">
               <div class="testimonial-item">
                 <div class="img-thumb">
@@ -741,12 +1650,12 @@
                   
                 </div> -->
               </div>
-            </div>              
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </section> 
+  </section>
 
   <!-- Testimonial Section End -->
 
@@ -756,17 +1665,17 @@
 
 
 
- 
+
   <!-- Footer Section Start -->
   <section id="footer" class="footer-area section-padding bg-gray">
     <div class="container">
       <div class="container" id="contact">
-          <div class="text-center justify-content-center">
-              <div class="section-header">
-                  <h1 class="section-title">Контакты</h1> 
-                  <div class="shape wow fadeInDown"></div>
-              </div>
-            </div>
+        <div class="text-center justify-content-center">
+          <div class="section-header">
+            <h1 class="section-title">Контакты</h1>
+            <div class="shape wow fadeInDown"></div>
+          </div>
+        </div>
         <div class="row">
           <div class="col-md-6 col-sm-6 col-mb-12">
             <div class="widget">
@@ -781,7 +1690,7 @@
             </div>
           </div>
 
-        
+
           <div class="contacts col-md-6">
             <div class="phone w-100">
               <div class="phone__img">
@@ -791,14 +1700,14 @@
                 +7 (8552) 44-37-13<br>
                 +7 (938) 358-30-07
               </div>
-          
+
             </div>
-          
+
             <div class="mail w-100">
               <img src="assets/img/feature/mail.png" class="icon-img">
               <a href="mailto:agregat-16@yandex.ru">agregat-16@yandex.ru</a>
             </div>
-          
+
             <div class="geo w-100">
               <div class="geo__mark">
                 <img src="assets/img/feature/geo-mark.png" class="icon-img" alt="">
@@ -808,43 +1717,44 @@
                 Мензелинскийтракт, 122
               </div>
             </div>
-          
-          
+
+
           </div>
         </div>
       </div>
     </div>
-   
-    
+
+
 
   </section>
   <div>
-      <iframe src="https://yandex.ru/map-widget/v1/-/CCauZ6Yj" width="100%" height="400" frameborder="1"
-        allowfullscreen="true"></iframe>
-    </div> 
+    <iframe src="https://yandex.ru/map-widget/v1/-/CCauZ6Yj" width="100%" height="400" frameborder="1"
+      allowfullscreen="true"></iframe>
+  </div>
 
 
-    <div id="copyright">
-        <div class="container">
-          <div class="row">
-            <div class="copyright-content">
-              <ul class="list-inline">
-                <li class="list-inline-item">
-                  <p>© 2017 <a href="ooo-agregat.html">ООО ТД «Agregat»</a>, Все права защищены</p>
-                </li>
-                <li class="list-inline-item">
-                  <p><a href="javascript:" class="nal-link" data-toggle="modal" data-target="#policy">Лицензионное соглашение</a>
-                  </p>
-                </li>
-                <li class="list-inline-item">
-                  <p><a href="javascript:" class="nal-link" data-toggle="modal" data-target="#license">Политика
-                      конфиденциальности</a></p>
-                </li>
-              </ul>
-            </div>
-          </div>
+  <div id="copyright">
+    <div class="container">
+      <div class="row">
+        <div class="copyright-content">
+          <ul class="list-inline">
+            <li class="list-inline-item">
+              <p>© 2017 <a href="ooo-agregat.html">ООО ТД «Agregat»</a>, Все права защищены</p>
+            </li>
+            <li class="list-inline-item">
+              <p><a href="javascript:" class="nal-link" data-toggle="modal" data-target="#policy">Лицензионное
+                  соглашение</a>
+              </p>
+            </li>
+            <li class="list-inline-item">
+              <p><a href="javascript:" class="nal-link" data-toggle="modal" data-target="#license">Политика
+                  конфиденциальности</a></p>
+            </li>
+          </ul>
         </div>
       </div>
+    </div>
+  </div>
 
 
 
@@ -885,13 +1795,221 @@
   <!-- невидимая google-форма для заявки -->
   <div class="hidden">
 
-      <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted)
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted)
       {window.location.reload();}"> </iframe>
 
-      <form action="https://docs.google.com/forms/d/e/1FAIpQLSeApDUv5yqExW2QvXXHUb_f9l4uqxRKzEC5ImPI4E34amM52Q/formResponse"
-       method="POST" id="mG61Hd" target="hidden_iframe" onsubmit="submitted=true;">     
-          <div class="freebirdFormviewerViewFormCard exportFormCard">          <div class="freebirdFormviewerViewAccentBanner freebirdAccentBackground"></div>          <div class="freebirdFormviewerViewFormContent">            <div class="freebirdFormviewerViewNoPadding">              <div class="freebirdFormviewerViewHeaderHeader exportHeader">                <div class="freebirdFormviewerViewHeaderTitleRow">                  <div class="freebirdFormviewerViewHeaderTitle exportFormTitle freebirdCustomFont" dir="auto" role="heading"                    aria-level="1">Камаз.Запчасти.Заявка</div>                </div>                <div jsname="F0H8Yc" class="freebirdCommonViewSecurequizSecureQuizBannerContainer"></div>              </div>            </div>            <div class="freebirdFormviewerViewItemList" role="list">              <div class="freebirdFormviewerViewNumberedItemContainer">                <div role="listitem" class="freebirdFormviewerViewItemsItemItem freebirdFormviewerViewItemsTextTextItem"                  jsname="ibnC6b" jscontroller="rDGJeb" jsaction="sPvj8e:e4JwSe,Dlbleb;O22p3e:e4JwSe,F0zejc;"                  data-item-id="1804223789">                  <div class="freebirdFormviewerViewItemsItemItemHeader">                    <div class="freebirdFormviewerViewItemsItemItemTitleContainer">                      <div class="freebirdFormviewerViewItemsItemItemTitle exportItemTitle freebirdCustomFont" dir="auto"                        role="heading" aria-level="2" aria-describedby="i.desc.1804223789">Контакты</div>                      <div class="freebirdFormviewerViewItemsItemItemHelpText" id="i.desc.1804223789" dir="auto"></div>                    </div>                  </div>                  <div class="freebirdFormviewerViewItemsTextItemWrapper">                    <div                      class="quantumWizTextinputPaperinputEl freebirdFormviewerViewItemsTextShortText freebirdThemedInput modeLight"                      jscontroller="pxq3x" jsaction="clickonly:KjsqPd; focus:Jt1EX; blur:fpfTEe; input:Lg5SV;" jsshadow=""                      jsname="W85ice">                      <div class="quantumWizTextinputPaperinputMainContent exportContent">                        <div class="quantumWizTextinputPaperinputContentArea exportContentArea">                          <div class="quantumWizTextinputPaperinputInputArea"><input type="text"                              class="quantumWizTextinputPaperinputInput exportInput" jsname="YPqjbf" autocomplete="off"                              tabindex="0" aria-label="Контакты" aria-describedby="i.desc.1804223789 i.err.1804223789"                              name="entry.1519454606" value="" dir="auto" data-initial-dir="auto" data-initial-value=""                              aria-invalid="false">                            <div jsname="LwH6nd" class="quantumWizTextinputPaperinputPlaceholder exportLabel">Мой ответ</div>                          </div>                          <div class="quantumWizTextinputPaperinputUnderline exportUnderline"></div>                          <div jsname="XmnwAc"                            class="quantumWizTextinputPaperinputFocusUnderline exportFocusUnderline animationInitialized"                            style="transform-origin: 152.5px center;"></div>                        </div>                      </div>                      <div class="quantumWizTextinputPaperinputCounterErrorHolder">                        <div jsname="ty6ygf" class="quantumWizTextinputPaperinputHint exportHint"></div>                      </div>                    </div>                  </div>                  <div                    class="freebirdFormviewerViewItemsItemGradingGradingBox freebirdFormviewerViewItemsItemGradingFeedbackBox"                    jsname="R7fTud"></div>                  <div jsname="XbIQze" class="freebirdFormviewerViewItemsItemErrorMessage" id="i.err.1804223789" role="alert">                  </div>                </div>              </div>              <div class="freebirdFormviewerViewNumberedItemContainer">                <div role="listitem" class="freebirdFormviewerViewItemsItemItem freebirdFormviewerViewItemsTextTextItem"                  jsname="ibnC6b" jscontroller="rDGJeb" jsaction="sPvj8e:e4JwSe,Dlbleb;O22p3e:e4JwSe,F0zejc;"                  data-item-id="2086922311">                  <div class="freebirdFormviewerViewItemsItemItemHeader">                    <div class="freebirdFormviewerViewItemsItemItemTitleContainer">                      <div class="freebirdFormviewerViewItemsItemItemTitle exportItemTitle freebirdCustomFont" dir="auto"                        role="heading" aria-level="2" aria-describedby="i.desc.2086922311">Товар</div>                      <div class="freebirdFormviewerViewItemsItemItemHelpText" id="i.desc.2086922311" dir="auto"></div>                    </div>                  </div>                  <div class="freebirdFormviewerViewItemsTextItemWrapper">                    <div                      class="quantumWizTextinputPaperinputEl freebirdFormviewerViewItemsTextShortText freebirdThemedInput modeLight"                      jscontroller="pxq3x" jsaction="clickonly:KjsqPd; focus:Jt1EX; blur:fpfTEe; input:Lg5SV;" jsshadow=""                      jsname="W85ice">                      <div class="quantumWizTextinputPaperinputMainContent exportContent">                        <div class="quantumWizTextinputPaperinputContentArea exportContentArea">                          <div class="quantumWizTextinputPaperinputInputArea"><input type="text"                              class="quantumWizTextinputPaperinputInput exportInput" jsname="YPqjbf" autocomplete="off"                              tabindex="0" aria-label="Товар" aria-describedby="i.desc.2086922311 i.err.2086922311"                              name="entry.191261818" value="" dir="auto" data-initial-dir="auto" data-initial-value=""                              aria-invalid="false">                            <div jsname="LwH6nd" class="quantumWizTextinputPaperinputPlaceholder exportLabel">Мой ответ</div>                          </div>                          <div class="quantumWizTextinputPaperinputUnderline exportUnderline"></div>                          <div jsname="XmnwAc"                            class="quantumWizTextinputPaperinputFocusUnderline exportFocusUnderline animationInitialized"                            style="transform-origin: 103.5px center;"></div>                        </div>                      </div>                      <div class="quantumWizTextinputPaperinputCounterErrorHolder">                        <div jsname="ty6ygf" class="quantumWizTextinputPaperinputHint exportHint"></div>                      </div>                    </div>                  </div>                  <div                    class="freebirdFormviewerViewItemsItemGradingGradingBox freebirdFormviewerViewItemsItemGradingFeedbackBox"                    jsname="R7fTud"></div>                  <div jsname="XbIQze" class="freebirdFormviewerViewItemsItemErrorMessage" id="i.err.2086922311" role="alert">                  </div>                </div>              </div>              <div class="freebirdFormviewerViewNumberedItemContainer">                <div role="listitem" class="freebirdFormviewerViewItemsItemItem freebirdFormviewerViewItemsTextTextItem"                  jsname="ibnC6b" jscontroller="rDGJeb" jsaction="sPvj8e:e4JwSe,Dlbleb;O22p3e:e4JwSe,F0zejc;"                  data-item-id="640437418">                  <div class="freebirdFormviewerViewItemsItemItemHeader">                    <div class="freebirdFormviewerViewItemsItemItemTitleContainer">                      <div class="freebirdFormviewerViewItemsItemItemTitle exportItemTitle freebirdCustomFont" dir="auto"                        role="heading" aria-level="2" aria-describedby="i.desc.640437418">Комментарий</div>                      <div class="freebirdFormviewerViewItemsItemItemHelpText" id="i.desc.640437418" dir="auto"></div>                    </div>                  </div>                  <div                    class="quantumWizTextinputPapertextareaEl modeLight freebirdFormviewerViewItemsTextLongText freebirdThemedInput"                    jscontroller="pxq3x" jsaction="clickonly:KjsqPd; focus:Jt1EX; blur:fpfTEe; input:Lg5SV;" jsshadow=""                    jsname="W85ice">                    <div class="quantumWizTextinputPapertextareaMainContent exportContent">                      <div class="quantumWizTextinputPapertextareaPlaceholder exportLabel" jsname="LwH6nd">Мой ответ</div>                      <div class="quantumWizTextinputPapertextareaContentArea exportContentArea"><textarea                          class="quantumWizTextinputPapertextareaInput exportTextarea" jsname="YPqjbf" data-rows="1"                          tabindex="0" aria-label="Комментарий" jscontroller="gZjhIf"                          jsaction="input:Lg5SV;ti6hGc:XMgOHc;rcuQ6b:WYd;" name="entry.1977316514" dir="auto"                          data-initial-dir="auto" data-initial-value="" aria-describedby="i.desc.640437418 i.err.640437418"                          style="height: 24px;"></textarea></div>                      <div class="quantumWizTextinputPapertextareaUnderline exportUnderline"></div>                      <div jsname="XmnwAc" class="quantumWizTextinputPapertextareaFocusUnderline exportFocusUnderline"></div>                    </div>                    <div class="quantumWizTextinputPapertextareaCounterErrorHolder">                      <div jsname="ty6ygf" class="quantumWizTextinputPapertextareaHint exportHint"></div>                    </div>                  </div>                  <div                    class="freebirdFormviewerViewItemsItemGradingGradingBox freebirdFormviewerViewItemsItemGradingFeedbackBox"                    jsname="R7fTud"></div>                  <div jsname="XbIQze" class="freebirdFormviewerViewItemsItemErrorMessage" id="i.err.640437418" role="alert">                  </div>                </div>              </div>              <div class="freebirdFormviewerViewNumberedItemContainer">                <div role="listitem" class="freebirdFormviewerViewItemsItemItem freebirdFormviewerViewItemsTextTextItem"                  jsname="ibnC6b" jscontroller="rDGJeb" jsaction="sPvj8e:e4JwSe,Dlbleb;O22p3e:e4JwSe,F0zejc;"                  data-item-id="301332701">                  <div class="freebirdFormviewerViewItemsItemItemHeader">                    <div class="freebirdFormviewerViewItemsItemItemTitleContainer">                      <div class="freebirdFormviewerViewItemsItemItemTitle exportItemTitle freebirdCustomFont" dir="auto"                        role="heading" aria-level="2" aria-describedby="i.desc.301332701">Время</div>                      <div class="freebirdFormviewerViewItemsItemItemHelpText" id="i.desc.301332701" dir="auto"></div>                    </div>                  </div>                  <div class="freebirdFormviewerViewItemsTextItemWrapper">                    <div                      class="quantumWizTextinputPaperinputEl freebirdFormviewerViewItemsTextShortText freebirdThemedInput modeLight"                      jscontroller="pxq3x" jsaction="clickonly:KjsqPd; focus:Jt1EX; blur:fpfTEe; input:Lg5SV;" jsshadow=""                      jsname="W85ice">                      <div class="quantumWizTextinputPaperinputMainContent exportContent">                        <div class="quantumWizTextinputPaperinputContentArea exportContentArea">                          <div class="quantumWizTextinputPaperinputInputArea"><input type="text"                              class="quantumWizTextinputPaperinputInput exportInput" jsname="YPqjbf" autocomplete="off"                              tabindex="0" aria-label="Время" aria-describedby="i.desc.301332701 i.err.301332701"                              name="entry.1126040740" value="" dir="auto" data-initial-dir="auto" data-initial-value="">                            <div jsname="LwH6nd" class="quantumWizTextinputPaperinputPlaceholder exportLabel">Мой ответ</div>                          </div>                          <div class="quantumWizTextinputPaperinputUnderline exportUnderline"></div>                          <div jsname="XmnwAc" class="quantumWizTextinputPaperinputFocusUnderline exportFocusUnderline"></div>                        </div>                      </div>                      <div class="quantumWizTextinputPaperinputCounterErrorHolder">                        <div jsname="ty6ygf" class="quantumWizTextinputPaperinputHint exportHint"></div>                      </div>                    </div>                  </div>                  <div                    class="freebirdFormviewerViewItemsItemGradingGradingBox freebirdFormviewerViewItemsItemGradingFeedbackBox"                    jsname="R7fTud"></div>                  <div jsname="XbIQze" class="freebirdFormviewerViewItemsItemErrorMessage" id="i.err.301332701" role="alert">                  </div>                </div>              </div>            </div>            <div class="freebirdFormviewerViewNavigationNavControls" jscontroller="lSvzH"              jsaction="rcuQ6b:npT2md;JIbuQc:Gl574d(QR6bsb),V3upec(GeGHKb),HiUbje(M2UYVd),NPBnCf(OCpkoe);"              data-shuffle-seed="4565707331092832681" data-should-execute-invisible-captcha-challenge="false"              data-is-receipt-checked="false">              <div class="freebirdFormviewerViewNavigationButtonsAndProgress">                <div class="freebirdFormviewerViewNavigationButtons">                  <div role="button"                    class="quantumWizButtonEl quantumWizButtonPaperbuttonEl quantumWizButtonPaperbuttonFlat quantumWizButtonPaperbuttonDark quantumWizButtonPaperbutton2El2 freebirdFormviewerViewNavigationSubmitButton"                    jscontroller="VXdfxd"                    jsaction="click:cOuCgd; mousedown:UX7yZ; mouseup:lbsD7e; mouseenter:tfO1Yc; mouseleave:JywGue; focus:AHmuwe; blur:O22p3e; contextmenu:mg9Pef;touchstart:p6p2H; touchmove:FwuNnf; touchend:yfqBxc(preventMouseEvents=true|preventDefault=true); touchcancel:JMtRjd;"                    jsshadow="" jsname="M2UYVd" aria-disabled="false" tabindex="0">                    <div class="quantumWizButtonPaperbuttonRipple exportInk" jsname="ksKsZd"></div>                    <div class="quantumWizButtonPaperbuttonFocusOverlay exportOverlay"></div>                    <content class="quantumWizButtonPaperbuttonContent"><span                        class="quantumWizButtonPaperbuttonLabel exportLabel">Отправить</span></content>                  </div>                </div>              </div>              <div class="freebirdFormviewerViewNavigationPasswordWarning">Никогда не используйте формы Google для передачи                паролей.</div>            </div><input type="hidden" name="fvv" value="1"><input type="hidden" name="draftResponse" value="[null,null,&quot;4565707331092832681&quot;]      "><input type="hidden" name="pageHistory" value="0"><input type="hidden" name="fbzx" value="4565707331092832681">          </div>        </div>      </form>
-    
+    <form
+      action="https://docs.google.com/forms/d/e/1FAIpQLSeApDUv5yqExW2QvXXHUb_f9l4uqxRKzEC5ImPI4E34amM52Q/formResponse"
+      method="POST" id="mG61Hd" target="hidden_iframe" onsubmit="submitted=true;">
+      <div class="freebirdFormviewerViewFormCard exportFormCard">
+        <div class="freebirdFormviewerViewAccentBanner freebirdAccentBackground"></div>
+        <div class="freebirdFormviewerViewFormContent">
+          <div class="freebirdFormviewerViewNoPadding">
+            <div class="freebirdFormviewerViewHeaderHeader exportHeader">
+              <div class="freebirdFormviewerViewHeaderTitleRow">
+                <div class="freebirdFormviewerViewHeaderTitle exportFormTitle freebirdCustomFont" dir="auto"
+                  role="heading" aria-level="1">Камаз.Запчасти.Заявка</div>
+              </div>
+              <div jsname="F0H8Yc" class="freebirdCommonViewSecurequizSecureQuizBannerContainer"></div>
+            </div>
+          </div>
+          <div class="freebirdFormviewerViewItemList" role="list">
+            <div class="freebirdFormviewerViewNumberedItemContainer">
+              <div role="listitem" class="freebirdFormviewerViewItemsItemItem freebirdFormviewerViewItemsTextTextItem"
+                jsname="ibnC6b" jscontroller="rDGJeb" jsaction="sPvj8e:e4JwSe,Dlbleb;O22p3e:e4JwSe,F0zejc;"
+                data-item-id="1804223789">
+                <div class="freebirdFormviewerViewItemsItemItemHeader">
+                  <div class="freebirdFormviewerViewItemsItemItemTitleContainer">
+                    <div class="freebirdFormviewerViewItemsItemItemTitle exportItemTitle freebirdCustomFont" dir="auto"
+                      role="heading" aria-level="2" aria-describedby="i.desc.1804223789">Контакты</div>
+                    <div class="freebirdFormviewerViewItemsItemItemHelpText" id="i.desc.1804223789" dir="auto"></div>
+                  </div>
+                </div>
+                <div class="freebirdFormviewerViewItemsTextItemWrapper">
+                  <div
+                    class="quantumWizTextinputPaperinputEl freebirdFormviewerViewItemsTextShortText freebirdThemedInput modeLight"
+                    jscontroller="pxq3x" jsaction="clickonly:KjsqPd; focus:Jt1EX; blur:fpfTEe; input:Lg5SV;" jsshadow=""
+                    jsname="W85ice">
+                    <div class="quantumWizTextinputPaperinputMainContent exportContent">
+                      <div class="quantumWizTextinputPaperinputContentArea exportContentArea">
+                        <div class="quantumWizTextinputPaperinputInputArea"><input type="text"
+                            class="quantumWizTextinputPaperinputInput exportInput" jsname="YPqjbf" autocomplete="off"
+                            tabindex="0" aria-label="Контакты" aria-describedby="i.desc.1804223789 i.err.1804223789"
+                            name="entry.1519454606" value="" dir="auto" data-initial-dir="auto" data-initial-value=""
+                            aria-invalid="false">
+                          <div jsname="LwH6nd" class="quantumWizTextinputPaperinputPlaceholder exportLabel">Мой ответ
+                          </div>
+                        </div>
+                        <div class="quantumWizTextinputPaperinputUnderline exportUnderline"></div>
+                        <div jsname="XmnwAc"
+                          class="quantumWizTextinputPaperinputFocusUnderline exportFocusUnderline animationInitialized"
+                          style="transform-origin: 152.5px center;"></div>
+                      </div>
+                    </div>
+                    <div class="quantumWizTextinputPaperinputCounterErrorHolder">
+                      <div jsname="ty6ygf" class="quantumWizTextinputPaperinputHint exportHint"></div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="freebirdFormviewerViewItemsItemGradingGradingBox freebirdFormviewerViewItemsItemGradingFeedbackBox"
+                  jsname="R7fTud"></div>
+                <div jsname="XbIQze" class="freebirdFormviewerViewItemsItemErrorMessage" id="i.err.1804223789"
+                  role="alert"> </div>
+              </div>
+            </div>
+            <div class="freebirdFormviewerViewNumberedItemContainer">
+              <div role="listitem" class="freebirdFormviewerViewItemsItemItem freebirdFormviewerViewItemsTextTextItem"
+                jsname="ibnC6b" jscontroller="rDGJeb" jsaction="sPvj8e:e4JwSe,Dlbleb;O22p3e:e4JwSe,F0zejc;"
+                data-item-id="2086922311">
+                <div class="freebirdFormviewerViewItemsItemItemHeader">
+                  <div class="freebirdFormviewerViewItemsItemItemTitleContainer">
+                    <div class="freebirdFormviewerViewItemsItemItemTitle exportItemTitle freebirdCustomFont" dir="auto"
+                      role="heading" aria-level="2" aria-describedby="i.desc.2086922311">Товар</div>
+                    <div class="freebirdFormviewerViewItemsItemItemHelpText" id="i.desc.2086922311" dir="auto"></div>
+                  </div>
+                </div>
+                <div class="freebirdFormviewerViewItemsTextItemWrapper">
+                  <div
+                    class="quantumWizTextinputPaperinputEl freebirdFormviewerViewItemsTextShortText freebirdThemedInput modeLight"
+                    jscontroller="pxq3x" jsaction="clickonly:KjsqPd; focus:Jt1EX; blur:fpfTEe; input:Lg5SV;" jsshadow=""
+                    jsname="W85ice">
+                    <div class="quantumWizTextinputPaperinputMainContent exportContent">
+                      <div class="quantumWizTextinputPaperinputContentArea exportContentArea">
+                        <div class="quantumWizTextinputPaperinputInputArea"><input type="text"
+                            class="quantumWizTextinputPaperinputInput exportInput" jsname="YPqjbf" autocomplete="off"
+                            tabindex="0" aria-label="Товар" aria-describedby="i.desc.2086922311 i.err.2086922311"
+                            name="entry.191261818" value="" dir="auto" data-initial-dir="auto" data-initial-value=""
+                            aria-invalid="false">
+                          <div jsname="LwH6nd" class="quantumWizTextinputPaperinputPlaceholder exportLabel">Мой ответ
+                          </div>
+                        </div>
+                        <div class="quantumWizTextinputPaperinputUnderline exportUnderline"></div>
+                        <div jsname="XmnwAc"
+                          class="quantumWizTextinputPaperinputFocusUnderline exportFocusUnderline animationInitialized"
+                          style="transform-origin: 103.5px center;"></div>
+                      </div>
+                    </div>
+                    <div class="quantumWizTextinputPaperinputCounterErrorHolder">
+                      <div jsname="ty6ygf" class="quantumWizTextinputPaperinputHint exportHint"></div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="freebirdFormviewerViewItemsItemGradingGradingBox freebirdFormviewerViewItemsItemGradingFeedbackBox"
+                  jsname="R7fTud"></div>
+                <div jsname="XbIQze" class="freebirdFormviewerViewItemsItemErrorMessage" id="i.err.2086922311"
+                  role="alert"> </div>
+              </div>
+            </div>
+            <div class="freebirdFormviewerViewNumberedItemContainer">
+              <div role="listitem" class="freebirdFormviewerViewItemsItemItem freebirdFormviewerViewItemsTextTextItem"
+                jsname="ibnC6b" jscontroller="rDGJeb" jsaction="sPvj8e:e4JwSe,Dlbleb;O22p3e:e4JwSe,F0zejc;"
+                data-item-id="640437418">
+                <div class="freebirdFormviewerViewItemsItemItemHeader">
+                  <div class="freebirdFormviewerViewItemsItemItemTitleContainer">
+                    <div class="freebirdFormviewerViewItemsItemItemTitle exportItemTitle freebirdCustomFont" dir="auto"
+                      role="heading" aria-level="2" aria-describedby="i.desc.640437418">Комментарий</div>
+                    <div class="freebirdFormviewerViewItemsItemItemHelpText" id="i.desc.640437418" dir="auto"></div>
+                  </div>
+                </div>
+                <div
+                  class="quantumWizTextinputPapertextareaEl modeLight freebirdFormviewerViewItemsTextLongText freebirdThemedInput"
+                  jscontroller="pxq3x" jsaction="clickonly:KjsqPd; focus:Jt1EX; blur:fpfTEe; input:Lg5SV;" jsshadow=""
+                  jsname="W85ice">
+                  <div class="quantumWizTextinputPapertextareaMainContent exportContent">
+                    <div class="quantumWizTextinputPapertextareaPlaceholder exportLabel" jsname="LwH6nd">Мой ответ</div>
+                    <div class="quantumWizTextinputPapertextareaContentArea exportContentArea"><textarea
+                        class="quantumWizTextinputPapertextareaInput exportTextarea" jsname="YPqjbf" data-rows="1"
+                        tabindex="0" aria-label="Комментарий" jscontroller="gZjhIf"
+                        jsaction="input:Lg5SV;ti6hGc:XMgOHc;rcuQ6b:WYd;" name="entry.1977316514" dir="auto"
+                        data-initial-dir="auto" data-initial-value=""
+                        aria-describedby="i.desc.640437418 i.err.640437418" style="height: 24px;"></textarea></div>
+                    <div class="quantumWizTextinputPapertextareaUnderline exportUnderline"></div>
+                    <div jsname="XmnwAc" class="quantumWizTextinputPapertextareaFocusUnderline exportFocusUnderline">
+                    </div>
+                  </div>
+                  <div class="quantumWizTextinputPapertextareaCounterErrorHolder">
+                    <div jsname="ty6ygf" class="quantumWizTextinputPapertextareaHint exportHint"></div>
+                  </div>
+                </div>
+                <div
+                  class="freebirdFormviewerViewItemsItemGradingGradingBox freebirdFormviewerViewItemsItemGradingFeedbackBox"
+                  jsname="R7fTud"></div>
+                <div jsname="XbIQze" class="freebirdFormviewerViewItemsItemErrorMessage" id="i.err.640437418"
+                  role="alert"> </div>
+              </div>
+            </div>
+            <div class="freebirdFormviewerViewNumberedItemContainer">
+              <div role="listitem" class="freebirdFormviewerViewItemsItemItem freebirdFormviewerViewItemsTextTextItem"
+                jsname="ibnC6b" jscontroller="rDGJeb" jsaction="sPvj8e:e4JwSe,Dlbleb;O22p3e:e4JwSe,F0zejc;"
+                data-item-id="301332701">
+                <div class="freebirdFormviewerViewItemsItemItemHeader">
+                  <div class="freebirdFormviewerViewItemsItemItemTitleContainer">
+                    <div class="freebirdFormviewerViewItemsItemItemTitle exportItemTitle freebirdCustomFont" dir="auto"
+                      role="heading" aria-level="2" aria-describedby="i.desc.301332701">Время</div>
+                    <div class="freebirdFormviewerViewItemsItemItemHelpText" id="i.desc.301332701" dir="auto"></div>
+                  </div>
+                </div>
+                <div class="freebirdFormviewerViewItemsTextItemWrapper">
+                  <div
+                    class="quantumWizTextinputPaperinputEl freebirdFormviewerViewItemsTextShortText freebirdThemedInput modeLight"
+                    jscontroller="pxq3x" jsaction="clickonly:KjsqPd; focus:Jt1EX; blur:fpfTEe; input:Lg5SV;" jsshadow=""
+                    jsname="W85ice">
+                    <div class="quantumWizTextinputPaperinputMainContent exportContent">
+                      <div class="quantumWizTextinputPaperinputContentArea exportContentArea">
+                        <div class="quantumWizTextinputPaperinputInputArea"><input type="text"
+                            class="quantumWizTextinputPaperinputInput exportInput" jsname="YPqjbf" autocomplete="off"
+                            tabindex="0" aria-label="Время" aria-describedby="i.desc.301332701 i.err.301332701"
+                            name="entry.1126040740" value="" dir="auto" data-initial-dir="auto" data-initial-value="">
+                          <div jsname="LwH6nd" class="quantumWizTextinputPaperinputPlaceholder exportLabel">Мой ответ
+                          </div>
+                        </div>
+                        <div class="quantumWizTextinputPaperinputUnderline exportUnderline"></div>
+                        <div jsname="XmnwAc" class="quantumWizTextinputPaperinputFocusUnderline exportFocusUnderline">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="quantumWizTextinputPaperinputCounterErrorHolder">
+                      <div jsname="ty6ygf" class="quantumWizTextinputPaperinputHint exportHint"></div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="freebirdFormviewerViewItemsItemGradingGradingBox freebirdFormviewerViewItemsItemGradingFeedbackBox"
+                  jsname="R7fTud"></div>
+                <div jsname="XbIQze" class="freebirdFormviewerViewItemsItemErrorMessage" id="i.err.301332701"
+                  role="alert"> </div>
+              </div>
+            </div>
+          </div>
+          <div class="freebirdFormviewerViewNavigationNavControls" jscontroller="lSvzH"
+            jsaction="rcuQ6b:npT2md;JIbuQc:Gl574d(QR6bsb),V3upec(GeGHKb),HiUbje(M2UYVd),NPBnCf(OCpkoe);"
+            data-shuffle-seed="4565707331092832681" data-should-execute-invisible-captcha-challenge="false"
+            data-is-receipt-checked="false">
+            <div class="freebirdFormviewerViewNavigationButtonsAndProgress">
+              <div class="freebirdFormviewerViewNavigationButtons">
+                <div role="button"
+                  class="quantumWizButtonEl quantumWizButtonPaperbuttonEl quantumWizButtonPaperbuttonFlat quantumWizButtonPaperbuttonDark quantumWizButtonPaperbutton2El2 freebirdFormviewerViewNavigationSubmitButton"
+                  jscontroller="VXdfxd"
+                  jsaction="click:cOuCgd; mousedown:UX7yZ; mouseup:lbsD7e; mouseenter:tfO1Yc; mouseleave:JywGue; focus:AHmuwe; blur:O22p3e; contextmenu:mg9Pef;touchstart:p6p2H; touchmove:FwuNnf; touchend:yfqBxc(preventMouseEvents=true|preventDefault=true); touchcancel:JMtRjd;"
+                  jsshadow="" jsname="M2UYVd" aria-disabled="false" tabindex="0">
+                  <div class="quantumWizButtonPaperbuttonRipple exportInk" jsname="ksKsZd"></div>
+                  <div class="quantumWizButtonPaperbuttonFocusOverlay exportOverlay"></div>
+                  <content class="quantumWizButtonPaperbuttonContent"><span
+                      class="quantumWizButtonPaperbuttonLabel exportLabel">Отправить</span></content>
+                </div>
+              </div>
+            </div>
+            <div class="freebirdFormviewerViewNavigationPasswordWarning">Никогда не используйте формы Google для
+              передачи паролей.</div>
+          </div><input type="hidden" name="fvv" value="1"><input type="hidden" name="draftResponse"
+            value="[null,null,&quot;4565707331092832681&quot;]      "><input type="hidden" name="pageHistory"
+            value="0"><input type="hidden" name="fbzx" value="4565707331092832681">
+        </div>
+      </div>
+    </form>
+
 
   </div>
 
