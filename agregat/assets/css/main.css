@@ -112,12 +112,12 @@ a:not([href]):not([tabindex]) {
 
 .image::after { 
   background: transparent;
-  background: -moz-linear-gradient(bottom, rgba(0, 0, 0, 0.8) 0%, rgba(56, 56, 56, 0.1) 100%);
+  background: -moz-linear-gradient(top, rgba(40, 40, 40, 0.5) 12%, rgba(0, 0, 0, 0.1) 25%);
   background: -webkit-gradient(left bottom, left bottom, color-stop(0%, rgba(56, 56, 56, 0.8)), color-stop(100%, rgba(0, 0, 0, 0.1)));
-  background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.8) 0%, rgba(56, 56, 56, 0.1) 100%);
-  background: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.8) 0%, rgba(56, 56, 56, 0.1) 100%);
-  background: -ms-linear-gradient(bottom, rgba(0, 0, 0, 0.8) 0%, rgba(56, 56, 56, 0.1) 100%);
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(56, 56, 56, 0.1) 100%);
+  background: -webkit-linear-gradient(top, rgba(40, 40, 40, 0.5) 12%, rgba(0, 0, 0, 0.1) 25%);
+  background: -o-linear-gradient(top, rgba(40, 40, 40, 0.5) 12%, rgba(0, 0, 0, 0.1) 25%);
+  background: -ms-linear-gradient(top, rgba(40, 40, 40, 0.5) 12%, rgba(0, 0, 0, 0.1) 25%);
+  background: linear-gradient(to top, rgba(40, 40, 40, 0.5) 12%, rgba(0, 0, 0, 0.1) 25%);
   content: "";
   display: block;
   height: 100%;    left: 0;
@@ -1843,23 +1843,32 @@ font-size: 30px;
 .characteristic__name {
   display: table-cell;
   padding: 10px;
-  font-size: 3em;
+  font-size: 1em;
+  width: 250px;
+  padding-left: 20px; 
+  font-weight: 400;
 }
 
 .charasteritstic__value {
   display: table cell;
   padding: 10px;
-  font-size: 3em;
+  font-size: 0.9em;
   text-align: left;
+  font-weight: 400;
 }
 
 .characteristic__row {
   display: table-row;
+  width: 100%;
 }
 
 .characteristic__table {
   display: table;
   padding: 5px;
+}
+
+.p-16 {
+  padding-left: 16.66667%;
 }
 
 .services {
