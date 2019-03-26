@@ -1907,5 +1907,12 @@ font-size: 30px;
 
 .about-area_1 {
   display: flex;
-  justify-content: center
+  justify-content: center;
+  font-family: roboto !important;
+  flex-direction: column;
+  font-size: 17px !important;
+}
+
+#table {
+  font-size: 17px !important;
 }
