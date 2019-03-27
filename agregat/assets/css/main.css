@@ -703,6 +703,9 @@ hr {
 .navbar-brand {
   position: relative;
   padding: 0px;
+  font-family: 'roboto';
+  font-size: 30px;
+  font-weight: 300;
 }
 
 .price {
