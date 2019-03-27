@@ -705,7 +705,7 @@ hr {
   padding: 0px;
   font-family: 'roboto';
   font-size: 30px;
-  font-weight: 300;
+  font-weight: 3  00;
 }
 
 .price {
@@ -864,6 +864,7 @@ iframe {
 .navbar {
   border-bottom: 1px solid #F4F4F4; 
   font-weight: 400;
+  background-color: #4c4c4c;
 }
 
 .navbar li.active a.nav-link {
@@ -1659,6 +1660,7 @@ textarea {
   margin: 45px 0 0px;
   width: 100%;
   text-align: center;
+  font-size: 
 }
 
 #copyright p {
