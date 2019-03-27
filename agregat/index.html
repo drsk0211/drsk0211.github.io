@@ -8,8 +8,8 @@
 
   <title>Двигатели КамАЗ в наличии от официального дилера с доставкой по России от 2 дней | Челныагрегатцентр, без
     предоплаты</title>
-    <meta name="Keywords" content="">
-    <meta name="description" content="Сайт об HTML и создании сайтов"> 
+  <meta name="Keywords" content="">
+  <meta name="description" content="Сайт об HTML и создании сайтов">
   <!--title icon-->
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <!--Avesome icons-->
@@ -47,7 +47,8 @@
         <nav class="navbar navbar-expand-lg bg-inverse fixed-top scrolling-navbar">
           <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
-            <a href="index.html" class="navbar-brand" style="display: contents;"><img src="assets/img/logo_7.png" style="max-width: 450px;"></a>
+            <a href="index.html" class="navbar-brand" style="display: contents;"><img src="assets/img/logo_7.png"
+                style="max-width: 450px;"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
               aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
               <i class="lni-menu"></i>
@@ -94,16 +95,20 @@
               <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
                 <div class="contents">
                   <ul>
-                    <li style="margin-bottom:0px;"> 
-                      <h1 class="title text-left w-100">Двигатели КамАЗ в наличии</h1> </li>
+                    <li style="margin-bottom:0px;">
+                      <h1 class="title text-left w-100">Двигатели КамАЗ в наличии</h1>
+                    </li>
                     <li style="margin-top:0px;">
                       <h2 class="title w-100">от официального дилера</h1>
                     </li>
                     <li>&nbsp;</li>
-                    <li><img src="assets/img/feature/mark.png" width="21px" alt=""> &nbsp;&nbsp;20 моделей в наличии в Москве
+                    <li><img src="assets/img/feature/mark.png" width="21px" alt=""> &nbsp;&nbsp;20 моделей в наличии в
+                      Москве
                       и Наб.Челнах</li>
-                    <li><img src="assets/img/feature/mark.png" width="21px" alt=""></i> &nbsp;&nbsp;10 лет на рынке </li>
-                    <li><img src="assets/img/feature/mark.png" width="21px" alt=""></i> &nbsp;&nbsp;Гарантия на все агрегаты</li>
+                    <li><img src="assets/img/feature/mark.png" width="21px" alt=""></i> &nbsp;&nbsp;10 лет на рынке
+                    </li>
+                    <li><img src="assets/img/feature/mark.png" width="21px" alt=""></i> &nbsp;&nbsp;Гарантия на все
+                      агрегаты</li>
                   </ul>
                 </div>
               </div>
@@ -120,17 +125,18 @@
                   <div class="form-group " id='default-suggestions'>
                     <div class="title" style="color:lightgray; padding-bottom:1em;">запросить предложение</div>
 
-                    <input type="tel" class="form-control" id="input_contact"
-                      placeholder="ваш телефон или email" name="phone" required autocomplete="tel"
+                    <input type="tel" class="form-control" id="input_contact" placeholder="ваш телефон или email"
+                      name="phone" required autocomplete="tel"
                       onchange="$('#btnSend').addClass('btn-primary');$('#btnSend').removeClass('btn-outline-primary');">
-                      <input class="typeahead form-control" type="text" placeholder="укажите модель" id="select">
+                    <input class="typeahead form-control" type="text" placeholder="укажите модель" id="select">
                     <a id="request_comment_link" href="javascript:"
                       onclick="$('#request_comment_link').addClass('hidden'); $('#request_comment').removeClass('hidden');"
                       class="small" style="color:lightgray;">добавить комментарий </a>
                     <textarea id="request_comment" class="form-control hidden" placeholder="комментарий"
                       rows="3"></textarea>
                   </div>
-                  <input id="btnSend" onclick="send_request();" class="btn btn-sm btn-outline-primary" type="button" value="отправить">
+                  <input id="btnSend" onclick="send_request();" class="btn btn-sm btn-outline-primary" type="button"
+                    value="отправить">
 
                   <!-- script для typeahaed  -->
                   <script>
@@ -177,33 +183,33 @@
 
                     // --------- ОТСЫЛКА ФОРМЫ  -----------------------
 
-                    function send_request(){
-                        // соберем данные и присвоим переменным.
-                        var contact = $("#input_contact").val(); // контакты
-                        var good = $("#select").val(); // товар
-                        var comment = $("#request_comment").val();
+                    function send_request() {
+                      // соберем данные и присвоим переменным.
+                      var contact = $("#input_contact").val(); // контакты
+                      var good = $("#select").val(); // товар
+                      var comment = $("#request_comment").val();
 
-                        // проверим заполнение 
-                        if(contact === "" || contact === null){
-                          alert("Укажите, пожалуйста, ваши контактные данные.");
-                          return; // закончим
-                        }
-                        
-                        // присвоим значения input-ам  google -формы
-                        $("[name='entry.1519454606']").val(contact); // input google формы, там id нет, потому ищем по имени. и присваиваем
-                        $("[name='entry.191261818']").val(good); 
-                        $("[name='entry.1977316514']").val(comment); 
-                        $("[name='entry.1126040740']").val(new Date().toJSON()); 
+                      // проверим заполнение 
+                      if (contact === "" || contact === null) {
+                        alert("Укажите, пожалуйста, ваши контактные данные.");
+                        return; // закончим
+                      }
 
-                        // берем форму по Id - и командой Submit - отправляем ее на сервер
-                        document.getElementById("mG61Hd").submit();
+                      // присвоим значения input-ам  google -формы
+                      $("[name='entry.1519454606']").val(contact); // input google формы, там id нет, потому ищем по имени. и присваиваем
+                      $("[name='entry.191261818']").val(good);
+                      $("[name='entry.1977316514']").val(comment);
+                      $("[name='entry.1126040740']").val(new Date().toJSON());
 
-                        alert("Заявка отправлена. Спасибо. Мы свяжемся с Вами в ближайшее время.");
-                        
-                        // очищу input
-                        $("#input_contact").val(""); // контакты
-                        $("#select").val(""); // товар
-                        $("#request_comment").val("");
+                      // берем форму по Id - и командой Submit - отправляем ее на сервер
+                      document.getElementById("mG61Hd").submit();
+
+                      alert("Заявка отправлена. Спасибо. Мы свяжемся с Вами в ближайшее время.");
+
+                      // очищу input
+                      $("#input_contact").val(""); // контакты
+                      $("#select").val(""); // товар
+                      $("#request_comment").val("");
                     }
 
                     // нужна глобальная переменная, чтобы не перенаправлял нас на сайт google - после отправки заявки
@@ -232,7 +238,7 @@
       </div>
       <div class="row" id="models_container">
         <!-- Services item -->
-       
+
 
 
       </div>
@@ -240,43 +246,43 @@
   </section>
 
 
-<script>
-  var mods;
-  $.getJSON("models.json", function(json) {
+  <script>
+    var mods;
+    $.getJSON("models.json", function (json) {
       mods = json;
-      if(mods == null || mods.length == 0) return;
+      if (mods == null || mods.length == 0) return;
       var source = document.getElementById("dvigatel-item").innerHTML;
       var template = Handlebars.compile(source);
 
-      for (let index = 0; index < mods.length; index++) {       
+      for (let index = 0; index < mods.length; index++) {
         var rez1 = mods[index];
-        if(rez1.id < 0) continue;
+        if (rez1.id < 0) continue;
         var html1 = template(rez1);
         $("#models_container").append(html1);
       }
-      
-      
-  });
+
+
+    });
 
 
     function show_dvigatel_popup(id) {
-        var source = document.getElementById("dvigatel-popup-template").innerHTML;
-        var template = Handlebars.compile(source);
-        if(mods == null || mods.length == 0) return;
+      var source = document.getElementById("dvigatel-popup-template").innerHTML;
+      var template = Handlebars.compile(source);
+      if (mods == null || mods.length == 0) return;
 
-        var rez = mods.find(x => x.id == id);
-        if (rez != null) {
-          var html = template(rez);
-          $("#popup_container").html("");
-          $("#popup_container").append(html);
-          $('#engineModal_one').modal('show');
-        }
+      var rez = mods.find(x => x.id == id);
+      if (rez != null) {
+        var html = template(rez);
+        $("#popup_container").html("");
+        $("#popup_container").append(html);
+        $('#engineModal_one').modal('show');
+      }
 
     }
-</script>
+  </script>
 
 
-<div id="popup_container"></div>
+  <div id="popup_container"></div>
   <!-- Modal windows -------------------------->
   <script id="dvigatel-item" type="text/x-handlebars-template">
     <div class="engine col-md-6 col-lg-4 col-xs-12">
@@ -292,7 +298,7 @@
 
   <!-- Modal windows -------------------------->
   <script id="dvigatel-popup-template" type="text/x-handlebars-template">
-  
+
     <div class="modal" id="engineModal_one" tabindex="-1" role="dialog" aria-labelledby="engineModal" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="vertical-alignment-helper">
@@ -390,7 +396,7 @@
                 <div class="row">
 
                   <div id="photoDescription" class="col">
-                    <img src="https://xn----7sbbaggflvddzks7f.xn--p1ai/wp-content/uploads/2017/07/eng2.jpg" alt=""
+                    <img src="assets/img/dvigatels/nophoto.jpg" alt=""
                       class="img-thumbnail" />
                   </div>
 
@@ -461,7 +467,7 @@
           laudantium consequatur esse repellendus numquam dicta explicabo consectetur ullam eaque exercitationem unde
           reiciendis laborum sapiente, excepturi necessitatibus doloremque? Quasi omnis voluptas vel mollitia rerum
           ipsum culpa non libero odio, odit magni iure quam ducimus fugiat. Nulla maxime quam dolore voluptas?
-          Reiciendis magnam cum sapien  te a accusantium aliquam quidem. Error similique minus, ut quas porro, molestias
+          Reiciendis magnam cum sapiente a accusantium aliquam quidem. Error similique minus, ut quas porro, molestias
           dolor aspernatur nisi, voluptatem numquam iusto. Tempore totam architecto enim distinctio inventore, ut maxime
           eos expedita eius porro odit tenetur laboriosam neque voluptate aspernatur adipisci quibusdam. Omnis suscipit
           numquam nemo enim dolores veniam iusto culpa autem, consequuntur expedita atque voluptates rerum sapiente hic,
@@ -607,7 +613,7 @@
   <!-- Call To Action Section Start -->
 
 
-  
+
 
 
   <!-- Call To Action Section Start -->
@@ -632,21 +638,28 @@
   <section id="priemyshestva" class="section-padding  bg-gray">
     <div class="container text-center justify-content-center">
       <div class="section-header">
+        <h1>Наши преимущества</ h1>
+      </div>
+      <div class="section-header">
+
         <!-- <h1 class="section-title wow fadeInDown">Нащи преимущества</h1> -->
         <div class="shape wow fadeInDown"></div>
         <div class="about-area">
           <div class="row">
-              <div class="col-lg-3 col-md-4 col-xs-12 priemyshestva"><img src="assets/img/feature/warranty.png"></i>Гарантия
-                на все агрегаты</div>
-              <div class="col-lg-3 col-md-4 col-xs-12 priemyshestva"><img src="assets/img/feature/customer.png">
-                4 тысячи
-                клиентов</div>
-              <div class="col-lg-3 col-md-4 col-xs-12 priemyshestva"><img src="assets/img//feature/delivery.png">Доставка по всей
-                России</div>
-              <div class="col-lg-3 col-md-4 col-xs-12 priemyshestva"><img src="assets/img/feature/percent_big.png">Отправим
-                по 10% авансу</div>
-        
-           
+            <div class="col-lg-3 col-md-4 col-xs-12 priemyshestva"><img
+                src="assets/img/feature/warranty.png"></i>Гарантия
+              на все агрегаты</div>
+            <div class="col-lg-3 col-md-4 col-xs-12 priemyshestva"><img src="assets/img/feature/customer.png">
+              4 тысячи
+              клиентов</div>
+            <div class="col-lg-3 col-md-4 col-xs-12 priemyshestva"><img src="assets/img//feature/delivery.png">Доставка
+              по всей
+              России</div>
+            <div class="col-lg-3 col-md-4 col-xs-12 priemyshestva"><img
+                src="assets/img/feature/percent_big.png">Отправим
+              по 10% авансу</div>
+
+
           </div>
         </div>
       </div>
@@ -658,12 +671,14 @@
             </div>
             <div class="content" style="padding-top:3em;">
               <div class="blog-lg-area-left">
-                <p style="text-align: justify;font-size: 1.2em;">ООО «ЧелныАгрегатЦентр» более десяти лет специализируется на оптовой
+                <p style="text-align: justify;font-size: 1.2em;">ООО «ЧелныАгрегатЦентр» более десяти лет
+                  специализируется на оптовой
                   торговле запасными частями и комплектующими для автомобилей КАМАЗ, а также поставке запчастей в
                   магазины и автотранспортные предприятия.</p>
-                <p style="text-align: justify;font-size: 1.2em;">За годы своей работы наши специалисты овладели всеми тонкостями и
+                <p style="text-align: justify;font-size: 1.2em;">За годы своей работы наши специалисты овладели всеми
+                  тонкостями и
                   нюансами оптовой торговли запасными частями и комплектующими. </p>
-                
+
               </div>
             </div>
           </div>
@@ -673,20 +688,285 @@
     </div>
   </section>
 
+  <section id="priemyshestva" class="section-padding  bg-gray">
+    <div class="container text-center justify-content-center">
+      <div class="section-header">
+        <h1>Прайс-лист</h1>
+        <div class="shape shape wow fadeInDown"></div>
+      </div>
+      <div class="shape shape wow fadeInDown"></div>
+      <div class="section-header">
+        <div class="about-area_1">
+          
 
-<!-- Направления Section Start -->
-<section id="projects" class="section-padding">
+          
+              
+            
+          
+          <a href="#"> Скачать прайс-лист</a>
+          <table id="table" cellspacing="0" border="0">
+              <colgroup width="43"></colgroup>
+              <colgroup width="369"></colgroup>
+              <colgroup width="540"></colgroup>
+              <colgroup span="2" width="194"></colgroup>
+              <colgroup width="184"></colgroup>
+              <colgroup width="242"></colgroup>
+              
+                <td height="29" align="center" valign=bottom><b><font face="roboto" font-size: 17px;><br></font></b></td>
+                <td align="center" valign=bottom><b><font face="roboto" font-size: 17px;><br></font></b></td>
+                <td align="center" valign=bottom><b><font face="roboto" font-size: 17px;><br></font></b></td>
+                <td align="center" valign=bottom><b><font face="roboto" font-size: 17px;><br></font></b></td>
+                <td align="center" valign=bottom><b><font face="roboto" font-size: 17px;><br></font></b></td>
+                <td align="center" valign=bottom><b><font face="roboto" font-size: 17px;><br></font></b></td>
+                <td align="center" valign=bottom><b><font face="roboto" font-size: 17px;><br></font></b></td>
+              </tr>
+              <tr>
+                <td style="border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 2px solid #000000; border-right: 1px solid #000000" rowspan=3 height="241" align="center" valign=middle><b><font face="roboto" font-size: 17px;>№ п/п</font></b></td>
+                <td style="border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" rowspan=3 align="center" valign=middle><b><font face="roboto" font-size: 17px;>Модель и комплектация</font></b></td>
+                <td style="border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" rowspan=3 align="center" valign=middle><b><font face="roboto" font-size: 17px;>Особенности комплектации</font></b></td>
+                <td style="border-top: 2px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 2px solid #000000" colspan=4 align="center" valign=middle><b><font face="roboto" font-size: 17px;>Прейскурантная цена, руб. </font></b></td>
+                </tr>
+              <tr>
+                <td style="border-top: 1px solid #000000; border-bottom: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" rowspan=2 align="center" valign=middle><b><font face="roboto" font-size: 17px;>Новый, завод  гарантия 1 год</font></b></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" rowspan=2 align="center" valign=middle><b><font face="roboto" font-size: 17px;>Новый      (дочернее предприятие) гарантия 1 год</font></b></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 2px solid #000000" colspan=2 align="center" valign=middle><b><font face="roboto" font-size: 17px;>ООО &quot;ЧелныАгрегатЦентр&quot;</font></b></td>
+                </tr>
+              <tr>
+                <td style="border-top: 1px solid #000000; border-bottom: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><b><font face="roboto" font-size: 17px;>Кап. ремонт по максимуму из новых деталей ОАО КАМАЗ* 12мес.</font></b></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 2px solid #000000; border-left: 1px solid #000000; border-right: 2px solid #000000" align="center" valign=middle><b><font face="roboto" font-size: 17px;>Кап. ремонт стандарт**      гарантия 6 мес.</font></b></td>
+              </tr>
+              <tr>
+                <td style="border-left: 2px solid #000000; border-right: 2px solid #000000" colspan=7 height="48" align="center" valign=bottom bgcolor="#FFFF00"><b><font face="roboto" font-size: 17px;>СИЛОВЫЕ АГРЕГАТЫ (300ая комплектация, с навесным оборудованием)</font></b></td>
+                </tr>
+              <tr>
+                <td style="border-top: 2px solid #000000; border-bottom: 1px solid #000000; border-left: 2px solid #000000" height="36" align="right" valign=bottom sdval="1" sdnum="1033;"><font face="roboto" font-size: 17px;>1</font></td>
+                <td style="border-top: 2px solid #000000; border-bottom: 1px solid #000000; border-left: 2px solid #000000; border-right: 1px solid #000000" align="left" valign=bottom><font face="roboto" font-size: 17px;>740.10-300 с 15 КПП</font></td>
+                <td style="border-top: 2px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=bottom><font face="roboto" font-size: 17px;>210 л.с.*, сцепление 14, ТНВД 33-02</font></td>
+                <td style="border-top: 2px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom sdnum="1033;0;#,##0.00 &quot;₽&quot;"><font face="roboto" font-size: 17px;>запрос</font></td>
+                <td style="border-top: 2px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom sdnum="1033;0;#,##0.00 &quot;₽&quot;"><font face="roboto" font-size: 17px;>запрос</font></td>
+                <td style="border-top: 2px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom sdnum="1033;0;#,##0.00 &quot;₽&quot;"><font face="roboto" font-size: 17px;>запрос</font></td>
+                <td style="border-top: 2px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom sdnum="1033;0;#,##0.00 &quot;₽&quot;"><font face="roboto" font-size: 17px;>запрос</font></td>
+              </tr>
+              <tr>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 2px solid #000000" height="36" align="right" valign=bottom sdval="2" sdnum="1033;"><font face="roboto" font-size: 17px;>2</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 2px solid #000000; border-right: 1px solid #000000" align="left" valign=bottom><font face="roboto" font-size: 17px;>740.11-300 с 152 КПП</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=bottom><font face="roboto" font-size: 17px;>240 л.с.*, сцепление 142, ТНВД 337-40</font></td>
+                <td style="border-top: 2px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom sdnum="1033;0;#,##0.00 &quot;₽&quot;"><font face="roboto" font-size: 17px;>запрос</font></td>
+                <td style="border-top: 2px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom sdnum="1033;0;#,##0.00 &quot;₽&quot;"><font face="roboto" font-size: 17px;>запрос</font></td>
+                <td style="border-top: 2px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom sdnum="1033;0;#,##0.00 &quot;₽&quot;"><font face="roboto" font-size: 17px;>запрос</font></td>
+                <td style="border-top: 2px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom sdnum="1033;0;#,##0.00 &quot;₽&quot;"><font face="roboto" font-size: 17px;>запрос</font></td>
+              </tr>
+              <tr>
+                <td style="border-top: 1px solid #000000; border-bottom: 2px solid #000000; border-left: 2px solid #000000" height="36" align="right" valign=bottom sdval="3" sdnum="1033;"><font face="roboto" font-size: 17px;>3</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 2px solid #000000; border-left: 2px solid #000000; border-right: 1px solid #000000" align="left" valign=bottom><font face="roboto" font-size: 17px;>740.13-300 с 152 КПП</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=bottom><font face="roboto" font-size: 17px;>260 л.с.*, сцепление 142, ТНВД 337-42</font></td>
+                <td style="border-top: 2px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom sdnum="1033;0;#,##0.00 &quot;₽&quot;"><font face="roboto" font-size: 17px;>запрос</font></td>
+                <td style="border-top: 2px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom sdnum="1033;0;#,##0.00 &quot;₽&quot;"><font face="roboto" font-size: 17px;>запрос</font></td>
+                <td style="border-top: 2px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom sdnum="1033;0;#,##0.00 &quot;₽&quot;"><font face="roboto" font-size: 17px;>запрос</font></td>
+                <td style="border-top: 2px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom sdnum="1033;0;#,##0.00 &quot;₽&quot;"><font face="roboto" font-size: 17px;>запрос</font></td>
+              </tr>
+              <tr>
+                <td style="border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 2px solid #000000; border-right: 2px solid #000000" colspan=7 height="47" align="center" valign=bottom bgcolor="#FFFF00"><b><font face="roboto" font-size: 17px;>ДВИГАТЕЛИ (400ая комплектация, с навесным оборудованием)</font></b></td>
+                </tr>
+              <tr>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 2px solid #000000; border-right: 1px solid #000000" height="38" align="right" valign=bottom sdval="1" sdnum="1033;"><font face="roboto" font-size: 17px;>1</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=bottom><font face="roboto" font-size: 17px;>74009.10-400 (ЕВРО-0)</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=bottom><font face="roboto" font-size: 17px;>210 л.с.*, ТНВД 33-02</font></td>
+                <td style="border-top: 2px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom sdnum="1033;0;#,##0.00 &quot;₽&quot;"><font face="roboto" font-size: 17px;>запрос</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle sdval="325000" sdnum="1033;0;#,##0.00 &quot;₽&quot;"><font face="roboto" font-size: 17px;>325,000.00 ₽</font></td>
+                <td style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle sdval="245000" sdnum="1033;0;#,##0.00 &quot;₽&quot;"><font face="roboto" font-size: 17px;>245,000.00 ₽</font></td>
+                <td style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 2px solid #000000" align="center" valign=bottom sdval="220000" sdnum="1033;0;#,##0.00 &quot;₽&quot;"><font face="roboto" font-size: 17px;>220,000.00 ₽</font></td>
+              </tr>
+              <tr>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 2px solid #000000; border-right: 1px solid #000000" height="38" align="right" valign=bottom sdval="2" sdnum="1033;"><font face="roboto" font-size: 17px;>2</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=bottom><font face="roboto" font-size: 17px;>74009.10-403 (УРАЛ)</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=bottom><font face="roboto" font-size: 17px;>210 л.с.*, ТНВД 33-10</font></td>
+                <td style="border-top: 2px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom sdnum="1033;0;#,##0.00 &quot;₽&quot;"><font face="roboto" font-size: 17px;>запрос</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle sdval="345000" sdnum="1033;0;#,##0.00 &quot;₽&quot;"><font face="roboto" font-size: 17px;>345,000.00 ₽</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle sdval="252200" sdnum="1033;0;#,##0.00 &quot;₽&quot;"><font face="roboto" font-size: 17px;>252,200.00 ₽</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 2px solid #000000" align="center" valign=bottom sdval="230000" sdnum="1033;0;#,##0.00 &quot;₽&quot;"><font face="roboto" font-size: 17px;>230,000.00 ₽</font></td>
+              </tr>
+              <tr>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 2px solid #000000; border-right: 1px solid #000000" height="38" align="right" valign=bottom sdval="3" sdnum="1033;"><font face="roboto" font-size: 17px;>3</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=bottom><font face="roboto" font-size: 17px;>74039.10-400 (турбо)</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=bottom><font face="roboto" font-size: 17px;>260 л.с.*, ТНВД 334</font></td>
+                <td style="border-top: 2px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom sdnum="1033;0;#,##0.00 &quot;₽&quot;"><font face="roboto" font-size: 17px;>запрос</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle sdval="390000" sdnum="1033;0;#,##0.00 &quot;₽&quot;"><font face="roboto" font-size: 17px;>390,000.00 ₽</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle sdval="308920" sdnum="1033;0;#,##0.00 &quot;₽&quot;"><font face="roboto" font-size: 17px;>308,920.00 ₽</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 2px solid #000000" align="center" valign=bottom sdval="265000" sdnum="1033;0;#,##0.00 &quot;₽&quot;"><font face="roboto" font-size: 17px;>265,000.00 ₽</font></td>
+              </tr>
+              <tr>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 2px solid #000000; border-right: 1px solid #000000" height="38" align="right" valign=bottom sdval="4" sdnum="1033;"><font face="roboto" font-size: 17px;>4</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=bottom><font face="roboto" font-size: 17px;>740.11-400 (ЕВРО-1)</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=bottom><font face="roboto" font-size: 17px;>240 л.с.*, ТНВД 337-40</font></td>
+                <td style="border-top: 2px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom sdnum="1033;0;#,##0.00 &quot;₽&quot;"><font face="roboto" font-size: 17px;>запрос</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle sdval="445000" sdnum="1033;0;#,##0.00 &quot;₽&quot;"><font face="roboto" font-size: 17px;>445,000.00 ₽</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle sdval="351220" sdnum="1033;0;#,##0.00 &quot;₽&quot;"><font face="roboto" font-size: 17px;>351,220.00 ₽</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 2px solid #000000" align="center" valign=bottom sdval="320000" sdnum="1033;0;#,##0.00 &quot;₽&quot;"><font face="roboto" font-size: 17px;>320,000.00 ₽</font></td>
+              </tr>
+              <tr>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 2px solid #000000; border-right: 1px solid #000000" height="38" align="right" valign=bottom sdval="5" sdnum="1033;"><font face="roboto" font-size: 17px;>5</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=bottom><font face="roboto" font-size: 17px;>740.13-400 (ЕВРО-1)</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=bottom><font face="roboto" font-size: 17px;>260 л.с.*, ТНВД 337-42</font></td>
+                <td style="border-top: 2px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom sdnum="1033;0;#,##0.00 &quot;₽&quot;"><font face="roboto" font-size: 17px;>запрос</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle sdval="470000" sdnum="1033;0;#,##0.00 &quot;₽&quot;"><font face="roboto" font-size: 17px;>470,000.00 ₽</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle sdval="361150" sdnum="1033;0;#,##0.00 &quot;₽&quot;"><font face="roboto" font-size: 17px;>361,150.00 ₽</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 2px solid #000000" align="center" valign=bottom sdval="320000" sdnum="1033;0;#,##0.00 &quot;₽&quot;"><font face="roboto" font-size: 17px;>320,000.00 ₽</font></td>
+              </tr>
+              <tr>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 2px solid #000000; border-right: 1px solid #000000" height="38" align="right" valign=bottom sdval="6" sdnum="1033;"><font face="roboto" font-size: 17px;>6</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=bottom><font face="roboto" font-size: 17px;>740.30-400 (ЕВРО-2)</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=bottom><font face="roboto" font-size: 17px;>260 л.с.*, ТНВД 337-20</font></td>
+                <td style="border-top: 2px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom sdnum="1033;0;#,##0.00 &quot;₽&quot;"><font face="roboto" font-size: 17px;>запрос</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle sdval="580000" sdnum="1033;0;#,##0.00 &quot;₽&quot;"><font face="roboto" font-size: 17px;>580,000.00 ₽</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle sdval="452740" sdnum="1033;0;#,##0.00 &quot;₽&quot;"><font face="roboto" font-size: 17px;>452,740.00 ₽</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 2px solid #000000" align="center" valign=bottom sdval="395000" sdnum="1033;0;#,##0.00 &quot;₽&quot;"><font face="roboto" font-size: 17px;>395,000.00 ₽</font></td>
+              </tr>
+              <tr>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 2px solid #000000; border-right: 1px solid #000000" height="38" align="right" valign=bottom sdval="7" sdnum="1033;"><font face="roboto" font-size: 17px;>7</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=bottom><font face="roboto" font-size: 17px;>740.31-400 (ЕВРО-2)</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=bottom><font face="roboto" font-size: 17px;>240 л.с.*, ТНВД 337-20.05</font></td>
+                <td style="border-top: 2px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom sdnum="1033;0;#,##0.00 &quot;₽&quot;"><font face="roboto" font-size: 17px;>запрос</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle sdval="540000" sdnum="1033;0;#,##0.00 &quot;₽&quot;"><font face="roboto" font-size: 17px;>540,000.00 ₽</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle sdval="445520" sdnum="1033;0;#,##0.00 &quot;₽&quot;"><font face="roboto" font-size: 17px;>445,520.00 ₽</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 2px solid #000000" align="center" valign=bottom sdval="395000" sdnum="1033;0;#,##0.00 &quot;₽&quot;"><font face="roboto" font-size: 17px;>395,000.00 ₽</font></td>
+              </tr>
+              <tr>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 2px solid #000000; border-right: 1px solid #000000" height="38" align="right" valign=bottom sdval="8" sdnum="1033;"><font face="roboto" font-size: 17px;>8</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=bottom><font face="roboto" font-size: 17px;>740.50-400 (ЕВРО-2)</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=bottom><font face="roboto" font-size: 17px;>360 л.с.*, ТНВД 337-20.04</font></td>
+                <td style="border-top: 2px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom sdnum="1033;0;#,##0.00 &quot;₽&quot;"><font face="roboto" font-size: 17px;>запрос</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle sdval="595000" sdnum="1033;0;#,##0.00 &quot;₽&quot;"><font face="roboto" font-size: 17px;>595,000.00 ₽</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle sdval="475920" sdnum="1033;0;#,##0.00 &quot;₽&quot;"><font face="roboto" font-size: 17px;>475,920.00 ₽</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 2px solid #000000" align="center" valign=bottom sdval="410000" sdnum="1033;0;#,##0.00 &quot;₽&quot;"><font face="roboto" font-size: 17px;>410,000.00 ₽</font></td>
+              </tr>
+              <tr>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 2px solid #000000; border-right: 1px solid #000000" height="38" align="right" valign=bottom sdval="9" sdnum="1033;"><font face="roboto" font-size: 17px;>9</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=bottom><font face="roboto" font-size: 17px;>740.51-400 (ЕВРО-2)</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=bottom><font face="roboto" font-size: 17px;>320 л.с.*, ТНВД 337-20.03</font></td>
+                <td style="border-top: 2px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom sdnum="1033;0;#,##0.00 &quot;₽&quot;"><font face="roboto" font-size: 17px;>запрос</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle sdval="590000" sdnum="1033;0;#,##0.00 &quot;₽&quot;"><font face="roboto" font-size: 17px;>590,000.00 ₽</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle sdval="465140" sdnum="1033;0;#,##0.00 &quot;₽&quot;"><font face="roboto" font-size: 17px;>465,140.00 ₽</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 2px solid #000000" align="center" valign=bottom sdval="410000" sdnum="1033;0;#,##0.00 &quot;₽&quot;"><font face="roboto" font-size: 17px;>410,000.00 ₽</font></td>
+              </tr>
+              <tr>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 2px solid #000000; border-right: 1px solid #000000" height="37" align="right" valign=bottom sdval="10" sdnum="1033;"><font face="roboto" font-size: 17px;>10</font></td>
+                <td style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=bottom><font face="roboto" font-size: 17px;>740.62-400 (ЕВРО-2)</font></td>
+                <td style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=bottom><font face="roboto" font-size: 17px;>280 л.с.*, ТНВД Bosch</font></td>
+                <td style="border-top: 2px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom sdnum="1033;0;#,##0.00 &quot;₽&quot;"><font face="roboto" font-size: 17px;>запрос</font></td>
+                <td style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle sdval="650000" sdnum="1033;0;#,##0.00 &quot;₽&quot;"><font face="roboto" font-size: 17px;>650,000.00 ₽</font></td>
+                <td style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle sdval="560000" sdnum="1033;0;#,##0.00 &quot;₽&quot;"><font face="roboto" font-size: 17px;>560,000.00 ₽</font></td>
+                <td style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 2px solid #000000" align="center" valign=bottom sdval="500000" sdnum="1033;0;#,##0.00 &quot;₽&quot;"><font face="roboto" font-size: 17px;>500,000.00 ₽</font></td>
+              </tr>
+              <tr style="text-align: center;">
+                
+                <td style="border-bottom: 2px solid #000000" colspan=7 height="36" align="left" valign=middle><font face="roboto" font-size: 17px;>* в мотор устанавливается новый коленвал вал, поршневая группа, всё новое заводское навесное, гарантия повышена.</font></td>
+              </tr>
+              <tr>
+                <td style="border-bottom: 2px solid #000000" colspan=7 height="36" align="left" valign=middle><font face="roboto" font-size: 17px;>**в мотор устанавливается новая поршневая группа и частично новое навесное, ремонт сделан качественно, гарантия 6 мес.</font></td>
+                </tr>
+              <tr>
+                <td style="border-top: 2px solid #000000; border-bottom: 1px solid #000000; border-left: 2px solid #000000; border-right: 1px solid #000000" height="35" align="left" valign=bottom><font face="roboto" font-size: 17px;><br></font></td>
+                <td style="border-top: 2px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 align="left" valign=bottom sdnum="1033;0;@"><font face="roboto" font-size: 17px;>Подставка деревянная под ДВС (универсальная)</font></td>
+                <td style="border-top: 2px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 align="center" valign=bottom sdnum="1033;0;#,##0"><font face="roboto" font-size: 17px;><br></font></td>
+                <td style="border-top: 2px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 2px solid #000000" colspan=2 align="center" valign=bottom sdval="1500" sdnum="1033;0;#,##0"><font face="roboto" font-size: 17px;>1,500</font></td>
+                </tr>
+              <tr>
+                <td style="border-top: 1px solid #000000; border-bottom: 2px solid #000000; border-left: 2px solid #000000; border-right: 1px solid #000000" height="36" align="left" valign=bottom><font face="roboto" font-size: 17px;><br></font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 align="left" valign=bottom sdnum="1033;0;@"><font face="roboto" font-size: 17px;>Подставка деревянная под силовой агрегат</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 align="center" valign=bottom sdnum="1033;0;#,##0"><font face="roboto" font-size: 17px;><br></font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 2px solid #000000; border-left: 1px solid #000000; border-right: 2px solid #000000" colspan=2 align="center" valign=bottom sdval="2500" sdnum="1033;0;#,##0"><font face="roboto" font-size: 17px;>2,500</font></td>
+                </tr>
+              <tr>
+                <td style="border-top: 2px solid #000000; border-left: 2px solid #000000; border-right: 2px solid #000000" colspan=7 height="46" align="center" valign=bottom bgcolor="#FFFF00"><b><font face="roboto" font-size: 17px;>ДВИГАТЕЛИ CUMMINS на технику КАМАЗ</font></b></td>
+                </tr>
+              <tr>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" rowspan=3 height="167" align="center" valign=middle><b><font face="roboto" font-size: 17px;>№ п/п</font></b></td>
+                <td style="border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" rowspan=3 align="center" valign=middle><b><font face="roboto" font-size: 17px;>Модель и комплектация</font></b></td>
+                <td style="border-top: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" rowspan=3 align="center" valign=middle><b><font face="roboto" font-size: 17px;>Особенности комплектации</font></b></td>
+                <td style="border-top: 2px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 2px solid #000000" colspan=4 align="center" valign=middle><b><font face="roboto" font-size: 17px;>Прейскурантная цена, руб. </font></b></td>
+                </tr>
+              <tr>
+                <td style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" rowspan=2 align="center" valign=middle><b><font face="roboto" font-size: 17px;>Новый </font></b></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 align="center" valign=middle sdnum="1033;0;#,##0.00 &quot;₽&quot;"><b><font face="roboto" font-size: 17px;>Заводские комплектации без навесного</font></b></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 2px solid #000000" colspan=2 align="center" valign=middle><b><font face="roboto" font-size: 17px;>ООО &quot;ЧАЦ&quot;</font></b></td>
+              </tr>
+              <tr>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000" align="center" valign=middle sdnum="1033;0;#,##0.00 &quot;₽&quot;"><b><font face="roboto" font-size: 17px;>2ая</font></b></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000" align="center" valign=middle sdnum="1033;0;#,##0.00 &quot;₽&quot;"><b><font face="roboto" font-size: 17px;>3яя</font></b></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 2px solid #000000" colspan=2 align="center" valign=middle><b><font face="roboto" font-size: 17px;>Кап. Ремонт</font></b></td>
+              </tr>
+              <tr>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 2px solid #000000; border-right: 1px solid #000000" height="33" align="right" valign=bottom sdval="1" sdnum="1033;"><font face="roboto" font-size: 17px;>1</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=bottom><font face="roboto" font-size: 17px;>4ISBe 185 1ая</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=bottom><font face="roboto" font-size: 17px;>(183 л.с., «Евро-3», «Евро-4»); </font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle sdval="670000" sdnum="1033;0;#,##0.00 &quot;₽&quot;"><font face="roboto" font-size: 17px;>670,000.00 ₽</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000" align="center" valign=middle sdval="450000" sdnum="1033;0;#,##0.00 &quot;₽&quot;"><font face="roboto" font-size: 17px;>450,000.00 ₽</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000" align="center" valign=middle sdval="200000" sdnum="1033;0;#,##0.00 &quot;₽&quot;"><font face="roboto" font-size: 17px;>200,000.00 ₽</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000" align="center" valign=middle sdval="400000" sdnum="1033;0;#,##0.00 &quot;₽&quot;"><font face="roboto" font-size: 17px;>400,000.00 ₽</font></td>
+              </tr>
+              <tr>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 2px solid #000000; border-right: 1px solid #000000" height="31" align="right" valign=bottom sdval="2" sdnum="1033;"><font face="roboto" font-size: 17px;>2</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=bottom><font face="roboto" font-size: 17px;>6ISBe 185 1ая</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=bottom><font face="roboto" font-size: 17px;>(183 л.с., «Евро-3»); </font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle sdval="670000" sdnum="1033;0;#,##0.00 &quot;₽&quot;"><font face="roboto" font-size: 17px;>670,000.00 ₽</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000" align="center" valign=middle sdval="450000" sdnum="1033;0;#,##0.00 &quot;₽&quot;"><font face="roboto" font-size: 17px;>450,000.00 ₽</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000" align="center" valign=middle sdval="200000" sdnum="1033;0;#,##0.00 &quot;₽&quot;"><font face="roboto" font-size: 17px;>200,000.00 ₽</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000" align="center" valign=middle sdval="410000" sdnum="1033;0;#,##0.00 &quot;₽&quot;"><font face="roboto" font-size: 17px;>410,000.00 ₽</font></td>
+              </tr>
+              <tr>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 2px solid #000000; border-right: 1px solid #000000" height="29" align="right" valign=bottom sdval="3" sdnum="1033;"><font face="roboto" font-size: 17px;>3</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=bottom><font face="roboto" font-size: 17px;>6ISBe 210 1ая</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=bottom><font face="roboto" font-size: 17px;>(207 л.с., «Евро-3»); </font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle sdval="805000" sdnum="1033;0;#,##0.00 &quot;₽&quot;"><font face="roboto" font-size: 17px;>805,000.00 ₽</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000" align="center" valign=middle sdval="450000" sdnum="1033;0;#,##0.00 &quot;₽&quot;"><font face="roboto" font-size: 17px;>450,000.00 ₽</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000" align="center" valign=middle sdval="200000" sdnum="1033;0;#,##0.00 &quot;₽&quot;"><font face="roboto" font-size: 17px;>200,000.00 ₽</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000" align="center" valign=middle sdval="420000" sdnum="1033;0;#,##0.00 &quot;₽&quot;"><font face="roboto" font-size: 17px;>420,000.00 ₽</font></td>
+              </tr>
+              <tr>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 2px solid #000000; border-right: 1px solid #000000" height="31" align="right" valign=bottom sdval="4" sdnum="1033;"><font face="roboto" font-size: 17px;>4</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=bottom><font face="roboto" font-size: 17px;>6ISBe 285 1ая</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=bottom><font face="roboto" font-size: 17px;>(281 л.с., «Евро-3» 282 л.с.,«Е-4»); </font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle sdval="805000" sdnum="1033;0;#,##0.00 &quot;₽&quot;"><font face="roboto" font-size: 17px;>805,000.00 ₽</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000" align="center" valign=middle sdval="450000" sdnum="1033;0;#,##0.00 &quot;₽&quot;"><font face="roboto" font-size: 17px;>450,000.00 ₽</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000" align="center" valign=middle sdval="200000" sdnum="1033;0;#,##0.00 &quot;₽&quot;"><font face="roboto" font-size: 17px;>200,000.00 ₽</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000" align="center" valign=middle sdval="420000" sdnum="1033;0;#,##0.00 &quot;₽&quot;"><font face="roboto" font-size: 17px;>420,000.00 ₽</font></td>
+              </tr>
+              <tr>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 2px solid #000000; border-right: 1px solid #000000" height="29" align="right" valign=bottom sdval="5" sdnum="1033;"><font face="roboto" font-size: 17px;>5</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=bottom><font face="roboto" font-size: 17px;>6ISBe 300 1ая</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=bottom><font face="roboto" font-size: 17px;>(296 л.с., «Евро-4»).</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle sdval="820000" sdnum="1033;0;#,##0.00 &quot;₽&quot;"><font face="roboto" font-size: 17px;>820,000.00 ₽</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000" align="center" valign=middle sdval="450000" sdnum="1033;0;#,##0.00 &quot;₽&quot;"><font face="roboto" font-size: 17px;>450,000.00 ₽</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000" align="center" valign=middle sdval="200000" sdnum="1033;0;#,##0.00 &quot;₽&quot;"><font face="roboto" font-size: 17px;>200,000.00 ₽</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000" align="center" valign=middle sdval="420000" sdnum="1033;0;#,##0.00 &quot;₽&quot;"><font face="roboto" font-size: 17px;>420,000.00 ₽</font></td>
+              </tr>
+            </table>
+  
+  
+
+          
+      </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- Направления Section Start -->
+  <section id="projects" class="section-padding">
     <div class="container">
       <div class="text-center justify-content-center">
         <div class="section-header">
-            <h1 class="section-title">Другие направления </h1> 
-            <div class="shape wow fadeInDown"></div>
+          <h1 class="section-title">Другие направления </h1>
+          <div class="shape wow fadeInDown"></div>
         </div>
       </div>
       <div class="row justify-content-center">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
           <div id="testimonials" class="owl-carousel" data-wow-delay="0">
-            
+
             <div class="item">
               <div class="testimonial-item">
                 <div class="img-thumb">
@@ -696,22 +976,22 @@
                   <h2><a href="#">Кабины</a></h2>
                   <h3><a href="#">Новые и ремонтные кабина КамАЗ</a></h3>
                 </div>
-                
+
               </div>
             </div>
 
             <div class="item">
-                <div class="testimonial-item">
-                  <div class="img-thumb">
-                    <img src="assets/img/projects/parts.jpg" alt="">
-                  </div>
-                  <div class="info">
-                    <h2><a href="#">Запчасти КамАЗ</a></h2>
-                    <h3><a href="#">Комплектуем заявки по запчастям КамАЗ</a></h3>
-                  </div>
-                
+              <div class="testimonial-item">
+                <div class="img-thumb">
+                  <img src="assets/img/projects/parts.jpg" alt="">
                 </div>
+                <div class="info">
+                  <h2><a href="#">Запчасти КамАЗ</a></h2>
+                  <h3><a href="#">Комплектуем заявки по запчастям КамАЗ</a></h3>
+                </div>
+
               </div>
+            </div>
 
 
             <div class="item">
@@ -723,10 +1003,10 @@
                   <h2><a href="#">Редукторы камаз</a></h2>
                   <h3><a href="#">Широкий выбор в редукторов в наличии</a></h3>
                 </div>
-               
+
               </div>
             </div>
-            
+
             <div class="item">
               <div class="testimonial-item">
                 <div class="img-thumb">
@@ -741,12 +1021,12 @@
                   
                 </div> -->
               </div>
-            </div>              
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </section> 
+  </section>
 
   <!-- Testimonial Section End -->
 
@@ -756,17 +1036,17 @@
 
 
 
- 
+
   <!-- Footer Section Start -->
   <section id="footer" class="footer-area section-padding bg-gray">
     <div class="container">
       <div class="container" id="contact">
-          <div class="text-center justify-content-center">
-              <div class="section-header">
-                  <h1 class="section-title">Контакты</h1> 
-                  <div class="shape wow fadeInDown"></div>
-              </div>
-            </div>
+        <div class="text-center justify-content-center">
+          <div class="section-header">
+            <h1 class="section-title">Контакты</h1>
+            <div class="shape wow fadeInDown"></div>
+          </div>
+        </div>
         <div class="row">
           <div class="col-md-6 col-sm-6 col-mb-12">
             <div class="widget">
@@ -781,7 +1061,7 @@
             </div>
           </div>
 
-        
+
           <div class="contacts col-md-6">
             <div class="phone w-100">
               <div class="phone__img">
@@ -791,14 +1071,14 @@
                 +7 (8552) 44-37-13<br>
                 +7 (938) 358-30-07
               </div>
-          
+
             </div>
-          
+
             <div class="mail w-100">
               <img src="assets/img/feature/mail.png" class="icon-img">
               <a href="mailto:agregat-16@yandex.ru">agregat-16@yandex.ru</a>
             </div>
-          
+
             <div class="geo w-100">
               <div class="geo__mark">
                 <img src="assets/img/feature/geo-mark.png" class="icon-img" alt="">
@@ -808,43 +1088,44 @@
                 Мензелинскийтракт, 122
               </div>
             </div>
-          
-          
+
+
           </div>
         </div>
       </div>
     </div>
-   
-    
+
+
 
   </section>
   <div>
-      <iframe src="https://yandex.ru/map-widget/v1/-/CCauZ6Yj" width="100%" height="400" frameborder="1"
-        allowfullscreen="true"></iframe>
-    </div> 
+    <iframe src="https://yandex.ru/map-widget/v1/-/CCauZ6Yj" width="100%" height="400" frameborder="1"
+      allowfullscreen="true"></iframe>
+  </div>
 
 
-    <div id="copyright">
-        <div class="container">
-          <div class="row">
-            <div class="copyright-content">
-              <ul class="list-inline">
-                <li class="list-inline-item">
-                  <p>© 2017 <a href="ooo-agregat.html">ООО ТД «Agregat»</a>, Все права защищены</p>
-                </li>
-                <li class="list-inline-item">
-                  <p><a href="javascript:" class="nal-link" data-toggle="modal" data-target="#policy">Лицензионное соглашение</a>
-                  </p>
-                </li>
-                <li class="list-inline-item">
-                  <p><a href="javascript:" class="nal-link" data-toggle="modal" data-target="#license">Политика
-                      конфиденциальности</a></p>
-                </li>
-              </ul>
-            </div>
-          </div>
+  <div id="copyright">
+    <div class="container">
+      <div class="row">
+        <div class="copyright-content">
+          <ul class="list-inline">
+            <li class="list-inline-item">
+              <p>© 2017 <a href="ooo-agregat.html">ООО ТД «Agregat»</a>, Все права защищены</p>
+            </li>
+            <li class="list-inline-item">
+              <p><a href="javascript:" class="nal-link" data-toggle="modal" data-target="#policy">Лицензионное
+                  соглашение</a>
+              </p>
+            </li>
+            <li class="list-inline-item">
+              <p><a href="javascript:" class="nal-link" data-toggle="modal" data-target="#license">Политика
+                  конфиденциальности</a></p>
+            </li>
+          </ul>
         </div>
       </div>
+    </div>
+  </div>
 
 
 
@@ -885,13 +1166,221 @@
   <!-- невидимая google-форма для заявки -->
   <div class="hidden">
 
-      <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted)
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted)
       {window.location.reload();}"> </iframe>
 
-      <form action="https://docs.google.com/forms/d/e/1FAIpQLSeApDUv5yqExW2QvXXHUb_f9l4uqxRKzEC5ImPI4E34amM52Q/formResponse"
-       method="POST" id="mG61Hd" target="hidden_iframe" onsubmit="submitted=true;">     
-          <div class="freebirdFormviewerViewFormCard exportFormCard">          <div class="freebirdFormviewerViewAccentBanner freebirdAccentBackground"></div>          <div class="freebirdFormviewerViewFormContent">            <div class="freebirdFormviewerViewNoPadding">              <div class="freebirdFormviewerViewHeaderHeader exportHeader">                <div class="freebirdFormviewerViewHeaderTitleRow">                  <div class="freebirdFormviewerViewHeaderTitle exportFormTitle freebirdCustomFont" dir="auto" role="heading"                    aria-level="1">Камаз.Запчасти.Заявка</div>                </div>                <div jsname="F0H8Yc" class="freebirdCommonViewSecurequizSecureQuizBannerContainer"></div>              </div>            </div>            <div class="freebirdFormviewerViewItemList" role="list">              <div class="freebirdFormviewerViewNumberedItemContainer">                <div role="listitem" class="freebirdFormviewerViewItemsItemItem freebirdFormviewerViewItemsTextTextItem"                  jsname="ibnC6b" jscontroller="rDGJeb" jsaction="sPvj8e:e4JwSe,Dlbleb;O22p3e:e4JwSe,F0zejc;"                  data-item-id="1804223789">                  <div class="freebirdFormviewerViewItemsItemItemHeader">                    <div class="freebirdFormviewerViewItemsItemItemTitleContainer">                      <div class="freebirdFormviewerViewItemsItemItemTitle exportItemTitle freebirdCustomFont" dir="auto"                        role="heading" aria-level="2" aria-describedby="i.desc.1804223789">Контакты</div>                      <div class="freebirdFormviewerViewItemsItemItemHelpText" id="i.desc.1804223789" dir="auto"></div>                    </div>                  </div>                  <div class="freebirdFormviewerViewItemsTextItemWrapper">                    <div                      class="quantumWizTextinputPaperinputEl freebirdFormviewerViewItemsTextShortText freebirdThemedInput modeLight"                      jscontroller="pxq3x" jsaction="clickonly:KjsqPd; focus:Jt1EX; blur:fpfTEe; input:Lg5SV;" jsshadow=""                      jsname="W85ice">                      <div class="quantumWizTextinputPaperinputMainContent exportContent">                        <div class="quantumWizTextinputPaperinputContentArea exportContentArea">                          <div class="quantumWizTextinputPaperinputInputArea"><input type="text"                              class="quantumWizTextinputPaperinputInput exportInput" jsname="YPqjbf" autocomplete="off"                              tabindex="0" aria-label="Контакты" aria-describedby="i.desc.1804223789 i.err.1804223789"                              name="entry.1519454606" value="" dir="auto" data-initial-dir="auto" data-initial-value=""                              aria-invalid="false">                            <div jsname="LwH6nd" class="quantumWizTextinputPaperinputPlaceholder exportLabel">Мой ответ</div>                          </div>                          <div class="quantumWizTextinputPaperinputUnderline exportUnderline"></div>                          <div jsname="XmnwAc"                            class="quantumWizTextinputPaperinputFocusUnderline exportFocusUnderline animationInitialized"                            style="transform-origin: 152.5px center;"></div>                        </div>                      </div>                      <div class="quantumWizTextinputPaperinputCounterErrorHolder">                        <div jsname="ty6ygf" class="quantumWizTextinputPaperinputHint exportHint"></div>                      </div>                    </div>                  </div>                  <div                    class="freebirdFormviewerViewItemsItemGradingGradingBox freebirdFormviewerViewItemsItemGradingFeedbackBox"                    jsname="R7fTud"></div>                  <div jsname="XbIQze" class="freebirdFormviewerViewItemsItemErrorMessage" id="i.err.1804223789" role="alert">                  </div>                </div>              </div>              <div class="freebirdFormviewerViewNumberedItemContainer">                <div role="listitem" class="freebirdFormviewerViewItemsItemItem freebirdFormviewerViewItemsTextTextItem"                  jsname="ibnC6b" jscontroller="rDGJeb" jsaction="sPvj8e:e4JwSe,Dlbleb;O22p3e:e4JwSe,F0zejc;"                  data-item-id="2086922311">                  <div class="freebirdFormviewerViewItemsItemItemHeader">                    <div class="freebirdFormviewerViewItemsItemItemTitleContainer">                      <div class="freebirdFormviewerViewItemsItemItemTitle exportItemTitle freebirdCustomFont" dir="auto"                        role="heading" aria-level="2" aria-describedby="i.desc.2086922311">Товар</div>                      <div class="freebirdFormviewerViewItemsItemItemHelpText" id="i.desc.2086922311" dir="auto"></div>                    </div>                  </div>                  <div class="freebirdFormviewerViewItemsTextItemWrapper">                    <div                      class="quantumWizTextinputPaperinputEl freebirdFormviewerViewItemsTextShortText freebirdThemedInput modeLight"                      jscontroller="pxq3x" jsaction="clickonly:KjsqPd; focus:Jt1EX; blur:fpfTEe; input:Lg5SV;" jsshadow=""                      jsname="W85ice">                      <div class="quantumWizTextinputPaperinputMainContent exportContent">                        <div class="quantumWizTextinputPaperinputContentArea exportContentArea">                          <div class="quantumWizTextinputPaperinputInputArea"><input type="text"                              class="quantumWizTextinputPaperinputInput exportInput" jsname="YPqjbf" autocomplete="off"                              tabindex="0" aria-label="Товар" aria-describedby="i.desc.2086922311 i.err.2086922311"                              name="entry.191261818" value="" dir="auto" data-initial-dir="auto" data-initial-value=""                              aria-invalid="false">                            <div jsname="LwH6nd" class="quantumWizTextinputPaperinputPlaceholder exportLabel">Мой ответ</div>                          </div>                          <div class="quantumWizTextinputPaperinputUnderline exportUnderline"></div>                          <div jsname="XmnwAc"                            class="quantumWizTextinputPaperinputFocusUnderline exportFocusUnderline animationInitialized"                            style="transform-origin: 103.5px center;"></div>                        </div>                      </div>                      <div class="quantumWizTextinputPaperinputCounterErrorHolder">                        <div jsname="ty6ygf" class="quantumWizTextinputPaperinputHint exportHint"></div>                      </div>                    </div>                  </div>                  <div                    class="freebirdFormviewerViewItemsItemGradingGradingBox freebirdFormviewerViewItemsItemGradingFeedbackBox"                    jsname="R7fTud"></div>                  <div jsname="XbIQze" class="freebirdFormviewerViewItemsItemErrorMessage" id="i.err.2086922311" role="alert">                  </div>                </div>              </div>              <div class="freebirdFormviewerViewNumberedItemContainer">                <div role="listitem" class="freebirdFormviewerViewItemsItemItem freebirdFormviewerViewItemsTextTextItem"                  jsname="ibnC6b" jscontroller="rDGJeb" jsaction="sPvj8e:e4JwSe,Dlbleb;O22p3e:e4JwSe,F0zejc;"                  data-item-id="640437418">                  <div class="freebirdFormviewerViewItemsItemItemHeader">                    <div class="freebirdFormviewerViewItemsItemItemTitleContainer">                      <div class="freebirdFormviewerViewItemsItemItemTitle exportItemTitle freebirdCustomFont" dir="auto"                        role="heading" aria-level="2" aria-describedby="i.desc.640437418">Комментарий</div>                      <div class="freebirdFormviewerViewItemsItemItemHelpText" id="i.desc.640437418" dir="auto"></div>                    </div>                  </div>                  <div                    class="quantumWizTextinputPapertextareaEl modeLight freebirdFormviewerViewItemsTextLongText freebirdThemedInput"                    jscontroller="pxq3x" jsaction="clickonly:KjsqPd; focus:Jt1EX; blur:fpfTEe; input:Lg5SV;" jsshadow=""                    jsname="W85ice">                    <div class="quantumWizTextinputPapertextareaMainContent exportContent">                      <div class="quantumWizTextinputPapertextareaPlaceholder exportLabel" jsname="LwH6nd">Мой ответ</div>                      <div class="quantumWizTextinputPapertextareaContentArea exportContentArea"><textarea                          class="quantumWizTextinputPapertextareaInput exportTextarea" jsname="YPqjbf" data-rows="1"                          tabindex="0" aria-label="Комментарий" jscontroller="gZjhIf"                          jsaction="input:Lg5SV;ti6hGc:XMgOHc;rcuQ6b:WYd;" name="entry.1977316514" dir="auto"                          data-initial-dir="auto" data-initial-value="" aria-describedby="i.desc.640437418 i.err.640437418"                          style="height: 24px;"></textarea></div>                      <div class="quantumWizTextinputPapertextareaUnderline exportUnderline"></div>                      <div jsname="XmnwAc" class="quantumWizTextinputPapertextareaFocusUnderline exportFocusUnderline"></div>                    </div>                    <div class="quantumWizTextinputPapertextareaCounterErrorHolder">                      <div jsname="ty6ygf" class="quantumWizTextinputPapertextareaHint exportHint"></div>                    </div>                  </div>                  <div                    class="freebirdFormviewerViewItemsItemGradingGradingBox freebirdFormviewerViewItemsItemGradingFeedbackBox"                    jsname="R7fTud"></div>                  <div jsname="XbIQze" class="freebirdFormviewerViewItemsItemErrorMessage" id="i.err.640437418" role="alert">                  </div>                </div>              </div>              <div class="freebirdFormviewerViewNumberedItemContainer">                <div role="listitem" class="freebirdFormviewerViewItemsItemItem freebirdFormviewerViewItemsTextTextItem"                  jsname="ibnC6b" jscontroller="rDGJeb" jsaction="sPvj8e:e4JwSe,Dlbleb;O22p3e:e4JwSe,F0zejc;"                  data-item-id="301332701">                  <div class="freebirdFormviewerViewItemsItemItemHeader">                    <div class="freebirdFormviewerViewItemsItemItemTitleContainer">                      <div class="freebirdFormviewerViewItemsItemItemTitle exportItemTitle freebirdCustomFont" dir="auto"                        role="heading" aria-level="2" aria-describedby="i.desc.301332701">Время</div>                      <div class="freebirdFormviewerViewItemsItemItemHelpText" id="i.desc.301332701" dir="auto"></div>                    </div>                  </div>                  <div class="freebirdFormviewerViewItemsTextItemWrapper">                    <div                      class="quantumWizTextinputPaperinputEl freebirdFormviewerViewItemsTextShortText freebirdThemedInput modeLight"                      jscontroller="pxq3x" jsaction="clickonly:KjsqPd; focus:Jt1EX; blur:fpfTEe; input:Lg5SV;" jsshadow=""                      jsname="W85ice">                      <div class="quantumWizTextinputPaperinputMainContent exportContent">                        <div class="quantumWizTextinputPaperinputContentArea exportContentArea">                          <div class="quantumWizTextinputPaperinputInputArea"><input type="text"                              class="quantumWizTextinputPaperinputInput exportInput" jsname="YPqjbf" autocomplete="off"                              tabindex="0" aria-label="Время" aria-describedby="i.desc.301332701 i.err.301332701"                              name="entry.1126040740" value="" dir="auto" data-initial-dir="auto" data-initial-value="">                            <div jsname="LwH6nd" class="quantumWizTextinputPaperinputPlaceholder exportLabel">Мой ответ</div>                          </div>                          <div class="quantumWizTextinputPaperinputUnderline exportUnderline"></div>                          <div jsname="XmnwAc" class="quantumWizTextinputPaperinputFocusUnderline exportFocusUnderline"></div>                        </div>                      </div>                      <div class="quantumWizTextinputPaperinputCounterErrorHolder">                        <div jsname="ty6ygf" class="quantumWizTextinputPaperinputHint exportHint"></div>                      </div>                    </div>                  </div>                  <div                    class="freebirdFormviewerViewItemsItemGradingGradingBox freebirdFormviewerViewItemsItemGradingFeedbackBox"                    jsname="R7fTud"></div>                  <div jsname="XbIQze" class="freebirdFormviewerViewItemsItemErrorMessage" id="i.err.301332701" role="alert">                  </div>                </div>              </div>            </div>            <div class="freebirdFormviewerViewNavigationNavControls" jscontroller="lSvzH"              jsaction="rcuQ6b:npT2md;JIbuQc:Gl574d(QR6bsb),V3upec(GeGHKb),HiUbje(M2UYVd),NPBnCf(OCpkoe);"              data-shuffle-seed="4565707331092832681" data-should-execute-invisible-captcha-challenge="false"              data-is-receipt-checked="false">              <div class="freebirdFormviewerViewNavigationButtonsAndProgress">                <div class="freebirdFormviewerViewNavigationButtons">                  <div role="button"                    class="quantumWizButtonEl quantumWizButtonPaperbuttonEl quantumWizButtonPaperbuttonFlat quantumWizButtonPaperbuttonDark quantumWizButtonPaperbutton2El2 freebirdFormviewerViewNavigationSubmitButton"                    jscontroller="VXdfxd"                    jsaction="click:cOuCgd; mousedown:UX7yZ; mouseup:lbsD7e; mouseenter:tfO1Yc; mouseleave:JywGue; focus:AHmuwe; blur:O22p3e; contextmenu:mg9Pef;touchstart:p6p2H; touchmove:FwuNnf; touchend:yfqBxc(preventMouseEvents=true|preventDefault=true); touchcancel:JMtRjd;"                    jsshadow="" jsname="M2UYVd" aria-disabled="false" tabindex="0">                    <div class="quantumWizButtonPaperbuttonRipple exportInk" jsname="ksKsZd"></div>                    <div class="quantumWizButtonPaperbuttonFocusOverlay exportOverlay"></div>                    <content class="quantumWizButtonPaperbuttonContent"><span                        class="quantumWizButtonPaperbuttonLabel exportLabel">Отправить</span></content>                  </div>                </div>              </div>              <div class="freebirdFormviewerViewNavigationPasswordWarning">Никогда не используйте формы Google для передачи                паролей.</div>            </div><input type="hidden" name="fvv" value="1"><input type="hidden" name="draftResponse" value="[null,null,&quot;4565707331092832681&quot;]      "><input type="hidden" name="pageHistory" value="0"><input type="hidden" name="fbzx" value="4565707331092832681">          </div>        </div>      </form>
-    
+    <form
+      action="https://docs.google.com/forms/d/e/1FAIpQLSeApDUv5yqExW2QvXXHUb_f9l4uqxRKzEC5ImPI4E34amM52Q/formResponse"
+      method="POST" id="mG61Hd" target="hidden_iframe" onsubmit="submitted=true;">
+      <div class="freebirdFormviewerViewFormCard exportFormCard">
+        <div class="freebirdFormviewerViewAccentBanner freebirdAccentBackground"></div>
+        <div class="freebirdFormviewerViewFormContent">
+          <div class="freebirdFormviewerViewNoPadding">
+            <div class="freebirdFormviewerViewHeaderHeader exportHeader">
+              <div class="freebirdFormviewerViewHeaderTitleRow">
+                <div class="freebirdFormviewerViewHeaderTitle exportFormTitle freebirdCustomFont" dir="auto"
+                  role="heading" aria-level="1">Камаз.Запчасти.Заявка</div>
+              </div>
+              <div jsname="F0H8Yc" class="freebirdCommonViewSecurequizSecureQuizBannerContainer"></div>
+            </div>
+          </div>
+          <div class="freebirdFormviewerViewItemList" role="list">
+            <div class="freebirdFormviewerViewNumberedItemContainer">
+              <div role="listitem" class="freebirdFormviewerViewItemsItemItem freebirdFormviewerViewItemsTextTextItem"
+                jsname="ibnC6b" jscontroller="rDGJeb" jsaction="sPvj8e:e4JwSe,Dlbleb;O22p3e:e4JwSe,F0zejc;"
+                data-item-id="1804223789">
+                <div class="freebirdFormviewerViewItemsItemItemHeader">
+                  <div class="freebirdFormviewerViewItemsItemItemTitleContainer">
+                    <div class="freebirdFormviewerViewItemsItemItemTitle exportItemTitle freebirdCustomFont" dir="auto"
+                      role="heading" aria-level="2" aria-describedby="i.desc.1804223789">Контакты</div>
+                    <div class="freebirdFormviewerViewItemsItemItemHelpText" id="i.desc.1804223789" dir="auto"></div>
+                  </div>
+                </div>
+                <div class="freebirdFormviewerViewItemsTextItemWrapper">
+                  <div
+                    class="quantumWizTextinputPaperinputEl freebirdFormviewerViewItemsTextShortText freebirdThemedInput modeLight"
+                    jscontroller="pxq3x" jsaction="clickonly:KjsqPd; focus:Jt1EX; blur:fpfTEe; input:Lg5SV;" jsshadow=""
+                    jsname="W85ice">
+                    <div class="quantumWizTextinputPaperinputMainContent exportContent">
+                      <div class="quantumWizTextinputPaperinputContentArea exportContentArea">
+                        <div class="quantumWizTextinputPaperinputInputArea"><input type="text"
+                            class="quantumWizTextinputPaperinputInput exportInput" jsname="YPqjbf" autocomplete="off"
+                            tabindex="0" aria-label="Контакты" aria-describedby="i.desc.1804223789 i.err.1804223789"
+                            name="entry.1519454606" value="" dir="auto" data-initial-dir="auto" data-initial-value=""
+                            aria-invalid="false">
+                          <div jsname="LwH6nd" class="quantumWizTextinputPaperinputPlaceholder exportLabel">Мой ответ
+                          </div>
+                        </div>
+                        <div class="quantumWizTextinputPaperinputUnderline exportUnderline"></div>
+                        <div jsname="XmnwAc"
+                          class="quantumWizTextinputPaperinputFocusUnderline exportFocusUnderline animationInitialized"
+                          style="transform-origin: 152.5px center;"></div>
+                      </div>
+                    </div>
+                    <div class="quantumWizTextinputPaperinputCounterErrorHolder">
+                      <div jsname="ty6ygf" class="quantumWizTextinputPaperinputHint exportHint"></div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="freebirdFormviewerViewItemsItemGradingGradingBox freebirdFormviewerViewItemsItemGradingFeedbackBox"
+                  jsname="R7fTud"></div>
+                <div jsname="XbIQze" class="freebirdFormviewerViewItemsItemErrorMessage" id="i.err.1804223789"
+                  role="alert"> </div>
+              </div>
+            </div>
+            <div class="freebirdFormviewerViewNumberedItemContainer">
+              <div role="listitem" class="freebirdFormviewerViewItemsItemItem freebirdFormviewerViewItemsTextTextItem"
+                jsname="ibnC6b" jscontroller="rDGJeb" jsaction="sPvj8e:e4JwSe,Dlbleb;O22p3e:e4JwSe,F0zejc;"
+                data-item-id="2086922311">
+                <div class="freebirdFormviewerViewItemsItemItemHeader">
+                  <div class="freebirdFormviewerViewItemsItemItemTitleContainer">
+                    <div class="freebirdFormviewerViewItemsItemItemTitle exportItemTitle freebirdCustomFont" dir="auto"
+                      role="heading" aria-level="2" aria-describedby="i.desc.2086922311">Товар</div>
+                    <div class="freebirdFormviewerViewItemsItemItemHelpText" id="i.desc.2086922311" dir="auto"></div>
+                  </div>
+                </div>
+                <div class="freebirdFormviewerViewItemsTextItemWrapper">
+                  <div
+                    class="quantumWizTextinputPaperinputEl freebirdFormviewerViewItemsTextShortText freebirdThemedInput modeLight"
+                    jscontroller="pxq3x" jsaction="clickonly:KjsqPd; focus:Jt1EX; blur:fpfTEe; input:Lg5SV;" jsshadow=""
+                    jsname="W85ice">
+                    <div class="quantumWizTextinputPaperinputMainContent exportContent">
+                      <div class="quantumWizTextinputPaperinputContentArea exportContentArea">
+                        <div class="quantumWizTextinputPaperinputInputArea"><input type="text"
+                            class="quantumWizTextinputPaperinputInput exportInput" jsname="YPqjbf" autocomplete="off"
+                            tabindex="0" aria-label="Товар" aria-describedby="i.desc.2086922311 i.err.2086922311"
+                            name="entry.191261818" value="" dir="auto" data-initial-dir="auto" data-initial-value=""
+                            aria-invalid="false">
+                          <div jsname="LwH6nd" class="quantumWizTextinputPaperinputPlaceholder exportLabel">Мой ответ
+                          </div>
+                        </div>
+                        <div class="quantumWizTextinputPaperinputUnderline exportUnderline"></div>
+                        <div jsname="XmnwAc"
+                          class="quantumWizTextinputPaperinputFocusUnderline exportFocusUnderline animationInitialized"
+                          style="transform-origin: 103.5px center;"></div>
+                      </div>
+                    </div>
+                    <div class="quantumWizTextinputPaperinputCounterErrorHolder">
+                      <div jsname="ty6ygf" class="quantumWizTextinputPaperinputHint exportHint"></div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="freebirdFormviewerViewItemsItemGradingGradingBox freebirdFormviewerViewItemsItemGradingFeedbackBox"
+                  jsname="R7fTud"></div>
+                <div jsname="XbIQze" class="freebirdFormviewerViewItemsItemErrorMessage" id="i.err.2086922311"
+                  role="alert"> </div>
+              </div>
+            </div>
+            <div class="freebirdFormviewerViewNumberedItemContainer">
+              <div role="listitem" class="freebirdFormviewerViewItemsItemItem freebirdFormviewerViewItemsTextTextItem"
+                jsname="ibnC6b" jscontroller="rDGJeb" jsaction="sPvj8e:e4JwSe,Dlbleb;O22p3e:e4JwSe,F0zejc;"
+                data-item-id="640437418">
+                <div class="freebirdFormviewerViewItemsItemItemHeader">
+                  <div class="freebirdFormviewerViewItemsItemItemTitleContainer">
+                    <div class="freebirdFormviewerViewItemsItemItemTitle exportItemTitle freebirdCustomFont" dir="auto"
+                      role="heading" aria-level="2" aria-describedby="i.desc.640437418">Комментарий</div>
+                    <div class="freebirdFormviewerViewItemsItemItemHelpText" id="i.desc.640437418" dir="auto"></div>
+                  </div>
+                </div>
+                <div
+                  class="quantumWizTextinputPapertextareaEl modeLight freebirdFormviewerViewItemsTextLongText freebirdThemedInput"
+                  jscontroller="pxq3x" jsaction="clickonly:KjsqPd; focus:Jt1EX; blur:fpfTEe; input:Lg5SV;" jsshadow=""
+                  jsname="W85ice">
+                  <div class="quantumWizTextinputPapertextareaMainContent exportContent">
+                    <div class="quantumWizTextinputPapertextareaPlaceholder exportLabel" jsname="LwH6nd">Мой ответ</div>
+                    <div class="quantumWizTextinputPapertextareaContentArea exportContentArea"><textarea
+                        class="quantumWizTextinputPapertextareaInput exportTextarea" jsname="YPqjbf" data-rows="1"
+                        tabindex="0" aria-label="Комментарий" jscontroller="gZjhIf"
+                        jsaction="input:Lg5SV;ti6hGc:XMgOHc;rcuQ6b:WYd;" name="entry.1977316514" dir="auto"
+                        data-initial-dir="auto" data-initial-value=""
+                        aria-describedby="i.desc.640437418 i.err.640437418" style="height: 24px;"></textarea></div>
+                    <div class="quantumWizTextinputPapertextareaUnderline exportUnderline"></div>
+                    <div jsname="XmnwAc" class="quantumWizTextinputPapertextareaFocusUnderline exportFocusUnderline">
+                    </div>
+                  </div>
+                  <div class="quantumWizTextinputPapertextareaCounterErrorHolder">
+                    <div jsname="ty6ygf" class="quantumWizTextinputPapertextareaHint exportHint"></div>
+                  </div>
+                </div>
+                <div
+                  class="freebirdFormviewerViewItemsItemGradingGradingBox freebirdFormviewerViewItemsItemGradingFeedbackBox"
+                  jsname="R7fTud"></div>
+                <div jsname="XbIQze" class="freebirdFormviewerViewItemsItemErrorMessage" id="i.err.640437418"
+                  role="alert"> </div>
+              </div>
+            </div>
+            <div class="freebirdFormviewerViewNumberedItemContainer">
+              <div role="listitem" class="freebirdFormviewerViewItemsItemItem freebirdFormviewerViewItemsTextTextItem"
+                jsname="ibnC6b" jscontroller="rDGJeb" jsaction="sPvj8e:e4JwSe,Dlbleb;O22p3e:e4JwSe,F0zejc;"
+                data-item-id="301332701">
+                <div class="freebirdFormviewerViewItemsItemItemHeader">
+                  <div class="freebirdFormviewerViewItemsItemItemTitleContainer">
+                    <div class="freebirdFormviewerViewItemsItemItemTitle exportItemTitle freebirdCustomFont" dir="auto"
+                      role="heading" aria-level="2" aria-describedby="i.desc.301332701">Время</div>
+                    <div class="freebirdFormviewerViewItemsItemItemHelpText" id="i.desc.301332701" dir="auto"></div>
+                  </div>
+                </div>
+                <div class="freebirdFormviewerViewItemsTextItemWrapper">
+                  <div
+                    class="quantumWizTextinputPaperinputEl freebirdFormviewerViewItemsTextShortText freebirdThemedInput modeLight"
+                    jscontroller="pxq3x" jsaction="clickonly:KjsqPd; focus:Jt1EX; blur:fpfTEe; input:Lg5SV;" jsshadow=""
+                    jsname="W85ice">
+                    <div class="quantumWizTextinputPaperinputMainContent exportContent">
+                      <div class="quantumWizTextinputPaperinputContentArea exportContentArea">
+                        <div class="quantumWizTextinputPaperinputInputArea"><input type="text"
+                            class="quantumWizTextinputPaperinputInput exportInput" jsname="YPqjbf" autocomplete="off"
+                            tabindex="0" aria-label="Время" aria-describedby="i.desc.301332701 i.err.301332701"
+                            name="entry.1126040740" value="" dir="auto" data-initial-dir="auto" data-initial-value="">
+                          <div jsname="LwH6nd" class="quantumWizTextinputPaperinputPlaceholder exportLabel">Мой ответ
+                          </div>
+                        </div>
+                        <div class="quantumWizTextinputPaperinputUnderline exportUnderline"></div>
+                        <div jsname="XmnwAc" class="quantumWizTextinputPaperinputFocusUnderline exportFocusUnderline">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="quantumWizTextinputPaperinputCounterErrorHolder">
+                      <div jsname="ty6ygf" class="quantumWizTextinputPaperinputHint exportHint"></div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="freebirdFormviewerViewItemsItemGradingGradingBox freebirdFormviewerViewItemsItemGradingFeedbackBox"
+                  jsname="R7fTud"></div>
+                <div jsname="XbIQze" class="freebirdFormviewerViewItemsItemErrorMessage" id="i.err.301332701"
+                  role="alert"> </div>
+              </div>
+            </div>
+          </div>
+          <div class="freebirdFormviewerViewNavigationNavControls" jscontroller="lSvzH"
+            jsaction="rcuQ6b:npT2md;JIbuQc:Gl574d(QR6bsb),V3upec(GeGHKb),HiUbje(M2UYVd),NPBnCf(OCpkoe);"
+            data-shuffle-seed="4565707331092832681" data-should-execute-invisible-captcha-challenge="false"
+            data-is-receipt-checked="false">
+            <div class="freebirdFormviewerViewNavigationButtonsAndProgress">
+              <div class="freebirdFormviewerViewNavigationButtons">
+                <div role="button"
+                  class="quantumWizButtonEl quantumWizButtonPaperbuttonEl quantumWizButtonPaperbuttonFlat quantumWizButtonPaperbuttonDark quantumWizButtonPaperbutton2El2 freebirdFormviewerViewNavigationSubmitButton"
+                  jscontroller="VXdfxd"
+                  jsaction="click:cOuCgd; mousedown:UX7yZ; mouseup:lbsD7e; mouseenter:tfO1Yc; mouseleave:JywGue; focus:AHmuwe; blur:O22p3e; contextmenu:mg9Pef;touchstart:p6p2H; touchmove:FwuNnf; touchend:yfqBxc(preventMouseEvents=true|preventDefault=true); touchcancel:JMtRjd;"
+                  jsshadow="" jsname="M2UYVd" aria-disabled="false" tabindex="0">
+                  <div class="quantumWizButtonPaperbuttonRipple exportInk" jsname="ksKsZd"></div>
+                  <div class="quantumWizButtonPaperbuttonFocusOverlay exportOverlay"></div>
+                  <content class="quantumWizButtonPaperbuttonContent"><span
+                      class="quantumWizButtonPaperbuttonLabel exportLabel">Отправить</span></content>
+                </div>
+              </div>
+            </div>
+            <div class="freebirdFormviewerViewNavigationPasswordWarning">Никогда не используйте формы Google для
+              передачи паролей.</div>
+          </div><input type="hidden" name="fvv" value="1"><input type="hidden" name="draftResponse"
+            value="[null,null,&quot;4565707331092832681&quot;]      "><input type="hidden" name="pageHistory"
+            value="0"><input type="hidden" name="fbzx" value="4565707331092832681">
+        </div>
+      </div>
+    </form>
+
 
   </div>
 
