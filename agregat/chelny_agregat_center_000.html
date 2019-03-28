@@ -48,8 +48,7 @@
                 <nav class="navbar navbar-expand-lg bg-inverse fixed-top scrolling-navbar">
                     <div class="container">
                         <!-- Brand and toggle get grouped for better mobile display -->
-                        <a href="index.html" class="navbar-brand" style="display: contents;"><img
-                                src="assets/img/logo_7.png" style="max-width: 450px;"></a>
+                        <a href="index.html" class="navbar-brand" style="display: contents; max-width:60%;">ЧЕЛНЫ АГРЕГАТ ЦЕНТР</a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse"
                             data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
                             aria-label="Toggle navigation">
@@ -98,10 +97,10 @@
                                 <div class="contents">
                                     <ul>
                                         <li style="margin-bottom:0px;">
-                                            <h1 class="title text-left w-100">Двигатели КамАЗ в наличии</h1>
+                                            <h1 class="title text-left w-100">ООО "ЧЕЛНЫАГРЕГАТЦЕНТР" </h1>
                                         </li>
                                         <li style="margin-top:0px;">
-                                            <h2 class="title w-100">от официального дилера</h1>
+                                            <h3 class="title w-100">Поставки агрегатов КамАЗ</h3>
                                         </li>
                                         <li>&nbsp;</li>
                                         <li><i class="lni-check-mark-circle"></i> &nbsp;&nbsp;20
@@ -231,11 +230,7 @@
         <!-- Hero Area End -->
 
     </header>
-    <script>
-        <link rel="import" href="contacts.html">
-            <link rel="import" href="prim.html">
-                <link rel="import" href="map.html"
-    </script>
+    
     
     <section class="services bg-white">
         <div class="container">
@@ -365,41 +360,17 @@
         </div>
 
     </section>
-    <script>
-                        var link= document.querySelector('link[rel=import]');
-                    var content = link.import.querySelector('#priemyshestva');
-                    document.body.appendChild(content.cloneNode(true));
-    </script>
+  
+    <div id="contacts_container"></div>
+<script>
+  $('#contacts_container').load('partials/contacts.html');
+</script>
 
-    <script>
-        var link = document.querySelector('link[rel=import]');
-        var content = link.import.querySelector('#footer');
-        document.body.appendChild(content.cloneNode(true));
-    </script>
-    <div id="copyright">
-        <div class="container">
-            <div class="row">
-                <div class="copyright-content">
-                    <ul class="list-inline">
-                        <li class="list-inline-item">
-                            <p>© 2017 <a href="ooo-agregat.html">ООО ТД «Agregat»</a>, Все права защищены</p>
-                        </li>
-                        <li class="list-inline-item">
-                            <p><a href="javascript:" class="nal-link" data-toggle="modal"
-                                    data-target="#policy">Лицензионное соглашение</a>
-                            </p>
-                        </li>
-                        <li class="list-inline-item">
-                            <p><a href="javascript:" class="nal-link" data-toggle="modal"
-                                    data-target="#license">Политика
-                                    конфиденциальности</a></p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
 
+    <div id="footer"></div> 
+    <script>
+    $('#footer').load('partials/footer.html');
+  </script>
 
 
     <script src="assets/js/popper.min.js"></script>
