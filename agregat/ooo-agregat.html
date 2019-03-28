@@ -28,9 +28,14 @@
     <link rel="stylesheet" href="assets/css/main.css">
     <!-- Responsive Style -->
     <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="import" href="contacts.html">
+    <link rel="import" href="prim.html">
 
     <script src="assets/js/jquery-min.js"></script>
     <script src="assets/js/handlebars-v4.1.1.js"></script>
+    <meta property="og:title" content="ООО ЧЕЛНЫАГРЕГАТЦЕНТР, Республика Татарстан, Набережные Челны: ИНН 1650279880, ОГРН 1141650003252, адрес, телефон, сайт, реквизиты, выписка из ЕГРЮЛ">
+    <meta name="description" content="ООО ЧЕЛНЫАГРЕГАТЦЕНТР, Набережные Челны, Республика Татарстан, ИНН 1650279880, ОГРН 1141650003252. Реквизиты, телефон, адрес и сайт, Сведения о ООО ЧЕЛНЫАГРЕГАТЦЕНТР">
+
 </head>
 
 <body>
@@ -97,12 +102,12 @@
                                             <h2 class="title w-100">от официального дилера</h1>
                                         </li>
                                         <li>&nbsp;</li>
-                                        <li><img src="assets/img/feature/mark.png" width="21px" alt=""> &nbsp;&nbsp;20
+                                        <li><i class="lni-check-mark-circle"></i> &nbsp;&nbsp;20
                                             моделей в наличии в Москве
                                             и Наб.Челнах</li>
-                                        <li><img src="assets/img/feature/mark.png" width="21px" alt=""></i>
+                                        <li><i class="lni-check-mark-circle"></i>
                                             &nbsp;&nbsp;10 лет на рынке </li>
-                                        <li><img src="assets/img/feature/mark.png" width="21px" alt=""></i>
+                                        <li><i class="lni-check-mark-circle"></i>
                                             &nbsp;&nbsp;Гарантия на все агрегаты</li>
                                     </ul>
                                 </div>
@@ -352,6 +357,17 @@
         </div>
 
     </section>
+        <script>
+        var link = document.querySelector('link[rel=import]');
+        var content = link.import.querySelector('#priemyshestva');
+        document.body.appendChild(content.cloneNode(true));
+      </script>
+
+    <script>
+        var link = document.querySelector('link[rel=import]');
+        var content = link.import.querySelector('#footer');
+        document.body.appendChild(content.cloneNode(true));
+      </script>
     <div id="copyright">
         <div class="container">
             <div class="row">
