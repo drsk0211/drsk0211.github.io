@@ -91,7 +91,7 @@
         <!-- Hero Area Start -->
         <div id="hero-area" class="hero-area-bg">
           <div class="container w-100">
-            <div idclass="row" style="padding-bottom:3.3em;">
+            <div class="row" style="padding-bottom:3.3em;">
               <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
                 <div class="contents">
                   <ul>
@@ -315,12 +315,20 @@
                   <div class="row">
     
                     <div id="photoDescription" class="col">
+
                       <img src='{{img}}' alt=""
                         class="img-thumbnail" />
                     </div>
     
                     <div id="description" class="col">
                       <h2>{{name}}</h2>
+
+                        <img src="assets/img/dvigatels/{{img}}" alt="{{name}}" class="img-thumbnail" />
+                    </div>
+                    
+                    <div id="description" class="col">
+                      <!-- <h2>{{name}}</h2> -->
+
                       <table>
                         <tr>
                           <td>
@@ -374,6 +382,7 @@
 
 
   </script>
+
 
 
 
@@ -451,7 +460,6 @@
       </div>
     </div>
   </div>
-
 
   <div class="modal" id="license" tabindex="-1" role="dialog" aria-labelledby="license" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
@@ -1081,10 +1089,8 @@
 
   <!-- Footer Section Start -->
   <script>
-    var link = document.querySelector('link[rel=import]');
-    var content = link.import.querySelector('#footer');
-    document.body.appendChild(content.cloneNode(true));
-  </script>
+    $('#footer').load('cotacts.html')
+</script>
   <div>
     <iframe src="https://yandex.ru/map-widget/v1/-/CCauZ6Yj" width="100%" height="400" frameborder="1"
       allowfullscreen="true"></iframe>
