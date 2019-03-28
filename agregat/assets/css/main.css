@@ -1761,7 +1761,7 @@ font-size: 30px;
 }
 
 #photoDescription{
-  /* min-height: 300px; */
+  min-height: 300px;
   width: 100%;
 }
 
@@ -1821,7 +1821,7 @@ font-size: 30px;
 }
 
 .hidden {
-  display: none !important;
+  display: none;
 }
 
 .geo {
@@ -1915,6 +1915,7 @@ font-size: 30px;
 
 #table {
   font-size: 17px !important;
+<<<<<<< HEAD
 }
 
 #engineModal_one td {
@@ -1940,3 +1941,6 @@ font-size: 30px;
   /* color: darkslategrey; */
 }
 
+=======
+}
+>>>>>>> parent of 4ac86e0... popup улучшил
