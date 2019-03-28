@@ -1761,7 +1761,7 @@ font-size: 30px;
 }
 
 #photoDescription{
-  min-height: 300px;
+  /* min-height: 300px; */
   width: 100%;
 }
 
@@ -1821,7 +1821,7 @@ font-size: 30px;
 }
 
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 .geo {
@@ -1915,4 +1915,18 @@ font-size: 30px;
 
 #table {
   font-size: 17px !important;
+}
+
+#engineModal_one td {
+  width: 50%;
+  padding: 5px 3px;
+  text-align: left;
+  color: #848789;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+#engineModal_one td+td {
+  color: #323537;
+  font-size: 15px;
 }
