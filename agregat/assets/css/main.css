@@ -1930,3 +1930,13 @@ font-size: 30px;
   color: #323537;
   font-size: 15px;
 }
+
+#engineModal_one .title {
+  color: #323537;
+  font-size: 15px;
+  padding-bottom:4px;
+  padding-left:20px; 
+  font-size: 20px; 
+  /* color: darkslategrey; */
+}
+
