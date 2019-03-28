@@ -81,9 +81,6 @@ a:not([href]):not([tabindex]) {
   font-weight: 200;
 }
 
-.head .h3 {
-  
-}
 
 .image h1 {
 	position	: absolute;
@@ -1018,6 +1015,10 @@ iframe {
   font-weight: 200;
 }
 
+.contents i{
+ color: gray;
+}
+
 #hero-area .contents_2{
   text-align: right; 
   color: #e4e4e4;
@@ -1660,7 +1661,7 @@ textarea {
   margin: 45px 0 0px;
   width: 100%;
   text-align: center;
-  font-size: 
+  font-size: ;
 }
 
 #copyright p {
@@ -1898,7 +1899,7 @@ font-size: 30px;
 }
 
 .owl-nav {
-  hid
+  
 }
 
 .flxmain_bordered_table {
