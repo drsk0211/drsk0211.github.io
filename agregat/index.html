@@ -60,20 +60,32 @@
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#services">
+                  <a class="nav-link" href="#catalog">
                     Каталог
                   </a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#team">
-                    О компании
-                  </a>
-                </li>
+               
                 <li class="nav-item">
                   <a class="nav-link" href="#pricing">
-                    Гарантии
+                    Цены
                   </a>
                 </li>
+               
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Направления
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Редукторы</a>
+                    <a class="dropdown-item" href="#">Коробки передач</a>
+                    <a class="dropdown-item" href="#">Кабины</a>
+                    <a class="dropdown-item" href="#">Запчасти СЗАП <br>(ставропольский завод автоприцепов)</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Реквизиты</a>
+                    <a class="dropdown-item" href="#">Статьи</a>
+                  </div>
+                </li>
+
                 <li class="nav-item">
                   <a class="nav-link" href="#contact">
                     Контакты
@@ -226,7 +238,7 @@
 
 
   <!-- Каталлог движков -->
-  <section id="services" class="section-padding">
+  <section id="catalog" class="section-padding">
     <div class="container text-center">
       <div class="section-header text-center">
         <h1 class="section-title ">Двигатели КамАЗ</h1>
@@ -369,7 +381,7 @@
                             
                             <input type="tel" class="form-control" id="input_contact" placeholder="ваш телефон или email"
                             name="phone" required autocomplete="tel" style="margin-bottom: 5px;"
-                            onchange="$('#btnSend').addClass('btn-primary');">
+                            onchange="$('#btnSend_popup').addClass('btn-primary btn-default');">
                             &nbsp;&nbsp;&nbsp;
                             <a id="request_comment_link_popup" href="javascript:"
                               onclick="$('#request_comment_link_popup').addClass('hidden'); $('#request_comment_popup').removeClass('hidden');"
@@ -377,7 +389,7 @@
                               &nbsp;&nbsp;&nbsp;
                             <textarea id="request_comment_popup" class="form-control hidden" placeholder="комментарий"
                               rows="3"></textarea>
-                              <input id="btnSend_popup" onclick="send_request('{{name}} ({{price}})', $('#input_contact_popup').val(), $('#request_comment_popup').val());" class="btn btn-sm btn-link btn-default" type="button"
+                              <input id="btnSend_popup" onclick="send_request('{{name}} ({{price}})', $('#input_contact_popup').val(), $('#request_comment_popup').val()); $('#engineModal_one').modal('hide'); " class="btn btn-sm btn-link btn-default" type="button"
                               value="отправить" style="color: darkslategrey; text-decoration: underline;">
                           </div>
                          
@@ -679,18 +691,24 @@
         <div class="shape wow fadeInDown"></div>
         <div class="about-area">
           <div class="row">
-            <div class="col-lg-3 col-md-4 col-xs-12 priemyshestva"><img
-                src="assets/img/feature/warranty.png"></i>Гарантия
-              на все агрегаты</div>
-            <div class="col-lg-3 col-md-4 col-xs-12 priemyshestva"><img src="assets/img/feature/customer.png">
-              4 тысячи
-              клиентов</div>
-            <div class="col-lg-3 col-md-4 col-xs-12 priemyshestva"><img src="assets/img//feature/delivery.png">Доставка
-              по всей
-              России</div>
-            <div class="col-lg-3 col-md-4 col-xs-12 priemyshestva"><img
-                src="assets/img/feature/percent_big.png">Отправим
-              по 10% авансу</div>
+              <div class="col-lg-3 col-md-4 col-xs-12 priemyshestva">
+                  <i class="lni-map"></i>
+                  <!-- <img src="assets/img/feature/percent_big.png"> -->
+                  Наличие 
+                в Москве и Наб.Челнах</div>
+            <div class="col-lg-3 col-md-4 col-xs-12 priemyshestva">
+                <i class="lni-medall"></i>
+                <!-- <img src="assets/img/feature/warranty.png"></i> -->
+                Гарантия на все агрегаты</div>
+            <div class="col-lg-3 col-md-4 col-xs-12 priemyshestva">
+                <i class="lni-users"></i>
+              <!-- <img src="assets/img/feature/customer.png"> -->
+              4 тысячи <br> клиентов</div>
+            <div class="col-lg-3 col-md-4 col-xs-12 priemyshestva">
+                <i class="lni-delivery"></i>
+              <!-- <img src="assets/img//feature/delivery.png"> -->
+              Доставка по всей России</div>
+           
 
 
           </div>
@@ -708,11 +726,7 @@
                   специализируется на оптовой
                   торговле запасными частями и комплектующими для автомобилей КАМАЗ, а также поставке запчастей в
                   магазины и автотранспортные предприятия.</p>
-                <p style="text-align: justify;font-size: 1.2em;">За годы своей работы наши специалисты овладели всеми
-                  тонкостями и
-                  нюансами оптовой торговли запасными частями и комплектующими. </p>
-
-              </div>
+              
             </div>
           </div>
         </div>
@@ -721,7 +735,7 @@
     </div>
   </section>
 
-  <section id="priemyshestva" class="section-padding  bg-gray">
+  <section id="pricing" class="section-padding  bg-gray">
     <div class="container text-center justify-content-center">
       <div class="section-header">
         <h1>Прайс-лист</h1>
@@ -1083,9 +1097,10 @@
         <div class="row">
           <div class="col-md-6 col-sm-6 col-mb-12">
             <div class="widget">
-              <h3 class="footer-logo" style="font-weight:400;">
+              <h3 class="" style="font-weight:400;font-size:24px;">
                 <!-- <img src="assets/img/logo_1.png" alt="" class="img-fluid"> -->
-                ООО "ЧЕЛНЫАГРЕГАТЦЕНТР"
+                <a href="ooo-agregat.html">ООО "ЧЕЛНЫАГРЕГАТЦЕНТР"
+                  <br/> <span style="font-size:13px;">реквизиты </span></a>
               </h3>
               <div class="textwidget">
                 <p>ИНН: 1650279880</p>
@@ -1143,12 +1158,12 @@
         <div class="copyright-content">
           <ul class="list-inline">
             <li class="list-inline-item">
-              <p>© 2017 <a href="ooo-agregat.html">ООО ТД «Agregat»</a>, Все права защищены</p>
+              <p>© 2009 <a href="ooo-agregat.html">ООО «ЧЕЛНЫАГРЕГАТЦЕНТР»</a>, Все права защищены</p>
             </li>
             <li class="list-inline-item">
-              <p><a href="javascript:" class="nal-link" data-toggle="modal" data-target="#policy">Лицензионное
+              <!-- <p><a href="javascript:" class="nal-link" data-toggle="modal" data-target="#policy">Лицензионное
                   соглашение</a>
-              </p>
+              </p> -->
             </li>
             <li class="list-inline-item">
               <p><a href="javascript:" class="nal-link" data-toggle="modal" data-target="#license">Политика
