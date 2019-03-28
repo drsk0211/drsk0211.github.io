@@ -1761,7 +1761,7 @@ font-size: 30px;
 }
 
 #photoDescription{
-  /* min-height: 300px; */
+  min-height: 300px;
   width: 100%;
 }
 
@@ -1821,7 +1821,7 @@ font-size: 30px;
 }
 
 .hidden {
-  display: none !important;
+  display: none;
 }
 
 .geo {
@@ -1915,6 +1915,7 @@ font-size: 30px;
 
 #table {
   font-size: 17px !important;
+<<<<<<< HEAD
 }
 
 #engineModal_one td {
@@ -1940,7 +1941,9 @@ font-size: 30px;
   /* color: darkslategrey; */
 }
 
-.about-area i {
-  font-size: 48px;
-  color: #0056b3;
+<<<<<<< HEAD
+=======
 }
+>>>>>>> parent of 4ac86e0... popup улучшил
+=======
+>>>>>>> parent of bbd0801... контакты
