@@ -972,7 +972,7 @@ iframe {
 #hero-area {
   background: url(/agregat/assets/img/feature/fon5.jpg) no-repeat right bottom;
   height: 100%;
-  /* font-weight: 100; */
+  font-weight: 20px;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -990,11 +990,11 @@ iframe {
 }
 
 #hero-area h1 {
-  font-size: 2em;
+  font-size: 2.0em;
 }
 
 #hero-area h2 {
-  font-size: 1.7em;
+  font-size:1.7em;
 }
  #hero-area h1, #hero-area h2 {
   font-family: roboto;
@@ -1007,6 +1007,7 @@ iframe {
 
 #hero-area ul li, ol li {
   margin: 15px;
+  font-size: 20px;
 }
 
 #hero-area .contents{
@@ -1505,6 +1506,8 @@ textarea {
   font-size: 22px;
 }
 
+
+
 .engine {
   padding-bottom: 30px;
 
@@ -1838,7 +1841,7 @@ font-size: 30px;
 .geo__text {
   display: flex;
   flex-direction: column;
-  font-size: 0.9em;
+  font-size: 1em;
   
 }
 
@@ -1898,9 +1901,7 @@ font-size: 30px;
   padding-top: 25px;
 }
 
-.owl-nav {
-  
-}
+
 
 .flxmain_bordered_table {
   text-align: center;
@@ -1943,5 +1944,11 @@ font-size: 30px;
 
 .about-area i {
   font-size: 48px;
-  color: #0056b3;
+  color: #4693e6;
+}
+
+.footer-area i {
+  font-size: 24px;
+  color: #4693e6;
+  padding-right: 15px;
 }
