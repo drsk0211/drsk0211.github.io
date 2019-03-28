@@ -31,8 +31,7 @@
   <link rel="stylesheet" href="assets/css/main.css">
   <!-- Responsive Style -->
   <link rel="stylesheet" href="assets/css/responsive.css">
-  <link rel="import" href="contacts.html">
-  <link rel="import" href="prim.html">
+  
   <script src="assets/js/jquery-min.js"></script>
   <script src="assets/js/handlebars-v4.1.1.js"></script>
 
@@ -48,7 +47,7 @@
         <nav class="navbar navbar-expand-lg bg-inverse fixed-top scrolling-navbar">
           <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
-            <a href="index.html" class="navbar-brand" style="display: contents;">ЧЕЛНЫ АГРЕГАТ ЦЕНТР</a>
+            <a href="index.html" class="navbar-brand" style="display: contents; max-width:60%;">ЧЕЛНЫ АГРЕГАТ ЦЕНТР</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
               aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
               <i class="lni-menu"></i>
@@ -61,20 +60,32 @@
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#services">
+                  <a class="nav-link" href="#catalog">
                     Каталог
                   </a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#team">
-                    О компании
-                  </a>
-                </li>
+               
                 <li class="nav-item">
                   <a class="nav-link" href="#pricing">
-                    Гарантии
+                    Цены
                   </a>
                 </li>
+               
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Направления
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Редукторы</a>
+                    <a class="dropdown-item" href="#">Коробки передач</a>
+                    <a class="dropdown-item" href="#">Кабины</a>
+                    <a class="dropdown-item" href="#">Запчасти СЗАП <br>(ставропольский завод автоприцепов)</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Реквизиты</a>
+                    <a class="dropdown-item" href="#">Статьи</a>
+                  </div>
+                </li>
+
                 <li class="nav-item">
                   <a class="nav-link" href="#contact">
                     Контакты
@@ -135,15 +146,13 @@
                     <textarea id="request_comment" class="form-control hidden" placeholder="комментарий"
                       rows="3"></textarea>
                   </div>
-                  <input id="btnSend" onclick="send_request();" class="btn btn-sm btn-outline-primary" type="button"
+                  <input id="btnSend" onclick="send_request( $('#select').val(), $('#input_contact').val(), $('#request_comment').val());" class="btn btn-sm btn-outline-primary" type="button"
                     value="отправить">
 
                   <!-- script для typeahaed  -->
                   <script>
-
                     // происходит только после загрузки 
                     $(document).ready(function () {
-
                       // присваивает переменной спец.объект, в котором можно задать правила чтения данных, в том числе JSON.
                       var dvigatels = new Bloodhound({
                         datumTokenizer: Bloodhound.tokenizers.whitespace,
@@ -153,7 +162,6 @@
                           , "740.30-400 (ЕВРО-2)", "740.31-400 (ЕВРО-2)", "740.50-400 (ЕВРО-2)", "740.51-400 (ЕВРО-2)", "740.62-400 (ЕВРО-2)",
                           "4ISBe 185 1ая", "6ISBe 185 1ая", "6ISBe 210 1ая", "6ISBe 285 1ая", "6ISBe 300 1ая"]
                       });
-
                       // фнукция которая будет выполняться - когда нужна подстановка
                       function dvigatelsWithDefaults(q, sync) {
                         // если текст не был набран - покажет список по-умолчанию
@@ -165,7 +173,6 @@
                           dvigatels.search(q, sync);
                         }
                       }
-
                       // привязываем в нужном нам input - функционал typeahead c определенным настройками
                       $('#default-suggestions .typeahead').typeahead({
                         minLength: 0,
@@ -176,42 +183,29 @@
                           source: dvigatelsWithDefaults // если здесь указать просто переменную dvigatels - будет просто подсказка по набранному, 
                           // а у нас стоит спец.функция, которая может указать
                         });
-
-
                     });
-
-
                     // --------- ОТСЫЛКА ФОРМЫ  -----------------------
-
-                    function send_request() {
+                    function send_request(good, contact, comment) {
                       // соберем данные и присвоим переменным.
-                      var contact = $("#input_contact").val(); // контакты
-                      var good = $("#select").val(); // товар
-                      var comment = $("#request_comment").val();
-
+                    
                       // проверим заполнение 
                       if (contact === "" || contact === null) {
                         alert("Укажите, пожалуйста, ваши контактные данные.");
                         return; // закончим
                       }
-
                       // присвоим значения input-ам  google -формы
                       $("[name='entry.1519454606']").val(contact); // input google формы, там id нет, потому ищем по имени. и присваиваем
                       $("[name='entry.191261818']").val(good);
                       $("[name='entry.1977316514']").val(comment);
                       $("[name='entry.1126040740']").val(new Date().toJSON());
-
                       // берем форму по Id - и командой Submit - отправляем ее на сервер
                       document.getElementById("mG61Hd").submit();
-
                       alert("Заявка отправлена. Спасибо. Мы свяжемся с Вами в ближайшее время.");
-
                       // очищу input
                       $("#input_contact").val(""); // контакты
                       $("#select").val(""); // товар
                       $("#request_comment").val("");
                     }
-
                     // нужна глобальная переменная, чтобы не перенаправлял нас на сайт google - после отправки заявки
                     var submitted;
                   </script>
@@ -230,7 +224,7 @@
 
 
   <!-- Каталлог движков -->
-  <section id="services" class="section-padding">
+  <section id="catalog" class="section-padding">
     <div class="container text-center">
       <div class="section-header text-center">
         <h1 class="section-title ">Двигатели КамАЗ</h1>
@@ -253,23 +247,17 @@
       if (mods == null || mods.length == 0) return;
       var source = document.getElementById("dvigatel-item").innerHTML;
       var template = Handlebars.compile(source);
-
       for (let index = 0; index < mods.length; index++) {
         var rez1 = mods[index];
         if (rez1.id < 0) continue;
         var html1 = template(rez1);
         $("#models_container").append(html1);
       }
-
-
     });
-
-
     function show_dvigatel_popup(id) {
       var source = document.getElementById("dvigatel-popup-template").innerHTML;
       var template = Handlebars.compile(source);
       if (mods == null || mods.length == 0) return;
-
       var rez = mods.find(x => x.id == id);
       if (rez != null) {
         var html = template(rez);
@@ -277,7 +265,6 @@
         $("#popup_container").append(html);
         $('#engineModal_one').modal('show');
       }
-
     }
   </script>
 
@@ -314,75 +301,56 @@
                 <div class="container">
                   <div class="row">
     
-                    <div id="photoDescription" class="col">
-<<<<<<< HEAD
-
-                      <img src='{{img}}' alt=""
-                        class="img-thumbnail" />
-                    </div>
-    
-                    <div id="description" class="col">
-                      <h2>{{name}}</h2>
-
+                    <div id="photoDescription" class="col-md-6 col-xs-12">
                         <img src="assets/img/dvigatels/{{img}}" alt="{{name}}" class="img-thumbnail" />
-=======
-                      <img src='{{img}}' alt=""
-                        class="img-thumbnail" />
->>>>>>> parent of 4ac86e0... popup улучшил
                     </div>
-    
-                    <div id="description" class="col">
-<<<<<<< HEAD
+                    
+                    <div id="description" class="col-md-6 col-xs-12">
                       <!-- <h2>{{name}}</h2> -->
-
-=======
-                      <h2>{{name}}</h2>
->>>>>>> parent of 4ac86e0... popup улучшил
                       <table>
+                        <tr><td>
+                            цена&nbsp; 
+                        </td><td><span style="font-size:1.6em;">{{price}} </span> руб.</td></tr>
                         <tr>
                           <td>
-                            <p>Мощность двигателя:</p>
+                            Мощность двигателя:
                           </td>
                           <td>{{power}}</td>
                         </tr>
                         <tr>
                           <td>
-                            <p>Экологический класс:</p>
+                            Экологический класс:
                           </td>
                           <td>{{eco}}</td>
                         </tr>
                         <tr>
                           <td>
-                            <p>Топливная аппаратура:</p>
+                            Топливная аппаратура:
                           </td>
                           <td>{{toplivo}}</td>
                         </tr>
                         <tr>
                           <td>
-                            <p>Турбокомпрессор:</p>
+                            Турбокомпрессор:
                           </td>
                           <td>{{turbo}}</td>
                         </tr>
                         <tr>
                           <td>
-                            <p>Применяемость с КПП:</p>
+                            Применяемость с КПП:
                           </td>
                           <td>{{kpp}}</td>
                         </tr>
                         <tr>
                           <td>
-                            <p>Привод вентилятора:</p>
+                            Привод вентилятора:
                           </td>
                           <td>{{ventilator}}</td>
                         </tr>
-                        <tr>Цена:</tr>
-                        <tr>{{price}}</tr>-
+                        
                       </table>
                     </div>
                   </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
                   <div class="row" style='padding-top: 20px; width:100%;'>
                     <div class="col-md-8 title" style="">отправить заявку</div>
                     <div class="title right" style="float: right;"> 8 (938) 358-30-07</div>
@@ -392,7 +360,7 @@
                             
                             <input type="tel" class="form-control" id="input_contact" placeholder="ваш телефон или email"
                             name="phone" required autocomplete="tel" style="margin-bottom: 5px;"
-                            onchange="$('#btnSend').addClass('btn-primary');">
+                            onchange="$('#btnSend_popup').addClass('btn-primary btn-default');">
                             &nbsp;&nbsp;&nbsp;
                             <a id="request_comment_link_popup" href="javascript:"
                               onclick="$('#request_comment_link_popup').addClass('hidden'); $('#request_comment_popup').removeClass('hidden');"
@@ -400,16 +368,13 @@
                               &nbsp;&nbsp;&nbsp;
                             <textarea id="request_comment_popup" class="form-control hidden" placeholder="комментарий"
                               rows="3"></textarea>
-                              <input id="btnSend_popup" onclick="send_request('{{name}} ({{price}})', $('#input_contact_popup').val(), $('#request_comment_popup').val());" class="btn btn-sm btn-link btn-default" type="button"
+                              <input id="btnSend_popup" onclick="send_request('{{name}} ({{price}})', $('#input_contact_popup').val(), $('#request_comment_popup').val()); $('#engineModal_one').modal('hide'); " class="btn btn-sm btn-link btn-default" type="button"
                               value="отправить" style="color: darkslategrey; text-decoration: underline;">
                           </div>
                          
 
                     </div>
                   </div>
->>>>>>> parent of bbd0801... контакты
-=======
->>>>>>> parent of 4ac86e0... popup улучшил
                 </div>
               </div>
             </div>
@@ -417,121 +382,10 @@
         </div>
       </div>
     </div>
-
-
-
   </script>
 
 
 
-
-
-
-<<<<<<< HEAD
-
-=======
->>>>>>> parent of 4ac86e0... popup улучшил
-  <div class="modal" id="engineModal1" tabindex="-1" role="dialog" aria-labelledby="engineModal" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="vertical-alignment-helper">
-        <div class="modal-dialog vertical-align-center">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h4 class="modal-title">Двигатель КАМАЗ 74039.10-400</h4>
-              <button class="close" type="button" data-dismiss="modal" aria-label="close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <div class="container">
-                <div class="row">
-
-                  <div id="photoDescription" class="col">
-                    <img src="assets/img/dvigatels/nophoto.jpg" alt=""
-                      class="img-thumbnail" />
-                  </div>
-
-                  <div id="description" class="col">
-                    <h2>Двигатель КАМАЗ 74039.10-400</h2>
-                    <table>
-                      <tr>
-                        <td>
-                          <p>Мощьность двигателя:</p>
-                        </td>
-                        <td>200 л/c</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <p>Экологический класс:</p>
-                        </td>
-                        <td>ЕВРО-0</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <p>Топливная аппаратура:</p>
-                        </td>
-                        <td>ЯЗДА 334.1111005</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <p>Турбокомпрессор:</p>
-                        </td>
-                        <td>ТКР 7Н1</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <p>Применяемость с КПП:</p>
-                        </td>
-                        <td>14, 142, 15, 152</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <p>Привод вентилятора:</p>
-                        </td>
-                        <td>гидромуфта</td>
-                      </tr>
-                      <tr></tr>
-                      <tr></tr>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-<<<<<<< HEAD
-=======
-
->>>>>>> parent of 4ac86e0... popup улучшил
-  <div class="modal" id="license" tabindex="-1" role="dialog" aria-labelledby="license" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h4 class="modal-title">Лицензионное соглашение</h4>
-          <button class="close" type="button" data-dismiss="modal" aria-label="close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae minus autem ratione temporibus
-          laudantium consequatur esse repellendus numquam dicta explicabo consectetur ullam eaque exercitationem unde
-          reiciendis laborum sapiente, excepturi necessitatibus doloremque? Quasi omnis voluptas vel mollitia rerum
-          ipsum culpa non libero odio, odit magni iure quam ducimus fugiat. Nulla maxime quam dolore voluptas?
-          Reiciendis magnam cum sapiente a accusantium aliquam quidem. Error similique minus, ut quas porro, molestias
-          dolor aspernatur nisi, voluptatem numquam iusto. Tempore totam architecto enim distinctio inventore, ut maxime
-          eos expedita eius porro odit tenetur laboriosam neque voluptate aspernatur adipisci quibusdam. Omnis suscipit
-         ывывывывыв vitae. Nisi, mollitia nulla. Qui nihil eos eveniet necessitatibus fugit accusamus architecto
-          in magni exercitationem expedita voluptas maxime ipsam ea omnis, at asperiores, incidunt, suscipit voluptate
-          maiores. Eos ipsum quia voluptatum nihil rem atque qui incidunt itaque omnis? Veniam eum aliquid corporis
-          vero?
-        </div>
-      </div>
-    </div>
-  </div>
   <div class="modal" id="policy" tabindex="-1" role="dialog" aria-labelledby="policy" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
@@ -649,8 +503,7 @@
               товаров пользователю, оказания услуг пользователю, а также для надлежащего исполнения договоров, заключаемых с
               пользователями.
               </li>
-              <li>
-              Осуществление информационных, новостных и рекламных рассылок в адрес пользователя производится Администрацией
+              <li>Осуществление информационных, новостных и рекламных рассылок в адрес пользователя производится Администрацией
               Сайта только в том случае, если имеется согласие пользователя на получение таких рассылок. Пользователь в
               любой момент может отказаться от любых рассылок, на которые он был подписан или иным образом давал свое
               согласие.
@@ -680,7 +533,6 @@
   <!-- <div id="team">
     <div class="about-area section-padding bg-gray">
       <div class="container">
-
         <div class="row">
           <div class="col-lg-12 col-md-12 col-xs-12 info">
             <div class="about-wrapper wow fadeInLeft" data-wow-delay="0.3s">
@@ -700,7 +552,6 @@
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </div>
@@ -779,14 +630,13 @@
   </section> -->
 
 
-<<<<<<< HEAD
-  <script>
-    var link = document.querySelector('link[rel=import]');
-    var content = link.import.querySelector('#priemyshestva');
-    document.body.appendChild(content.cloneNode(true));
-  </script>
 
-=======
+  <script>
+    
+    <link rel="import" href="contacts.html">
+    <link rel="import" href="prim.html">
+  </script>
+  <section id="priemyshestva" class="section-padding  bg-gray">
   <section id="priemyshestva" class="section-padding  bg-gray">
     <div class="container text-center justify-content-center">
       <div class="section-header">
@@ -798,18 +648,24 @@
         <div class="shape wow fadeInDown"></div>
         <div class="about-area">
           <div class="row">
-            <div class="col-lg-3 col-md-4 col-xs-12 priemyshestva"><img
-                src="assets/img/feature/warranty.png"></i>Гарантия
-              на все агрегаты</div>
-            <div class="col-lg-3 col-md-4 col-xs-12 priemyshestva"><img src="assets/img/feature/customer.png">
-              4 тысячи
-              клиентов</div>
-            <div class="col-lg-3 col-md-4 col-xs-12 priemyshestva"><img src="assets/img//feature/delivery.png">Доставка
-              по всей
-              России</div>
-            <div class="col-lg-3 col-md-4 col-xs-12 priemyshestva"><img
-                src="assets/img/feature/percent_big.png">Отправим
-              по 10% авансу</div>
+              <div class="col-lg-3 col-md-4 col-xs-12 priemyshestva">
+                  <i class="lni-map"></i>
+                  <!-- <img src="assets/img/feature/percent_big.png"> -->
+                  Наличие 
+                в Москве и Наб.Челнах</div>
+            <div class="col-lg-3 col-md-4 col-xs-12 priemyshestva">
+                <i class="lni-medall"></i>
+                <!-- <img src="assets/img/feature/warranty.png"></i> -->
+                Гарантия на все агрегаты</div>
+            <div class="col-lg-3 col-md-4 col-xs-12 priemyshestva">
+                <i class="lni-users"></i>
+              <!-- <img src="assets/img/feature/customer.png"> -->
+              4 тысячи <br> клиентов</div>
+            <div class="col-lg-3 col-md-4 col-xs-12 priemyshestva">
+                <i class="lni-delivery"></i>
+              <!-- <img src="assets/img//feature/delivery.png"> -->
+              Доставка по всей России</div>
+           
 
 
           </div>
@@ -827,11 +683,7 @@
                   специализируется на оптовой
                   торговле запасными частями и комплектующими для автомобилей КАМАЗ, а также поставке запчастей в
                   магазины и автотранспортные предприятия.</p>
-                <p style="text-align: justify;font-size: 1.2em;">За годы своей работы наши специалисты овладели всеми
-                  тонкостями и
-                  нюансами оптовой торговли запасными частями и комплектующими. </p>
-
-              </div>
+              
             </div>
           </div>
         </div>
@@ -839,9 +691,8 @@
     </div>
     </div>
   </section>
->>>>>>> parent of bbd0801... контакты
 
-  <section id="priemyshestva" class="section-padding  bg-gray">
+  <section id="pricing" class="section-padding  bg-gray">
     <div class="container text-center justify-content-center">
       <div class="section-header">
         <h1>Прайс-лист</h1>
@@ -1191,11 +1042,6 @@
 
 
   <!-- Footer Section Start -->
-<<<<<<< HEAD
-  <script>
-    $('#footer').load('contacts.html')
-  </script>
-=======
   <section id="footer" class="footer-area section-padding bg-gray">
     <div class="container">
       <div class="container" id="contact">
@@ -1208,9 +1054,10 @@
         <div class="row">
           <div class="col-md-6 col-sm-6 col-mb-12">
             <div class="widget">
-              <h3 class="footer-logo" style="font-weight:400;">
+              <h3 class="" style="font-weight:400;font-size:24px;">
                 <!-- <img src="assets/img/logo_1.png" alt="" class="img-fluid"> -->
-                ООО "ЧЕЛНЫАГРЕГАТЦЕНТР"
+                <a href="ooo-agregat.html">ООО "ЧЕЛНЫАГРЕГАТЦЕНТР"
+                  <br/> <span style="font-size:13px;">реквизиты </span></a>
               </h3>
               <div class="textwidget">
                 <p>ИНН: 1650279880</p>
@@ -1256,7 +1103,8 @@
 
 
   </section>
->>>>>>> parent of bbd0801... контакты
+
+
   <div>
     <iframe src="https://yandex.ru/map-widget/v1/-/CCauZ6Yj" width="100%" height="400" frameborder="1"
       allowfullscreen="true"></iframe>
@@ -1269,15 +1117,15 @@
         <div class="copyright-content">
           <ul class="list-inline">
             <li class="list-inline-item">
-              <p>© 2017 <a href="ooo-agregat.html">ООО ТД «Agregat»</a>, Все права защищены</p>
+              <p>© 2009 <a href="ooo-agregat.html">ООО «ЧЕЛНЫАГРЕГАТЦЕНТР»</a>, Все права защищены</p>
             </li>
             <li class="list-inline-item">
-              <p><a href="javascript:" class="nal-link" data-toggle="modal" data-target="#policy">Лицензионное
+              <!-- <p><a href="javascript:" class="nal-link" data-toggle="modal" data-target="#policy">Лицензионное
                   соглашение</a>
-              </p>
+              </p> -->
             </li>
             <li class="list-inline-item">
-              <p><a href="javascript:" class="nal-link" data-toggle="modal" data-target="#license">Политика
+              <p><a href="javascript:" class="nal-link" data-toggle="modal" data-target="#policy">Политика
                   конфиденциальности</a></p>
             </li>
           </ul>
@@ -1316,7 +1164,12 @@
   <script src="assets/js/typeahead.bundle.min.js"></script>
 
 
-  
+
+
+
+
+
+
   <!-- невидимая google-форма для заявки -->
   <div class="hidden">
 
@@ -1537,6 +1390,10 @@
 
 
   </div>
+
+
+
+
 
 </body>
 
