@@ -704,7 +704,7 @@ hr {
   position: relative;
   padding: 0px;
   font-family: 'roboto';
-  font-size: 1.5em;
+  font-size: 30px;
   font-weight: 3  00;
 }
 
@@ -731,7 +731,7 @@ hr {
 .top-nav-collapse {
   background: #fff;
   z-index: 999999;
-  /* padding: 5px !important; */
+  padding: 5px !important;
   top: 0px !important;
   box-shadow: 0px 3px 6px 3px rgba(0, 0, 0, 0.06);
   background: #fff !important;
@@ -862,9 +862,9 @@ iframe {
 }
 
 .navbar {
-  /* border-bottom: 1px solid #8c8c8c;  */
-  font-weight: 600;
-  /* background-color: #4c4c4c; */
+  border-bottom: 1px solid #F4F4F4; 
+  font-weight: 400;
+  background-color: #4c4c4c;
 }
 
 .navbar li.active a.nav-link {
