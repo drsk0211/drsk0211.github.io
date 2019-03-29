@@ -1118,6 +1118,11 @@ iframe {
   margin-bottom: 10px;
 }
 
+.content p {
+  font-size: 1.2em;
+  text-align: justify;
+}
+
 .team-item .info-text h3 {
   font-size: 16px;
   text-transform: uppercase;
