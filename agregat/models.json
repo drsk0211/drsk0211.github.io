@@ -7,7 +7,7 @@
     ,{"id":"35","name":"Двигатель КАМАЗ 740.31-400","price":"540000","img":"740.31-400.jpg","power":"240л/с","eco":"ЕВРО-2","toplivo":"","turbo":"","kpp":"","ventilator":"" }
     ,{"id":"40","name":"Двигатель КАМАЗ 740.50-400","price":"595000","img":"740.50-400.jpg","power":"360л/с","eco":"ЕВРО-2","toplivo":"","turbo":"","kpp":"","ventilator":"" }
     ,{"id":"45","name":"Двигатель КАМАЗ 740.51-400","price":"590000","img":"740.51-400.jpg","power":"320л/с","eco":"ЕВРО-2","toplivo":"","turbo":"","kpp":"","ventilator":"" }
-    ,{"id":"55","name":"Двигатель КАМАЗ 740.62-400","price":"650000","img":"740.62-400.jpg","power":"280л/с","eco":"ЕВРО-2","toplivo":"","turbo":"","kpp":"","ventilator":"" }
+    ,{"id":"-55","name":"Двигатель КАМАЗ 740.62-400","price":"650000","img":"740.62-400.jpg","power":"280л/с","eco":"ЕВРО-2","toplivo":"","turbo":"","kpp":"","ventilator":"" }
     ,{"id":"-60","name":"4ISBe 185 1ая","price":"670000","img":"nophoto.jpg","power":"183л/с","eco":"ЕВРО-3, 4","toplivo":"","turbo":"","kpp":"","ventilator":"" }
     ,{"id":"-65","name":"6ISBe 185 1ая","price":"670000","img":"nophoto.jpg","power":"183л/с","eco":"ЕВРО-3","toplivo":"","turbo":"","kpp":"","ventilator":"" }
     ,{"id":"-70","name":"6ISBe 210 1ая","price":"805000","img":"nophoto.jpg","power":"207л/с","eco":"ЕВРО-3","toplivo":"","turbo":"","kpp":"","ventilator":"" }

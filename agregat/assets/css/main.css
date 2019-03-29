@@ -1945,6 +1945,7 @@ font-size: 30px;
 }
 
 .about-area i {
+  padding-top: 15px; 
   font-size: 48px;
   color: #4693e6;
 }
