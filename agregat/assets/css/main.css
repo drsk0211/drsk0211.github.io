@@ -94,9 +94,11 @@ a:not([href]):not([tabindex]) {
 }
 .image img {
   width:350px;
-  height: 180px;
+  height: 250px;
   padding: 0; 
 }
+
+
 
 .image {
   
@@ -1510,7 +1512,7 @@ textarea {
 
 .engine {
   padding-bottom: 30px;
-
+  
 
 }
 
@@ -1519,7 +1521,7 @@ textarea {
 }
 
 .engine img {
-  height: 100%;
+ 
   width: 100%;
 }
 
