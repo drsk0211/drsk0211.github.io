@@ -786,7 +786,7 @@ hr {
 
 iframe {
   filter: grayscale(100%); 
-  
+  margin: 0px;  
 }
 
 .menu-bg {
@@ -1499,6 +1499,7 @@ textarea {
 .contacts {
   font-weight: 300;
   font-family: roboto;  
+  margin-bottom: 0px;
 }
 
 .contact-right-area {
@@ -1668,7 +1669,7 @@ textarea {
 #copyright .copyright-content {
   border-top: 1px solid #d5d4e9;
   padding: 15px 0;
-  margin: 45px 0 0px;
+  margin: 0 0px;
   width: 100%;
   text-align: center;
   font-size: ;
