@@ -242,7 +242,7 @@
 
   <script>
     var mods;
-    $.getJSON("models.json", function (json) {
+    $.getJSON("reductor_models.json", function (json) {
       mods = json;
       if (mods == null || mods.length == 0) return;
       var source = document.getElementById("dvigatel-item").innerHTML;
@@ -277,7 +277,7 @@
           <div class="image">
             <img src="assets/img/dvigatels/{{img}}" alt="{{name}}"
               class="img-thumbnail" />
-            <h1>{{name}}<br>({{eco}}, {{power}})</h1>
+            <h1>{{name}}<br>({{zubya}})</h1>
           </div>
         </a>
       </div>
@@ -952,7 +952,7 @@
                   <img src="assets/img/projects/reductor.jpg" alt="">
                 </div>
                 <div class="info">
-                  <h2><a href="#">Редукторы камаз</a></h2>
+                  <h2><a href="reductor.html">Редукторы камаз</a></h2>
                   <h3><a href="#">Широкий выбор в редукторов в наличии</a></h3>
                 </div>
 
