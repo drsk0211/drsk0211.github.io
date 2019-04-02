@@ -117,7 +117,7 @@
                                             <h2 class="title w-100">от официального дилера</h1>
                                         </li>
                                         <li>&nbsp;</li>
-                                        <li><i class="lni-check-mark-circle"></i> &nbsp;&nbsp;20 моделей в наличии в
+                                        <li><i class="lni-check-mark-circle"></i> &nbsp;&nbsp;Все модели в наличии в
                                             Москве
                                             и Наб.Челнах</li>
                                         <li><i class="lni-check-mark-circle"></i>&nbsp;&nbsp;10 лет на рынке
@@ -228,12 +228,28 @@
         </div>
     </header>
 
-    <script>
+    <section id="catalog" class="section-padding">
+        <div class="container text-center">
+          <div class="section-header text-center">
+            <h1 class="section-title ">Редукторы КамАЗ</h1>
+            <div class="shape wow fadeInDown"></div>
+          </div>
+          <div class="row" id="models_container">
+            <!-- Services item -->
+    
+    
+    
+          </div>
+        </div>
+      </section>
+    
+    
+      <script>
         var mods;
         $.getJSON("reductor_models.json", function (json) {
           mods = json;
           if (mods == null || mods.length == 0) return;
-          var source = document.getElementById("reductor-item").innerHTML;
+          var source = document.getElementById("dvigatel-item").innerHTML;
           var template = Handlebars.compile(source);
           for (let index = 0; index < mods.length; index++) {
             var rez1 = mods[index];
@@ -255,20 +271,21 @@
           }
         }
       </script>
-
-    <div id="popup_container"></div>
-    <!-- Modal windows -------------------------->
-    <script id="reductor-item" type="text/x-handlebars-template">
-      <div class="reductor col-md-6 col-lg-4 col-xs-12">
-          <a href="javascript:" onclick="show_dvigatel_popup({{id}});" class="nal-link" data-toggle="modal">
-            <div class="image">
-              <img src="assets/img/reductor/{{img}}" alt="{{name}}"
-                class="img-thumbnail" />
-              <h1>{{name}}<br>({{zubya}})</h1>
-            </div>
-          </a>
-        </div>
-    </script>
+    
+    
+      <div id="popup_container"></div>
+      <!-- Modal windows -------------------------->
+      <script id="dvigatel-item" type="text/x-handlebars-template">
+        <div class="engine col-md-6 col-lg-4 col-xs-12">
+            <a href="javascript:" onclick="show_dvigatel_popup({{id}});" class="nal-link" data-toggle="modal">
+              <div class="image">
+                <img src="assets/img/reductor/{{img}}" alt="{{name}}"
+                  class="img-thumbnail" />
+                <h1>{{name}}<br>({{zubya}})</h1>
+              </div>
+            </a>
+          </div>
+      </script>
 
    <section id="pricing" class="section-padding  bg-gray">
     <div class="container text-center justify-content-center">

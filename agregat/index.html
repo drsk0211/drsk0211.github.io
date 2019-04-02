@@ -76,9 +76,9 @@
                     Направления
                   </a>
                   <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Редукторы</a>
+                    <a class="dropdown-item" href="reductor.html">Редукторы</a>
                     <a class="dropdown-item" href="#">Коробки передач</a>
-                    <a class="dropdown-item" href="#">Кабины</a>
+                    <a class="dropdown-item" href="cabins.html">Кабины</a>
                     <a class="dropdown-item" href="#">Запчасти СЗАП <br>(ставропольский завод автоприцепов)</a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="chelny_agregat_center_000.html">Реквизиты</a>
@@ -242,7 +242,7 @@
 
   <script>
     var mods;
-    $.getJSON("reductor_models.json", function (json) {
+    $.getJSON("models.json", function (json) {
       mods = json;
       if (mods == null || mods.length == 0) return;
       var source = document.getElementById("dvigatel-item").innerHTML;
@@ -277,7 +277,7 @@
           <div class="image">
             <img src="assets/img/dvigatels/{{img}}" alt="{{name}}"
               class="img-thumbnail" />
-            <h1>{{name}}<br>({{zubya}})</h1>
+            <h1>{{name}}<br>({{eco}},{{power}})</h1>
           </div>
         </a>
       </div>
