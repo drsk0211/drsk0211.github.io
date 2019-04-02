@@ -76,9 +76,9 @@
                     Направления
                   </a>
                   <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Редукторы</a>
+                    <a class="dropdown-item" href="reductor.html">Редукторы</a>
                     <a class="dropdown-item" href="#">Коробки передач</a>
-                    <a class="dropdown-item" href="#">Кабины</a>
+                    <a class="dropdown-item" href="index.html">Двигатели</a>
                     <a class="dropdown-item" href="#">Запчасти СЗАП <br>(ставропольский завод автоприцепов)</a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="chelny_agregat_center_000.html">Реквизиты</a>
@@ -107,7 +107,7 @@
                 <div class="contents">
                   <ul>
                     <li style="margin-bottom:0px;">
-                      <h1 class="title text-left w-100">Двигатели КамАЗ в наличии</h1>
+                      <h1 class="title text-left w-100">Кабины КамАЗ в наличии</h1>
                     </li>
                     <li style="margin-top:0px;">
                       <h2 class="title w-100">от официального дилера</h1>
@@ -158,9 +158,7 @@
                         datumTokenizer: Bloodhound.tokenizers.whitespace,
                         queryTokenizer: Bloodhound.tokenizers.whitespace,
                         // prefetch: 'models.json'
-                        local: ["74009.10-400 (ЕВРО-0)", "74009.10-403 (УРАЛ)", "74039.10-400 (турбо)", "740.11-400 (ЕВРО-1)", "740.13-400 (ЕВРО-1)"
-                          , "740.30-400 (ЕВРО-2)", "740.31-400 (ЕВРО-2)", "740.50-400 (ЕВРО-2)", "740.51-400 (ЕВРО-2)", "740.62-400 (ЕВРО-2)",
-                          "4ISBe 185 1ая", "6ISBe 185 1ая", "6ISBe 210 1ая", "6ISBe 285 1ая", "6ISBe 300 1ая"]
+                        local: []
                       });
                       // фнукция которая будет выполняться - когда нужна подстановка
                       function dvigatelsWithDefaults(q, sync) {
@@ -220,6 +218,65 @@
     <!-- Hero Area End -->
 
   </header>
+
+  <section id="catalog" class="section-padding">
+    <div class="container text-center">
+      <div class="section-header text-center">
+        <h1 class="section-title ">Кабины КамАЗ</h1>
+        <div class="shape wow fadeInDown"></div>
+      </div>
+      <div class="row" id="models_container">
+        <!-- Services item -->
+
+
+
+      </div>
+    </div>
+  </section>
+
+
+  <script>
+    var mods;
+    $.getJSON("models.json", function (json) {
+      mods = json;
+      if (mods == null || mods.length == 0) return;
+      var source = document.getElementById("dvigatel-item").innerHTML;
+      var template = Handlebars.compile(source);
+      for (let index = 0; index < mods.length; index++) {
+        var rez1 = mods[index];
+        if (rez1.id < 0) continue;
+        var html1 = template(rez1);
+        $("#models_container").append(html1);
+      }
+    });
+    function show_dvigatel_popup(id) {
+      var source = document.getElementById("dvigatel-popup-template").innerHTML;
+      var template = Handlebars.compile(source);
+      if (mods == null || mods.length == 0) return;
+      var rez = mods.find(x => x.id == id);
+      if (rez != null) {
+        var html = template(rez);
+        $("#popup_container").html("");
+        $("#popup_container").append(html);
+        $('#engineModal_one').modal('show');
+      }
+    }
+  </script>
+
+
+  <div id="popup_container"></div>
+  <!-- Modal windows -------------------------->
+  <script id="dvigatel-item" type="text/x-handlebars-template">
+    <div class="engine col-md-6 col-lg-4 col-xs-12">
+        <a href="javascript:" onclick="show_dvigatel_popup({{id}});" class="nal-link" data-toggle="modal">
+          <div class="image">
+            <img src="assets/img/dvigatels/{{img}}" alt="{{name}}"
+              class="img-thumbnail" />
+            <h1>{{name}}<br>({{eco}},{{power}})</h1>
+          </div>
+        </a>
+      </div>
+  </script>
 
   <section id="projects" class="section-padding">
     <div class="container">
