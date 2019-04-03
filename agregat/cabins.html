@@ -237,7 +237,7 @@
 
   <script>
     var mods;
-    $.getJSON("cabin_models.json", function (json) {
+    $.getJSON("lists/cabin_models.json", function (json) {
       mods = json;
       if (mods == null || mods.length == 0) return;
       var source = document.getElementById("dvigatel-item").innerHTML;

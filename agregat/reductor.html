@@ -246,7 +246,7 @@
     
       <script>
         var mods;
-        $.getJSON("reductor_models.json", function (json) {
+        $.getJSON("lists/reductor_models.json", function (json) {
           mods = json;
           if (mods == null || mods.length == 0) return;
           var source = document.getElementById("dvigatel-item").innerHTML;
